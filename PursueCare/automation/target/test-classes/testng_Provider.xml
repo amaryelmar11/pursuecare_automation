@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	 <parameter name="browser" value="chrome"/>
+  <!--
+   <listeners>
+    <listener class-name="utilities.ExtentSparkManager"/>
+  </listeners> 
+ -->
+
+  <test thread-count="5" name="Test">
+    
+    <classes>
+  <!--  
+  <class name="testCases_Provider.Login_Provider"/> 
+  <class name="testCases_Provider.Patient_Creation"/> 
+ <class name="testCases_Provider.Login_Validations"/>  
+  <class name="testCases_Provider.Forgot_Password_Provider"/> 
+
+  <class name="testCases_Provider.Patient_Creation"/> 
+
+  <class name="testCases_Provider.Provider_Chat"/>
+  <class name="testCases_Provider.Provider_Chat_Advanced"/>
+  <class name="testCases_Provider.Provider_Timezone_Option"/>
+  <class name="testCases_Provider.Provider_Appointment_Booking"/>
+  <class name="testCases_Provider.ProviderDoubleBookingAppointment"/> -->
+
+  <class name="testCases_Provider.Appointment_Booking_Available_Section"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
