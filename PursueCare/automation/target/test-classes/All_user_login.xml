@@ -4,9 +4,11 @@
     <parameter name="browser" value="chrome"/>
 
     
-    <listeners>
+
+    <!-- for extent report -->
+    <!-- <listeners>
         <listener class-name="utilities.ExtentSparkManager"/>
-    </listeners>
+    </listeners> -->
     
 
     <test name="All Users Login Tests">

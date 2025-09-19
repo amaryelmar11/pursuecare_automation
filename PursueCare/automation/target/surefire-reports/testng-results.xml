@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-18T02:31:40 EDT" name="Suite" finished-at="2025-09-18T02:33:01 EDT" duration-ms="80996">
+  <suite started-at="2025-09-19T04:58:24 EDT" name="Suite" finished-at="2025-09-19T05:00:00 EDT" duration-ms="95359">
     <groups>
     </groups>
-    <test started-at="2025-09-18T02:31:40 EDT" name="All Users Login Tests" finished-at="2025-09-18T02:33:01 EDT" duration-ms="80996">
+    <test started-at="2025-09-19T04:58:24 EDT" name="All Users Login Tests" finished-at="2025-09-19T05:00:00 EDT" duration-ms="95359">
       <class name="testCases_PAS.PAS_Appointment_Booking">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-18T02:31:41 EDT" name="setup" finished-at="2025-09-18T02:32:01 EDT" duration-ms="20019" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-19T04:58:26 EDT" name="setup" finished-at="2025-09-19T04:58:42 EDT" duration-ms="15809" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-18T02:32:01 EDT" name="initPages" finished-at="2025-09-18T02:32:01 EDT" duration-ms="234" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-19T04:58:42 EDT" name="initPages" finished-at="2025-09-19T04:58:42 EDT" duration-ms="200" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-18T02:32:01 EDT" name="setUp" finished-at="2025-09-18T02:32:01 EDT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-19T04:58:42 EDT" name="setUp" finished-at="2025-09-19T04:58:42 EDT" duration-ms="5" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,17 +33,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="appointmentBooking()[pri:1, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-18T02:32:01 EDT" name="appointmentBooking" finished-at="2025-09-18T02:32:36 EDT" duration-ms="34229" status="FAIL">
+        <test-method signature="appointmentBooking()[pri:1, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-19T04:58:42 EDT" name="appointmentBooking" finished-at="2025-09-19T04:59:35 EDT" duration-ms="53250" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //span[normalize-space()='Appointment']' (tried for 20 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: /html[1]/body[1]/div[3]/div[2]/div[1]/mat-dialog-container[1]/div[1]/div[1]/app-multiple-user-appointment-add[1]/div[1]/div[2]/form[1]/div[7]/div[1]/div[2]/mat-form-field[1]/div[1]/div[2]/div[1]/mat-select[1]/div[1]/div[1]/span[1]' (tried for 20 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //span[normalize-space()='Appointment']' (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: /html[1]/body[1]/div[3]/div[2]/div[1]/mat-dialog-container[1]/div[1]/div[1]/app-multiple-user-appointment-add[1]/div[1]/div[2]/form[1]/div[7]/div[1]/div[2]/mat-form-field[1]/div[1]/div[2]/div[1]/mat-select[1]/div[1]/div[1]/span[1]' (tried for 20 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at BasePage.Common_Utils.click(Common_Utils.java:50)
-at testCases_PAS.PAS_Appointment_Booking.appointmentBooking(PAS_Appointment_Booking.java:32)
+at testCases_PAS.PAS_Appointment_Booking.appointmentBooking(PAS_Appointment_Booking.java:50)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -76,15 +76,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[normalize-space()='Appointment']"}
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html[1]/body[1]/div[3]/div[2]/div[1]/mat-dialog-container[1]/div[1]/div[1]/app-multiple-user-appointment-add[1]/div[1]/div[2]/form[1]/div[7]/div[1]/div[2]/mat-form-field[1]/div[1]/div[2]/div[1]/mat-select[1]/div[1]/div[1]/span[1]"}
   (Session info: chrome=140.0.7339.128)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7c24bb286cdb326b1d323805d070007a, findElement {using=xpath, value=//span[normalize-space()='Appointment']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59882}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59882/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7c24bb286cdb326b1d323805d070007a
+Command: [e3581af8e0e308ccf0d8ea7eb97fc74c, findElement {value=/html[1]/body[1]/div[3]/div[2]/div[1]/mat-dialog-container[1]/div[1]/div[1]/app-multiple-user-appointment-add[1]/div[1]/div[2]/form[1]/div[7]/div[1]/div[2]/mat-form-field[1]/div[1]/div[2]/div[1]/mat-select[1]/div[1]/div[1]/span[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64420}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64420/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e3581af8e0e308ccf0d8ea7eb97fc74c
 at jdk.internal.reflect.GeneratedConstructorAccessor14.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -116,7 +116,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appointmentBooking -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-18T02:32:36 EDT" name="setUp" finished-at="2025-09-18T02:32:36 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-19T04:59:35 EDT" name="setUp" finished-at="2025-09-19T04:59:35 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -127,7 +127,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="pasAppointmentDelete()[pri:2, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-18T02:32:36 EDT" name="pasAppointmentDelete" finished-at="2025-09-18T02:32:59 EDT" duration-ms="23283" status="FAIL">
+        <test-method signature="pasAppointmentDelete()[pri:2, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-19T04:59:35 EDT" name="pasAppointmentDelete" finished-at="2025-09-19T04:59:59 EDT" duration-ms="23358" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //input[@formcontrolname='email']' (tried for 20 second(s) with 500 milliseconds interval)]]>
@@ -138,7 +138,7 @@ at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.j
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at BasePage.Common_Utils.enterText(Common_Utils.java:78)
 at BasePage.Common_Utils.login(Common_Utils.java:159)
-at testCases_PAS.PAS_Appointment_Booking.pasAppointmentDelete(PAS_Appointment_Booking.java:67)
+at testCases_PAS.PAS_Appointment_Booking.pasAppointmentDelete(PAS_Appointment_Booking.java:73)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -177,9 +177,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7c24bb286cdb326b1d323805d070007a, findElement {using=xpath, value=//input[@formcontrolname='email']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59882}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59882/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7c24bb286cdb326b1d323805d070007a
+Command: [e3581af8e0e308ccf0d8ea7eb97fc74c, findElement {value=//input[@formcontrolname='email'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64420}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64420/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e3581af8e0e308ccf0d8ea7eb97fc74c
 at jdk.internal.reflect.GeneratedConstructorAccessor14.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -211,7 +211,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pasAppointmentDelete -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-18T02:33:00 EDT" name="tearDown" finished-at="2025-09-18T02:33:01 EDT" duration-ms="1199" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_PAS.PAS_Appointment_Booking@6cf0e0ba]" started-at="2025-09-19T04:59:59 EDT" name="tearDown" finished-at="2025-09-19T04:59:59 EDT" duration-ms="498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
