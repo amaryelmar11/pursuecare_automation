@@ -3,15 +3,15 @@
 <suite name="Suite" thread-count="5">
     <parameter name="browser" value="chrome"/>
 
-    
+   <!-- 
     <listeners>
         <listener class-name="utilities.ExtentSparkManager"/>
     </listeners>
-    
+    -->
 
     <test name="Provider Tests">
         <classes>
-            <class name="testCases_Provider.CalendarFiltersValidations"/> 
+            <class name="testCases_Provider.Provider_Availability"/> 
         <!--    <class name="testCases_Provider.Login_Validations"/>   
             <class name="testCases_Provider.Forgot_Password_Provider"/> 
             <class name="testCases_Provider.Patient_Creation"/>

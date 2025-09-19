@@ -2,10 +2,11 @@ package PageObjectClass;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
 import java.util.Locale;
+import java.util.List;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.ListDocument.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,6 +45,9 @@ public class Provider_Availability_Page extends BasePageClass{
     @FindBy(xpath="//span[normalize-space()='Set']")
     public WebElement ClickOnSetStartTime;
 
+    @FindBy(xpath="//input[@formcontrolname='slotEndTime']")
+    public WebElement ClickONEndTimeTimeSlot;
+
     @FindBy(xpath="//button[@aria-label='Add a hour']//span[@class='owl-dt-control-button-content']//*[name()='svg']")
     public WebElement ClickOnAddHourArrow;
 
@@ -59,46 +63,58 @@ public class Provider_Availability_Page extends BasePageClass{
     @FindBy(xpath="//mat-icon[@role='button']")
     public WebElement DeleteslotBtn;
 
-    public static void clickCurrentDay(WebDriver driver, By ulLocator) {
-        // Get today's day name (e.g., MONDAY → "Monday")
-        String today = LocalDate.now().getDayOfWeek().toString(); 
-        today = today.substring(0, 1) + today.substring(1).toLowerCase(); // Format: "Monday"
+    // Add slot for the multiple days
 
-        // Find all <li> inside the given <ul>
-        WebElement ulElement = driver.findElement(ulLocator);
-        java.util.List<WebElement> liElements = ulElement.findElements(By.tagName("li"));
 
-        // Loop through li elements and click the one matching today
-        for (WebElement li : liElements) {
-            String dayText = li.getText().trim();
-            if (dayText.equalsIgnoreCase(today)) {
-                li.click();
-                System.out.println("Clicked on: " + dayText);
-                return;
+
+    public void clickTodayAndTomorrow() {
+        // Get today's and tomorrow's day name (e.g., Sunday, Monday)
+        LocalDate today = LocalDate.now();
+        LocalDate tomorrow = today.plusDays(1);
+    
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE"); // full day name
+        String todayDay = today.format(formatter);
+        String tomorrowDay = tomorrow.format(formatter);
+    
+        // Build the XPaths dynamically
+        WebElement todayElement = driver.findElement(By.xpath("//span[normalize-space()='" + todayDay + "']"));
+        WebElement tomorrowElement = driver.findElement(By.xpath("//span[normalize-space()='" + tomorrowDay + "']"));
+    
+        // Click both
+        todayElement.click();
+        //TEsting
+        tomorrowElement.click();
+    }
+    
+
+    public void DeleteMultipleSlots() {
+        // Get today's and tomorrow's day names
+        LocalDate today = LocalDate.now();
+        LocalDate tomorrow = today.plusDays(1);
+    
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE"); // Sunday, Monday...
+        String todayDay = today.format(formatter);
+        String tomorrowDay = tomorrow.format(formatter);
+    
+        // Collect all the <li>/a elements
+        List<WebElement> daysList = driver.findElements(
+            By.xpath("//div[@class='card schedule-widget']/div/div/ul/li/a")
+        );
+    
+        for (WebElement dayElement : daysList) {
+            String dayText = dayElement.getText().trim();
+    
+            if (dayText.equalsIgnoreCase(todayDay) || dayText.equalsIgnoreCase(tomorrowDay)) {
+                // Click the day first
+                dayElement.click();
+    
+                // After clicking the day, click on the mat-icon
+                WebElement matIcon = driver.findElement(By.xpath("//mat-icon[@role='button']"));
+                matIcon.click();
             }
         }
-
-        throw new RuntimeException("No matching day found for today: " + today);
     }
-
-    public void clickDay(boolean isTomorrow) {
-        // Get today or tomorrow
-        LocalDate date = LocalDate.now();
-        if (isTomorrow) {
-            date = date.plusDays(1);
-        }
     
-        // Get the day name (e.g., Sunday, Monday)
-        DayOfWeek dayOfWeek = date.getDayOfWeek();
-        String dayName = dayOfWeek.getDisplayName(TextStyle.FULL, Locale.ENGLISH);
-    
-        // Build XPath dynamically
-        String xpath = String.format("//span[normalize-space()='%s']", dayName);
-        System.out.println("Clicking day: " + dayName + " | XPath: " + xpath);
-    
-        WebElement dayElement = driver.findElement(By.xpath(xpath));
-        dayElement.click();
-    }
 }
     
 
