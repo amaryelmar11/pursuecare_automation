@@ -138,6 +138,4 @@ public class Patient_Creation_Page extends BasePageClass{
     }
 
 
-
-
 }
