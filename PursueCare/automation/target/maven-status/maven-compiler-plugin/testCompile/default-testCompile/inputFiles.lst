@@ -13,6 +13,7 @@ C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\
 C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Admin\Login_Admin.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\BasePage\BasePageClass.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\utilities\DataProviders.java
+C:\pursuecare_automation\PursueCare\automation\src\test\java\PageObjectClass\ProviderZoomSessionPage.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\PageObjectClass\TimeBlockPage.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_PAS\PAS_Appointment_Booking.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\Appointment_Schedule_PopUp_Validations.java
@@ -22,6 +23,7 @@ C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\
 C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\TimeBlockRecurring.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\Appointment_Booking_Available_Section.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\PageObjectClass\DashBoardPage.java
+C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\Provider_Zoom_Session_EndToEnd.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\BasePage\RandomData.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\CalendarFiltersValidations.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\PageObjectClass\Provider_Availability_Page.java
@@ -37,3 +39,4 @@ C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\
 C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\Login_Provider.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\PageObjectClass\Patient_Creation_Page.java
 C:\pursuecare_automation\PursueCare\automation\src\test\java\PageObjectClass\ProviderAppointmentsPage.java
+C:\pursuecare_automation\PursueCare\automation\src\test\java\testCases_Provider\Provider_ZoomSession_Checks.java
