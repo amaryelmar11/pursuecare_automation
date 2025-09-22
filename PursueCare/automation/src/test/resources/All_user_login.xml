@@ -5,8 +5,8 @@
 
     
 
-    <!-- for extent report -->
-    <!-- <listeners>
+    <!-- for extent report 
+     <listeners>
         <listener class-name="utilities.ExtentSparkManager"/>
     </listeners> -->
     
@@ -18,7 +18,7 @@
             <class name="testCases_Case.Login_Case"/>
             <class name="testCases_Provider.Login_Provider"/>
             <class name="testCases_Patient.Login_Patient"/> -->
-            <class name="testCases_PAS.PAS_Appointment_Booking"/>
+            <class name="testCases_Provider.Provider_Zoom_Session_EndToEnd"/>
 
 
         </classes>

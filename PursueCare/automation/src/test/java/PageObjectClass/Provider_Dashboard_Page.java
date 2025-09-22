@@ -100,6 +100,8 @@ public class Provider_Dashboard_Page extends BasePageClass{
     @FindBy(xpath="//div[@class='table-responsive'][1]//table[1]/tbody/tr/td[9]")
     public WebElement ProviderAppointmentTime;
 
+   
+
 
 
 

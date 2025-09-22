@@ -8,6 +8,7 @@ PageObjectClass\Patient_Creation_Page.class
 BaseClass\Baseclass.class
 testCases_Provider\RecurringAppBooking_WeekelyType.class
 testCases_Provider\ProviderDoubleBookingAppointment.class
+PageObjectClass\ProviderZoomSessionPage.class
 testCases_Case\Login_Case.class
 BasePage\BasePageClass.class
 BasePage\Common_Utils.class
@@ -20,6 +21,7 @@ PageObjectClass\ProviderAppointmentsPage.class
 PageObjectClass\Provider_Availability_Page.class
 testCases_Provider\Forgot_Password_Provider.class
 testCases_Provider\Provider_Availability.class
+testCases_Provider\Provider_ZoomSession_Checks.class
 testCases_Provider\Provider_Chat.class
 testCases_Provider\TimeBlockRecurring.class
 testCases_Provider\CalendarFiltersValidations.class
@@ -36,4 +38,5 @@ testCases_Provider\Provider_DashBoard_Checks.class
 testCases_Provider\Remember_Me.class
 testCases_Patient\Login_Patient.class
 utilities\DataProviders.class
+testCases_Provider\Provider_Zoom_Session_EndToEnd.class
 testCases_Admin\Login_Admin.class

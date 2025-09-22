@@ -13,6 +13,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 import java.util.List;
 import org.openqa.selenium.NoSuchElementException;
 import PageObjectClass.LoginPage;
@@ -164,6 +166,54 @@ public void login(LoginPage loginPage, String username, String password) {
 public void pressEscape() {
     Actions actions = new Actions(driver);
     actions.sendKeys(Keys.ESCAPE).perform();
+}
+
+//Click On Join Zoom Session
+
+
+public void clickJoinMeetingprovider(String startTime) {
+    List<WebElement> rows = driver.findElements(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr"));
+    System.out.println(rows.size());
+
+    boolean app = false;
+    for (int i = 1; i <= rows.size(); i++) {
+        String value = driver
+                .findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[9][1]"))
+                .getText();
+
+        if (value.contains(startTime)) {
+            driver.findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[12]"))
+                    .click();
+            app = true;
+            Assert.assertTrue(app);
+            break;
+        }
+
+    }
+
+}
+
+
+public void clickJoinMeetingPatient(String startTime) {
+    List<WebElement> rows = driver.findElements(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr"));
+    System.out.println(rows.size());
+
+    boolean app = false;
+    for (int i = 1; i <= rows.size(); i++) {
+        String value = driver
+                .findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[4]"))
+                .getText();
+        System.out.println(value);
+        if (value.contains(startTime)) {
+            driver.findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[7]"))
+                    .click();
+            app = true;
+            Assert.assertTrue(app);
+            break;
+        }
+
+    }
+
 }
 
 }
