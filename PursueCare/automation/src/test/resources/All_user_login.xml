@@ -18,7 +18,15 @@
             <class name="testCases_Case.Login_Case"/>
             <class name="testCases_Provider.Login_Provider"/>
             <class name="testCases_Patient.Login_Patient"/> -->
-            <class name="testCases_Provider.Provider_Zoom_Session_EndToEnd"/>
+            <!-- <class name="testCases_Provider.Provider_Zoom_Session_EndToEnd"/> -->
+            <!-- <class name="testCases_Provider.Provider_ZoomSession_Checks"/> -->
+            <!-- <class name="testCases_PAS.PAS_Appointment_Booking"/> -->
+            <!-- <class name="testCases_Provider.Patient_Creation"/> -->
+            <!-- <class name="testCases_Patient.Patient_Role_Actions"/> -->
+      <!-- <class name="testCases_Case.CM_Role_Menu_Visibility"/>  -->
+  <class name="testCases_Case.Patient_Creation"/> 
+     
+
 
 
         </classes>

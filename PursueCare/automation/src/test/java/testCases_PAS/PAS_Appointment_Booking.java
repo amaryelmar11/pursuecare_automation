@@ -47,6 +47,7 @@ public class PAS_Appointment_Booking extends Baseclass{
 
         cu.click(pa.selectHost);
         new Actions(driver).sendKeys(Keys.ENTER).perform();
+
         cu.click(pa.selectPatient);
         cu.enterText(pa.inputPatientName, p.getProperty("PASPatientSearch"));
         cu.click(pa.setVisiblePatient);
