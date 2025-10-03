@@ -25,11 +25,17 @@ public class PAS_Appointment_Booking extends Baseclass{
         pa = new ProviderAppointmentsPage(driver);
     }
 
+    
+
+ 
     @Test(priority = 1)
     public void appointmentBooking() throws InterruptedException
     {
         cu.login(lp, p.getProperty("pas"), p.getProperty("pass"));
-        cu.click(pa.selectAppointmentDash);
+        Thread.sleep(2000);
+        cu.click(pa.clickCareTeamDash);
+        Thread.sleep(2000);
+        cu.click(pa.clickAppointmentsPASCM);
         WebElement todayCell = pa.getTodayAppXpath();
         cu.click(todayCell);
         Thread.sleep(2000);
@@ -41,8 +47,9 @@ public class PAS_Appointment_Booking extends Baseclass{
 
         cu.click(pa.selectHost);
         new Actions(driver).sendKeys(Keys.ENTER).perform();
+
         cu.click(pa.selectPatient);
-        cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch"));
+        cu.enterText(pa.inputPatientName, p.getProperty("PASPatientSearch"));
         cu.click(pa.setVisiblePatient);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 

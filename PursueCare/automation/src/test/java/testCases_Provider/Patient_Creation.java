@@ -45,8 +45,8 @@ public class Patient_Creation extends Baseclass{
         cu.click(pc.addPatient);
 
         
-        cu.enterText(pc.add_pat_Email, createdPatientEmail);
-        Thread.sleep(2000);
+      //  cu.enterText(pc.add_pat_Email, createdPatientEmail);
+       // Thread.sleep(2000);
         //driver.switchTo().activeElement().sendKeys(Keys.TAB);
 
         cu.click(pc.add_pat_Timezone);

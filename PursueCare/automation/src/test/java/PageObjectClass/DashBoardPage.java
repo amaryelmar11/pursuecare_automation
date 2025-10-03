@@ -84,8 +84,12 @@ public class DashBoardPage extends BasePageClass{
 	public WebElement ClickOnDeletePatient; 
 
 
-
+  // Related to the zoom Session
+    @FindBy(xpath="//span[normalize-space()='Dashboard']")
+    public WebElement ClickOnDashboardHome; 
     
+    @FindBy(xpath = "//div[@class='sidebar-userpic-name']")
+	public WebElement getProviderNameDash;
 
     public String dashBoardtext()
     {
