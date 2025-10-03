@@ -177,6 +177,14 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	public WebElement ClickAllRecurringMeetingChkbx;
 
 
+	//PAS & CM Appointment Booking Xpaths
+	@FindBy(xpath="//a[normalize-space()='Appointments']")
+	public WebElement clickAppointmentsPASCM;
+	@FindBy(xpath="//span[@class='mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c1771602899-59 ng-star-inserted']")
+	public WebElement clickpatientsearchASCM;
+
+	
+
 	//Schedule Popup Validations
 
 	@FindBy(xpath="//strong[normalize-space()='Patient name is required.']")

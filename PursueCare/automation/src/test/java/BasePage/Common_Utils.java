@@ -13,7 +13,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.openqa.selenium.NoSuchElementException;
 import PageObjectClass.LoginPage;
 
@@ -164,6 +170,90 @@ public void login(LoginPage loginPage, String username, String password) {
 public void pressEscape() {
     Actions actions = new Actions(driver);
     actions.sendKeys(Keys.ESCAPE).perform();
+}
+
+//Click On Join Zoom Session
+
+
+public void clickJoinMeetingprovider(String startTime) {
+    List<WebElement> rows = driver.findElements(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr"));
+    System.out.println(rows.size());
+
+    boolean app = false;
+    for (int i = 1; i <= rows.size(); i++) {
+        String value = driver
+                .findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[9][1]"))
+                .getText();
+
+        if (value.contains(startTime)) {
+            driver.findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[12]"))
+                    .click();
+            app = true;
+            Assert.assertTrue(app);
+            break;
+        }
+
+    }
+
+}
+
+
+public void clickJoinMeetingPatient(String startTime) {
+    List<WebElement> rows = driver.findElements(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr"));
+    System.out.println(rows.size());
+
+    boolean app = false;
+    for (int i = 1; i <= rows.size(); i++) {
+        String value = driver
+                .findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[4]"))
+                .getText();
+        System.out.println(value);
+        if (value.contains(startTime)) {
+            driver.findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[7]"))
+                    .click();
+            app = true;
+            Assert.assertTrue(app);
+            break;
+        }
+
+    }
+
+}
+
+public static boolean isColumnSorted(List<WebElement> columnElements, String order) {
+    // Extract text from column elements
+    List<String> actualList = columnElements.stream()
+            .map(e -> e.getText().trim())
+            .filter(s -> !s.isEmpty()) // remove blanks
+            .collect(Collectors.toList());
+
+    // Make a copy for sorting
+    List<String> sortedList = new ArrayList<>(actualList);
+
+    // Try numeric sorting first, if fails fallback to string sorting
+    try {
+        List<Double> actualNumbers = actualList.stream()
+                .map(Double::parseDouble)
+                .collect(Collectors.toList());
+
+        List<Double> sortedNumbers = new ArrayList<>(actualNumbers);
+
+        if (order.equalsIgnoreCase("asc")) {
+            Collections.sort(sortedNumbers);
+        } else {
+            Collections.sort(sortedNumbers, Collections.reverseOrder());
+        }
+        return actualNumbers.equals(sortedNumbers);
+
+    } catch (NumberFormatException e) {
+        // Non-numeric → sort alphabetically
+        if (order.equalsIgnoreCase("asc")) {
+            Collections.sort(sortedList, String.CASE_INSENSITIVE_ORDER);
+        } else {
+            Collections.sort(sortedList, String.CASE_INSENSITIVE_ORDER.reversed());
+        }
+        return actualList.equals(sortedList);
+    }
 }
 
 }

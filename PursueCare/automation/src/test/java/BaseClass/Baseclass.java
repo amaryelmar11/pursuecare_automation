@@ -16,6 +16,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -43,7 +44,11 @@ public class Baseclass {
 
         switch (br.toLowerCase())
          {
-            case "chrome": driver = new ChromeDriver();
+            case "chrome": 
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("--start-maximized");
+                options.addArguments("--force-device-scale-factor=0.7");
+                driver = new ChromeDriver();
                 break;
             case "firefox": driver = new FirefoxDriver();
                 break;
@@ -53,6 +58,10 @@ public class Baseclass {
             default: System.out.println("Invalid browser");
                 return;
         }
+
+        // Running Script for the 70% max screen zoom size
+
+       
 
         driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
