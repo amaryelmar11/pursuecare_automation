@@ -5,11 +5,13 @@ import java.util.Set;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import BaseClass.Baseclass;
 import BasePage.Common_Utils;
+import PageObjectClass.Appointment_Report_Page;
 import PageObjectClass.DashBoardPage;
 import PageObjectClass.LoginPage;
 import PageObjectClass.ProviderAppointmentsPage;
@@ -24,6 +26,7 @@ public class Provider_Zoom_Session_EndToEnd extends Baseclass{
 	private Provider_Dashboard_Page pd;
     private DashBoardPage dp;
     private ProviderZoomSessionPage pz;
+    private Appointment_Report_Page pr;
 
     
 
@@ -35,6 +38,7 @@ public class Provider_Zoom_Session_EndToEnd extends Baseclass{
 		pd = new Provider_Dashboard_Page(driver);
         dp = new DashBoardPage(driver);
         pz = new ProviderZoomSessionPage(driver);
+        pr = new Appointment_Report_Page(driver);
 	}
 
     @Test(priority = 1)
@@ -133,6 +137,19 @@ public class Provider_Zoom_Session_EndToEnd extends Baseclass{
             driver.switchTo().window(mainwindowHandle);
 
             cu.logout(lp);
+
+            cu.login(lp, p.getProperty("provider2"), p.getProperty("password2"));
+
+            cu.click(pd.ClickReportsDash);   
+            cu.click(pd.ClickAppointmentReportDash);  
+
+            cu.click(pr.clickSelectPatientFilter);
+            cu.enterText(pr.SearchPatientInput, p.getProperty("PatientSearch1"));
+            cu.click(pr.clickCheckbxPatientSelect);
+            driver.switchTo().activeElement().sendKeys(Keys.ESCAPE);
+            cu.click(pr.clickAppointmentReportSearch);
+            Thread.sleep(2000);
+            Assert.assertEquals("Completed Successfully", cu.getElementText(pr.AppointmentCompletionTxtZoomCheck));
 
     }
 }

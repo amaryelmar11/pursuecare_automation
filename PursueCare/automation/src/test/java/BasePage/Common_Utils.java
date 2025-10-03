@@ -15,7 +15,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.openqa.selenium.NoSuchElementException;
 import PageObjectClass.LoginPage;
 
@@ -214,6 +218,42 @@ public void clickJoinMeetingPatient(String startTime) {
 
     }
 
+}
+
+public static boolean isColumnSorted(List<WebElement> columnElements, String order) {
+    // Extract text from column elements
+    List<String> actualList = columnElements.stream()
+            .map(e -> e.getText().trim())
+            .filter(s -> !s.isEmpty()) // remove blanks
+            .collect(Collectors.toList());
+
+    // Make a copy for sorting
+    List<String> sortedList = new ArrayList<>(actualList);
+
+    // Try numeric sorting first, if fails fallback to string sorting
+    try {
+        List<Double> actualNumbers = actualList.stream()
+                .map(Double::parseDouble)
+                .collect(Collectors.toList());
+
+        List<Double> sortedNumbers = new ArrayList<>(actualNumbers);
+
+        if (order.equalsIgnoreCase("asc")) {
+            Collections.sort(sortedNumbers);
+        } else {
+            Collections.sort(sortedNumbers, Collections.reverseOrder());
+        }
+        return actualNumbers.equals(sortedNumbers);
+
+    } catch (NumberFormatException e) {
+        // Non-numeric → sort alphabetically
+        if (order.equalsIgnoreCase("asc")) {
+            Collections.sort(sortedList, String.CASE_INSENSITIVE_ORDER);
+        } else {
+            Collections.sort(sortedList, String.CASE_INSENSITIVE_ORDER.reversed());
+        }
+        return actualList.equals(sortedList);
+    }
 }
 
 }
