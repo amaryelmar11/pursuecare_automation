@@ -1,5 +1,7 @@
 package PageObjectClass;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Random;
 
@@ -141,7 +143,7 @@ public class CM_Role extends BasePageClass{
     @FindBy(xpath="//div[@aria-multiselectable='false']/mat-option[2]")
     public WebElement InterpreterPrefLanguageselection;
 
-    @FindBy(xpath="//button[.//span[normalize-space(text())='Save']]")
+    @FindBy(xpath="//button[@type='onSubmit(){}']")
     public WebElement Save_Patient_Info;
 
     // Add Patient modal close (X/Close) button
@@ -246,6 +248,9 @@ public class CM_Role extends BasePageClass{
     @FindBy(xpath = "//button[@aria-label='Clear filters']//span[@class='mat-mdc-button-touch-target']")
     public WebElement Clear_filter;
 
+    //New Mandatory Field DOB
+    @FindBy(xpath = "//button[@aria-label='Open calendar']")
+    public WebElement ClickDatePatientCreation;
 
 
     public void selectRandomState() {
@@ -257,4 +262,21 @@ public class CM_Role extends BasePageClass{
         options.get(index).click();
     }
     
+    public void BlockclickDateAfterXDaysPASCM(WebDriver driver, int daysToAdd, String datePattern) {
+        // Step 1: Calculate target date
+        LocalDate targetDate = LocalDate.now().plusDays(daysToAdd);
+    
+        // Step 2: Format using the given pattern (e.g., "MMMM d, yyyy")
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(datePattern);
+        String dateToClick = targetDate.format(formatter);
+        System.out.println(dateToClick);
+        // Step 3: Build dynamic XPath
+        String xpath = "//button[@aria-label='" + dateToClick + "']/span";
+        System.out.println(xpath);
+        // Step 4: Locate and click
+        WebElement element = driver.findElement(By.xpath(xpath));
+        element.click();
+    
+        System.out.println("Clicked on date: " + dateToClick);
+    }
 }

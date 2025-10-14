@@ -146,7 +146,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <version>3.2.5</version>
 <configuration>
 <suiteXmlFiles>
-<suiteXmlFile>src/test/resources/Master.xml</suiteXmlFile>
+<suiteXmlFile>src/test/resources/All_user_login.xml</suiteXmlFile>
 </suiteXmlFiles>
 <systemPropertyVariables>
 <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>

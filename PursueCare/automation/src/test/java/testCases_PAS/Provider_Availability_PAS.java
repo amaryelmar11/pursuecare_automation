@@ -67,14 +67,13 @@ public class Provider_Availability_PAS extends Baseclass{
     cu.click(pd.ClickCancelBtn);
 
     cu.click(pl.ClickRefreshFilter);
-    cu.click(pl.GetAddPNewProvider);
-    Assert.assertEquals(pd.GetAvailabilityScheduleText, "Availability Schedule");
+    cu.click(pl.ClickAddItemBtn);
+    Assert.assertEquals(cu.getElementText(pd.GetAvailabilityScheduleText), "Availability Schedule");
 
     cu.click(pl.ClickProviderDash);
     cu.click(pd.ClickProviderAvailDash);
 
     cu.click(pd.ClickExportToExcel);
-
-
+    
     }
 }

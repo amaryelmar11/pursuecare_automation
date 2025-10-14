@@ -38,6 +38,7 @@ PageObjectClass\Patient_Satisfaction_Report_Page.class
 testCases_Case\Login_Case.class
 BasePage\BasePageClass.class
 PageObjectClass\PAS_Availability_Page.class
+testCases_Case\Provider_list.class
 testCases_Provider\Appointment_Booking_Available_Section.class
 PageObjectClass\No_Show_Report_Page.class
 testCases_Provider\Provider_Timezone_Option.class
@@ -60,3 +61,4 @@ testCases_Patient\Login_Patient.class
 utilities\DataProviders.class
 testCases_PAS\PAS_Availability.class
 testCases_Provider\Appointment_Confirmation_Report.class
+testCases_PAS\Patient_List_Page.class

@@ -32,12 +32,6 @@ public class CM_Appointment_booking extends Baseclass{
     
     }
 
-
-
-
-
-
-
         @Test(priority = 1)
         public void CM_Appointment_booking_flow() throws InterruptedException
         {

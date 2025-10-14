@@ -330,10 +330,10 @@ public void BlockclickDateAfterXDays(WebDriver driver, int daysToAdd, String dat
     // Step 2: Format using the given pattern (e.g., "MMMM d, yyyy")
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern(datePattern);
     String dateToClick = targetDate.format(formatter);
-
+	System.out.println(dateToClick);
     // Step 3: Build dynamic XPath
     String xpath = "//button[@aria-label='" + dateToClick + "']";
-
+	System.out.println(xpath);
     // Step 4: Locate and click
     WebElement element = driver.findElement(By.xpath(xpath));
     element.click();
