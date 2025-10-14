@@ -23,7 +23,7 @@ public class Patient_Role_Actions extends Baseclass{
     }
 
     @Test(priority = 1)
-    public void patientRoleMenuNavigation() throws InterruptedException
+    public void Patient_actions() throws InterruptedException
     {
         cu.login(lp, p.getProperty("Patientaction"), p.getProperty("Patientactionpass"));
 

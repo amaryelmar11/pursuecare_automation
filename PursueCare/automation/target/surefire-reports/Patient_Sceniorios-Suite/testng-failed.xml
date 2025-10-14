@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Patient_Sceniorios-Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="utilities.ExtentSparkManager"/>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
+  <test thread-count="5" name="Patient Tests(failed)" verbose="0">
+    <classes>
+      <class name="testCases_Patient.Patient_Role_Actions">
+        <methods>
+          <include name="Patient_actions"/>
+          <include name="initPages"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases_Patient.Patient_Role_Actions -->
+    </classes>
+  </test> <!-- Patient Tests(failed) -->
+</suite> <!-- Failed suite [Patient_Sceniorios-Suite] -->

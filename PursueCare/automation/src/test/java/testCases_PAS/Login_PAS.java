@@ -9,8 +9,9 @@ import PageObjectClass.LoginPage;
 
 public class Login_PAS extends Baseclass{
 
-    @Test(priority = 1)
-    public void correctdetails() throws InterruptedException
+ 
+    @Test(testName="PAS User Login")
+    public void Patient_access_specialist_login() throws InterruptedException
     {
         LoginPage lp = new LoginPage(driver);
         lp.enterEmailId(p.getProperty("pas"));

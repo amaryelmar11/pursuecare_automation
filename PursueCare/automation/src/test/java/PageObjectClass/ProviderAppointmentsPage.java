@@ -48,7 +48,7 @@ public class ProviderAppointmentsPage extends BasePageClass{
 
    
 
-	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[2]/div[1]/mat-dialog-container[1]/div[1]/div[1]/app-multiple-user-appointment-add[1]/div[1]/div[2]/form[1]/div[7]/div[1]/div[2]/mat-form-field[1]/div[1]/div[2]/div[1]/mat-select[1]/div[1]/div[1]/span[1]")
+	@FindBy(xpath = "//mat-select[@formcontrolname='patientNameControl']")
 	public WebElement selectPatient;
 
 	@FindBy(xpath = "//input[@placeholder='Search patients...']")
@@ -211,6 +211,20 @@ public class ProviderAppointmentsPage extends BasePageClass{
 		String xpath = "//td[normalize-space()='" + currentDate + "' and contains(@class, 'fc-day-today')]";
 		return driver.findElement(By.xpath(xpath));
 	}
+
+	//today xpath CM & PAS
+	public WebElement getTodayAppXpathCM_PAS() {
+
+	
+		String currentDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+	
+		String xpath = "//td[@data-date='" + currentDate + "' and contains(@class, 'fc-day-today')]";
+	
+		return driver.findElement(By.xpath(xpath));
+	
+	}
+	
+	 
 
 
 	// Clicking on the available Section Of the Calendar
