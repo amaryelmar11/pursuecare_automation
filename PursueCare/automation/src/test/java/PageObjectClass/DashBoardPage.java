@@ -83,6 +83,11 @@ public class DashBoardPage extends BasePageClass{
     @FindBy(xpath="//ul[@class='dropdown-menu show']/li[7]/a")
 	public WebElement ClickOnDeletePatient; 
 
+    // Care Team Related
+    @FindBy(xpath="//span[normalize-space()='Care Team']")
+	public WebElement ClickOnCareTeamDash; 
+
+
 
   // Related to the zoom Session
     @FindBy(xpath="//span[normalize-space()='Dashboard']")

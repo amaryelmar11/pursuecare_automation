@@ -1,11 +1,13 @@
 PageObjectClass\Provider_Dashboard_Page.class
 testCases_Provider\Provider_Chat_Advanced.class
+testCases_PAS\Provider_Availability_PAS.class
 testCases_Provider\Appointment_Report_Checks.class
 testCases_Provider\RecurringAppBooking_WeekelyType.class
 testCases_Provider\ProviderDoubleBookingAppointment.class
 PageObjectClass\ProviderZoomSessionPage.class
 testCases_Case\Patient_Creation.class
 BasePage\Common_Utils.class
+PageObjectClass\Provider_List_Page.class
 testCases_Provider\Provider_Appointment_Booking.class
 PageObjectClass\Appointment_Confirmation_Report_Page.class
 testCases_Case\CM_Role_Menu_Visibility.class
@@ -28,10 +30,12 @@ testCases_PAS\PAS_Appointment_Booking.class
 testCases_Provider\Patient_Creation.class
 PageObjectClass\Patient_Creation_Page.class
 BaseClass\Baseclass.class
+testCases_PAS\Provider_List_PAS.class
 PageObjectClass\Patient_Role.class
 PageObjectClass\Patient_Satisfaction_Report_Page.class
 testCases_Case\Login_Case.class
 BasePage\BasePageClass.class
+PageObjectClass\PAS_Availability_Page.class
 testCases_Provider\Appointment_Booking_Available_Section.class
 PageObjectClass\No_Show_Report_Page.class
 testCases_Provider\Provider_Timezone_Option.class
@@ -52,4 +56,5 @@ testCases_Provider\Login_Validations.class
 PageObjectClass\Appointment_Report_Page.class
 testCases_Patient\Login_Patient.class
 utilities\DataProviders.class
+testCases_PAS\PAS_Availability.class
 testCases_Provider\Appointment_Confirmation_Report.class

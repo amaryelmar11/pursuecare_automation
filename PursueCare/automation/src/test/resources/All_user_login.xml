@@ -24,7 +24,7 @@
             <!-- <class name="testCases_Provider.Patient_Creation"/> -->
             <!-- <class name="testCases_Patient.Patient_Role_Actions"/> -->
       <!-- <class name="testCases_Case.CM_Role_Menu_Visibility"/>  -->
-        <class name="testCases_Provider.Provider_Appointment_Booking"/> 
+        <class name="testCases_PAS.Provider_Availability_PAS"/> 
      
 
 

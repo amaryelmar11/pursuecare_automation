@@ -1,0 +1,43 @@
+# -------------------------
+# Java Selenium POM Framework Git Ignore
+# -------------------------
+
+# Maven build output
+target/
+
+# Test reports (TestNG, ExtentReports, Surefire, Custom)
+reports/
+test-output/
+surefire-reports/
+extent-reports/
+output/
+report-output/
+emailable-report.html
+testng-failed.xml
+
+# Screenshots captured during tests
+screenshots/
+*.png
+*.jpg
+
+# Logs
+*.log
+logs/
+
+# IntelliJ IDEA / Eclipse / VS Code project files
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Temporary / swap files
+*.tmp
+*.swp
+
+target/
