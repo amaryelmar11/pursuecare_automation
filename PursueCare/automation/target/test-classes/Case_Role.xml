@@ -4,11 +4,10 @@
     <parameter name="browser" value="chrome"/>
 
     
-<!-- 
-    for extent report 
-     <listeners>
+    <listeners>
         <listener class-name="utilities.ExtentSparkManager"/>
-    </listeners> -->
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
     
 
     <test name="PAS User Role Tests">

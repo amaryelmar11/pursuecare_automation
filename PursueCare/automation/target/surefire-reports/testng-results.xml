@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="16" passed="14" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-14T04:22:51 EDT" name="Case_Manager_Sceniorios-Suite" finished-at="2025-10-14T04:29:38 EDT" duration-ms="407589">
+  <suite started-at="2025-10-14T05:26:34 EDT" name="Case_Manager_Sceniorios-Suite" finished-at="2025-10-14T05:35:35 EDT" duration-ms="541481">
     <groups>
     </groups>
-    <test started-at="2025-10-14T04:22:51 EDT" name="PAS User Role Tests" finished-at="2025-10-14T04:29:38 EDT" duration-ms="407589">
+    <test started-at="2025-10-14T05:26:34 EDT" name="PAS User Role Tests" finished-at="2025-10-14T05:35:35 EDT" duration-ms="541481">
       <class name="testCases_Case.Login_Case">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Login_Case@5b7a5baa]" started-at="2025-10-14T04:22:51 EDT" name="setup" finished-at="2025-10-14T04:23:10 EDT" duration-ms="19717" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Login_Case@50378a4]" started-at="2025-10-14T05:26:34 EDT" name="setup" finished-at="2025-10-14T05:27:13 EDT" duration-ms="38652" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Login_Case@5b7a5baa]" started-at="2025-10-14T04:23:10 EDT" name="setUp" finished-at="2025-10-14T04:23:10 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Login_Case@50378a4]" started-at="2025-10-14T05:27:13 EDT" name="setUp" finished-at="2025-10-14T05:27:13 EDT" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -29,17 +29,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Case_login()[pri:0, instance:testCases_Case.Login_Case@5b7a5baa]" started-at="2025-10-14T04:23:10 EDT" name="Case_login" finished-at="2025-10-14T04:23:18 EDT" duration-ms="7911" status="PASS">
+        <test-method signature="Case_login()[pri:0, instance:testCases_Case.Login_Case@50378a4]" started-at="2025-10-14T05:27:13 EDT" name="Case_login" finished-at="2025-10-14T05:27:24 EDT" duration-ms="11813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Case_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Login_Case@5b7a5baa]" started-at="2025-10-14T04:23:18 EDT" name="tearDown" finished-at="2025-10-14T04:23:19 EDT" duration-ms="878" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Login_Case@50378a4]" started-at="2025-10-14T05:27:24 EDT" name="tearDown" finished-at="2025-10-14T05:27:25 EDT" duration-ms="670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases_Case.Login_Case -->
       <class name="testCases_Case.Patient_Creation">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:26:19 EDT" name="setup" finished-at="2025-10-14T04:26:28 EDT" duration-ms="9261" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:30:44 EDT" name="setup" finished-at="2025-10-14T05:31:35 EDT" duration-ms="50727" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,15 +50,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:26:28 EDT" name="initPages" finished-at="2025-10-14T04:26:28 EDT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:31:35 EDT" name="initPages" finished-at="2025-10-14T05:31:35 EDT" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="Patient_Creation_by_CM()[pri:1, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:26:28 EDT" name="Patient_Creation_by_CM" finished-at="2025-10-14T04:27:29 EDT" duration-ms="60408" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Patient_Creation_by_CM -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:26:28 EDT" name="setUp" finished-at="2025-10-14T04:26:28 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:31:35 EDT" name="setUp" finished-at="2025-10-14T05:31:35 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,11 +65,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Check_Patient_Created()[pri:2, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:29 EDT" name="Check_Patient_Created" finished-at="2025-10-14T04:27:31 EDT" duration-ms="2811" status="PASS">
+        <test-method signature="Patient_Creation_by_CM()[pri:1, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:31:35 EDT" name="Patient_Creation_by_CM" finished-at="2025-10-14T05:32:58 EDT" duration-ms="83064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Patient_Creation_by_CM -->
+        <test-method signature="Check_Patient_Created()[pri:2, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:32:58 EDT" name="Check_Patient_Created" finished-at="2025-10-14T05:33:01 EDT" duration-ms="2868" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Check_Patient_Created -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:29 EDT" name="setUp" finished-at="2025-10-14T04:27:29 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:32:58 EDT" name="setUp" finished-at="2025-10-14T05:32:58 EDT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -84,11 +84,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Verifying_Patient_Duplication()[pri:3, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:31 EDT" name="Verifying_Patient_Duplication" finished-at="2025-10-14T04:27:40 EDT" duration-ms="8112" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verifying_Patient_Duplication -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:31 EDT" name="setUp" finished-at="2025-10-14T04:27:31 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:33:01 EDT" name="setUp" finished-at="2025-10-14T05:33:01 EDT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,7 +95,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:40 EDT" name="setUp" finished-at="2025-10-14T04:27:40 EDT" duration-ms="1" status="PASS">
+        <test-method signature="Verifying_Patient_Duplication()[pri:3, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:33:01 EDT" name="Verifying_Patient_Duplication" finished-at="2025-10-14T05:33:10 EDT" duration-ms="9094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verifying_Patient_Duplication -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:33:10 EDT" name="setUp" finished-at="2025-10-14T05:33:10 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -110,11 +110,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="View_Edit_Patient_Assessment_Options()[pri:4, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:40 EDT" name="View_Edit_Patient_Assessment_Options" finished-at="2025-10-14T04:27:58 EDT" duration-ms="18087" status="PASS">
+        <test-method signature="View_Edit_Patient_Assessment_Options()[pri:4, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:33:10 EDT" name="View_Edit_Patient_Assessment_Options" finished-at="2025-10-14T05:33:36 EDT" duration-ms="25521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- View_Edit_Patient_Assessment_Options -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:58 EDT" name="setUp" finished-at="2025-10-14T04:27:58 EDT" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:33:36 EDT" name="setUp" finished-at="2025-10-14T05:33:36 EDT" duration-ms="31" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -125,17 +125,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Connected_User_To_New_Patient()[pri:5, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:58 EDT" name="Connected_User_To_New_Patient" finished-at="2025-10-14T04:28:10 EDT" duration-ms="12615" status="PASS">
+        <test-method signature="Connected_User_To_New_Patient()[pri:5, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:33:36 EDT" name="Connected_User_To_New_Patient" finished-at="2025-10-14T05:34:05 EDT" duration-ms="29677" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Connected_User_To_New_Patient -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:28:10 EDT" name="tearDown" finished-at="2025-10-14T04:28:11 EDT" duration-ms="392" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Patient_Creation@491b9b8]" started-at="2025-10-14T05:34:05 EDT" name="tearDown" finished-at="2025-10-14T05:34:12 EDT" duration-ms="6245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases_Case.Patient_Creation -->
       <class name="testCases_Case.CM_Appointment_booking">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:23:19 EDT" name="setup" finished-at="2025-10-14T04:23:37 EDT" duration-ms="18017" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.CM_Appointment_booking@60f00693]" started-at="2025-10-14T05:27:25 EDT" name="setup" finished-at="2025-10-14T05:27:46 EDT" duration-ms="20930" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -146,11 +146,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:23:37 EDT" name="initPages" finished-at="2025-10-14T04:23:37 EDT" duration-ms="23" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.CM_Appointment_booking@60f00693]" started-at="2025-10-14T05:27:46 EDT" name="initPages" finished-at="2025-10-14T05:27:46 EDT" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:23:37 EDT" name="setUp" finished-at="2025-10-14T04:23:37 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.CM_Appointment_booking@60f00693]" started-at="2025-10-14T05:27:46 EDT" name="setUp" finished-at="2025-10-14T05:27:46 EDT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -161,7 +161,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="CM_Appointment_booking_flow()[pri:1, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:23:37 EDT" name="CM_Appointment_booking_flow" finished-at="2025-10-14T04:24:33 EDT" duration-ms="55847" status="FAIL">
+        <test-method signature="CM_Appointment_booking_flow()[pri:1, instance:testCases_Case.CM_Appointment_booking@60f00693]" started-at="2025-10-14T05:27:46 EDT" name="CM_Appointment_booking_flow" finished-at="2025-10-14T05:28:43 EDT" duration-ms="56696" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-select[@formcontrolname='athenaApptType']' (tried for 20 second(s) with 500 milliseconds interval)]]>
@@ -170,7 +170,7 @@
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-select[@formcontrolname='athenaApptType']' (tried for 20 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at BasePage.Common_Utils.click(Common_Utils.java:52)
+at BasePage.Common_Utils.click(Common_Utils.java:56)
 at testCases_Case.CM_Appointment_booking.CM_Appointment_booking_flow(CM_Appointment_booking.java:64)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -211,9 +211,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [33816062aa48d6efa0ef12c7688057a9, findElement {value=//mat-select[@formcontrolname='athenaApptType'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54231}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54231/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 33816062aa48d6efa0ef12c7688057a9
+Command: [7cab7a462ce073f8076ce5655d2afc56, findElement {value=//mat-select[@formcontrolname='athenaApptType'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61886}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61886/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cab7a462ce073f8076ce5655d2afc56
 at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -245,13 +245,13 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CM_Appointment_booking_flow -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:24:33 EDT" name="tearDown" finished-at="2025-10-14T04:24:33 EDT" duration-ms="139" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.CM_Appointment_booking@60f00693]" started-at="2025-10-14T05:28:43 EDT" name="tearDown" finished-at="2025-10-14T05:28:44 EDT" duration-ms="652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases_Case.CM_Appointment_booking -->
       <class name="testCases_Case.CM_Role_Menu_Visibility">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:28:11 EDT" name="setup" finished-at="2025-10-14T04:28:36 EDT" duration-ms="25825" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@1a4927d6]" started-at="2025-10-14T05:34:12 EDT" name="setup" finished-at="2025-10-14T05:34:25 EDT" duration-ms="12999" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -262,11 +262,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:28:36 EDT" name="initPages" finished-at="2025-10-14T04:28:36 EDT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@1a4927d6]" started-at="2025-10-14T05:34:25 EDT" name="initPages" finished-at="2025-10-14T05:34:25 EDT" duration-ms="22" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:28:36 EDT" name="setUp" finished-at="2025-10-14T04:28:36 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@1a4927d6]" started-at="2025-10-14T05:34:25 EDT" name="setUp" finished-at="2025-10-14T05:34:25 EDT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,17 +277,17 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="CM_Role_Menu_Checks()[pri:1, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:28:36 EDT" name="CM_Role_Menu_Checks" finished-at="2025-10-14T04:29:38 EDT" duration-ms="61588" status="PASS">
+        <test-method signature="CM_Role_Menu_Checks()[pri:1, instance:testCases_Case.CM_Role_Menu_Visibility@1a4927d6]" started-at="2025-10-14T05:34:25 EDT" name="CM_Role_Menu_Checks" finished-at="2025-10-14T05:35:35 EDT" duration-ms="69999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CM_Role_Menu_Checks -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:29:38 EDT" name="tearDown" finished-at="2025-10-14T04:29:38 EDT" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@1a4927d6]" started-at="2025-10-14T05:35:35 EDT" name="tearDown" finished-at="2025-10-14T05:35:35 EDT" duration-ms="657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases_Case.CM_Role_Menu_Visibility -->
       <class name="testCases_Case.Provider_list">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:24:33 EDT" name="setup" finished-at="2025-10-14T04:24:51 EDT" duration-ms="17717" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Provider_list@79207381]" started-at="2025-10-14T05:28:44 EDT" name="setup" finished-at="2025-10-14T05:29:16 EDT" duration-ms="31763" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -298,15 +298,11 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:24:51 EDT" name="initPages" finished-at="2025-10-14T04:24:51 EDT" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.Provider_list@79207381]" started-at="2025-10-14T05:29:16 EDT" name="initPages" finished-at="2025-10-14T05:29:16 EDT" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method signature="Provider_list_view_and_filter()[pri:1, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:24:51 EDT" name="Provider_list_view_and_filter" finished-at="2025-10-14T04:26:19 EDT" duration-ms="87762" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Provider_list_view_and_filter -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:24:51 EDT" name="setUp" finished-at="2025-10-14T04:24:51 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Provider_list@79207381]" started-at="2025-10-14T05:29:16 EDT" name="setUp" finished-at="2025-10-14T05:29:16 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -317,23 +313,27 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:26:19 EDT" name="tearDown" finished-at="2025-10-14T04:26:19 EDT" duration-ms="151" status="PASS">
+        <test-method signature="Provider_list_view_and_filter()[pri:1, instance:testCases_Case.Provider_list@79207381]" started-at="2025-10-14T05:29:16 EDT" name="Provider_list_view_and_filter" finished-at="2025-10-14T05:30:44 EDT" duration-ms="88347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Provider_list_view_and_filter -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Provider_list@79207381]" started-at="2025-10-14T05:30:44 EDT" name="tearDown" finished-at="2025-10-14T05:30:44 EDT" duration-ms="193" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases_Case.Provider_list -->
     </test> <!-- PAS User Role Tests -->
   </suite> <!-- Case_Manager_Sceniorios-Suite -->
-  <suite started-at="2025-10-14T04:31:02 EDT" name="End2End Automation Suite" finished-at="2025-10-14T04:31:02 EDT" duration-ms="0">
+  <suite started-at="2025-10-14T05:36:20 EDT" name="End2End Automation Suite" finished-at="2025-10-14T05:36:20 EDT" duration-ms="0">
     <groups>
     </groups>
   </suite> <!-- End2End Automation Suite -->
-  <suite started-at="2025-10-14T04:20:42 EDT" name="User_Login_Verification - Suite" finished-at="2025-10-14T04:22:47 EDT" duration-ms="125428">
+  <suite started-at="2025-10-14T05:24:02 EDT" name="User_Login_Verification - Suite" finished-at="2025-10-14T05:26:28 EDT" duration-ms="145166">
     <groups>
     </groups>
-    <test started-at="2025-10-14T04:20:42 EDT" name="All Users Login Tests" finished-at="2025-10-14T04:22:47 EDT" duration-ms="125428">
-      <class name="testCases_Case.Login_Case">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Login_Case@1623b78d]" started-at="2025-10-14T04:20:44 EDT" name="setup" finished-at="2025-10-14T04:21:08 EDT" duration-ms="24594" status="PASS">
+    <test started-at="2025-10-14T05:24:02 EDT" name="All Users Login Tests" finished-at="2025-10-14T05:26:28 EDT" duration-ms="145166">
+      <class name="testCases_Case.Patient_Creation">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:24:04 EDT" name="setup" finished-at="2025-10-14T05:24:12 EDT" duration-ms="8896" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -344,177 +344,113 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Login_Case@1623b78d]" started-at="2025-10-14T04:21:08 EDT" name="setUp" finished-at="2025-10-14T04:21:08 EDT" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases_Case.Login_Case.Case_login() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Case_login()[pri:0, instance:testCases_Case.Login_Case@1623b78d]" started-at="2025-10-14T04:21:08 EDT" name="Case_login" finished-at="2025-10-14T04:21:18 EDT" duration-ms="9642" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Case_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Login_Case@1623b78d]" started-at="2025-10-14T04:21:18 EDT" name="tearDown" finished-at="2025-10-14T04:21:18 EDT" duration-ms="434" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases_Case.Login_Case -->
-      <class name="testCases_PAS.Login_PAS">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_PAS.Login_PAS@4efbca5a]" started-at="2025-10-14T04:22:32 EDT" name="setup" finished-at="2025-10-14T04:22:38 EDT" duration-ms="5529" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_PAS.Login_PAS@4efbca5a]" started-at="2025-10-14T04:22:38 EDT" name="setUp" finished-at="2025-10-14T04:22:38 EDT" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases_PAS.Login_PAS.Patient_access_specialist_login() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Patient_access_specialist_login()[pri:0, instance:testCases_PAS.Login_PAS@4efbca5a]" started-at="2025-10-14T04:22:38 EDT" name="Patient_access_specialist_login" finished-at="2025-10-14T04:22:47 EDT" duration-ms="8931" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Patient_access_specialist_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_PAS.Login_PAS@4efbca5a]" started-at="2025-10-14T04:22:47 EDT" name="tearDown" finished-at="2025-10-14T04:22:47 EDT" duration-ms="228" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases_PAS.Login_PAS -->
-      <class name="testCases_Provider.Login_Provider">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Provider.Login_Provider@6069db50]" started-at="2025-10-14T04:22:07 EDT" name="setup" finished-at="2025-10-14T04:22:25 EDT" duration-ms="17814" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Provider.Login_Provider@6069db50]" started-at="2025-10-14T04:22:25 EDT" name="setUp" finished-at="2025-10-14T04:22:25 EDT" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases_Provider.Login_Provider.Provider_login() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Provider_login()[pri:1, instance:testCases_Provider.Login_Provider@6069db50]" started-at="2025-10-14T04:22:25 EDT" name="Provider_login" finished-at="2025-10-14T04:22:32 EDT" duration-ms="7105" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Provider_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Provider.Login_Provider@6069db50]" started-at="2025-10-14T04:22:32 EDT" name="tearDown" finished-at="2025-10-14T04:22:32 EDT" duration-ms="394" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases_Provider.Login_Provider -->
-      <class name="testCases_Admin.Login_Admin">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Admin.Login_Admin@49139829]" started-at="2025-10-14T04:21:18 EDT" name="setup" finished-at="2025-10-14T04:21:25 EDT" duration-ms="6945" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Admin.Login_Admin@49139829]" started-at="2025-10-14T04:21:25 EDT" name="setUp" finished-at="2025-10-14T04:21:25 EDT" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases_Admin.Login_Admin.Admin_login() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Admin_login()[pri:1, instance:testCases_Admin.Login_Admin@49139829]" started-at="2025-10-14T04:21:25 EDT" name="Admin_login" finished-at="2025-10-14T04:21:50 EDT" duration-ms="24422" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Admin_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Admin.Login_Admin@49139829]" started-at="2025-10-14T04:21:50 EDT" name="tearDown" finished-at="2025-10-14T04:21:50 EDT" duration-ms="190" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases_Admin.Login_Admin -->
-      <class name="testCases_Patient.Login_Patient">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Patient.Login_Patient@9597028]" started-at="2025-10-14T04:21:50 EDT" name="setup" finished-at="2025-10-14T04:22:03 EDT" duration-ms="12669" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Patient.Login_Patient@9597028]" started-at="2025-10-14T04:22:03 EDT" name="setUp" finished-at="2025-10-14T04:22:03 EDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testCases_Patient.Login_Patient.Patient_login() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Patient_login()[pri:1, instance:testCases_Patient.Login_Patient@9597028]" started-at="2025-10-14T04:22:03 EDT" name="Patient_login" finished-at="2025-10-14T04:22:07 EDT" duration-ms="4087" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Patient_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Patient.Login_Patient@9597028]" started-at="2025-10-14T04:22:07 EDT" name="tearDown" finished-at="2025-10-14T04:22:07 EDT" duration-ms="198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases_Patient.Login_Patient -->
-    </test> <!-- All Users Login Tests -->
-  </suite> <!-- User_Login_Verification - Suite -->
-  <suite started-at="2025-10-14T04:29:39 EDT" name="Patient_Sceniorios-Suite" finished-at="2025-10-14T04:31:00 EDT" duration-ms="81611">
-    <groups>
-    </groups>
-    <test started-at="2025-10-14T04:29:39 EDT" name="Patient Tests" finished-at="2025-10-14T04:31:00 EDT" duration-ms="81611">
-      <class name="testCases_Patient.Patient_Role_Actions">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:30:14 EDT" name="setup" finished-at="2025-10-14T04:30:44 EDT" duration-ms="29287" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:30:44 EDT" name="initPages" finished-at="2025-10-14T04:30:44 EDT" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:24:12 EDT" name="initPages" finished-at="2025-10-14T05:24:13 EDT" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:30:44 EDT" name="setUp" finished-at="2025-10-14T04:30:44 EDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:24:13 EDT" name="setUp" finished-at="2025-10-14T05:24:13 EDT" duration-ms="48" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.Patient_Creation_by_CM() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Patient_Creation_by_CM()[pri:1, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:24:13 EDT" name="Patient_Creation_by_CM" finished-at="2025-10-14T05:25:34 EDT" duration-ms="81054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Patient_Creation_by_CM -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:25:35 EDT" name="setUp" finished-at="2025-10-14T05:25:35 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.Check_Patient_Created() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Check_Patient_Created()[pri:2, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:25:35 EDT" name="Check_Patient_Created" finished-at="2025-10-14T05:25:38 EDT" duration-ms="3084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Patient_Created -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:25:38 EDT" name="setUp" finished-at="2025-10-14T05:25:38 EDT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.Verifying_Patient_Duplication()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Verifying_Patient_Duplication()[pri:3, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:25:38 EDT" name="Verifying_Patient_Duplication" finished-at="2025-10-14T05:25:46 EDT" duration-ms="8522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verifying_Patient_Duplication -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:25:46 EDT" name="setUp" finished-at="2025-10-14T05:25:46 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.View_Edit_Patient_Assessment_Options() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="View_Edit_Patient_Assessment_Options()[pri:4, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:25:46 EDT" name="View_Edit_Patient_Assessment_Options" finished-at="2025-10-14T05:26:07 EDT" duration-ms="20664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- View_Edit_Patient_Assessment_Options -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:26:07 EDT" name="setUp" finished-at="2025-10-14T05:26:07 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.Connected_User_To_New_Patient() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Connected_User_To_New_Patient()[pri:5, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:26:07 EDT" name="Connected_User_To_New_Patient" finished-at="2025-10-14T05:26:27 EDT" duration-ms="19752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Connected_User_To_New_Patient -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Patient_Creation@4a8355dd]" started-at="2025-10-14T05:26:27 EDT" name="tearDown" finished-at="2025-10-14T05:26:28 EDT" duration-ms="939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Case.Patient_Creation -->
+    </test> <!-- All Users Login Tests -->
+  </suite> <!-- User_Login_Verification - Suite -->
+  <suite started-at="2025-10-14T05:35:38 EDT" name="Patient_Sceniorios-Suite" finished-at="2025-10-14T05:36:18 EDT" duration-ms="39944">
+    <groups>
+    </groups>
+    <test started-at="2025-10-14T05:35:38 EDT" name="Patient Tests" finished-at="2025-10-14T05:36:18 EDT" duration-ms="39944">
+      <class name="testCases_Patient.Patient_Role_Actions">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Patient.Patient_Role_Actions@6b09fb41]" started-at="2025-10-14T05:35:54 EDT" name="setup" finished-at="2025-10-14T05:36:03 EDT" duration-ms="9155" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Patient.Patient_Role_Actions@6b09fb41]" started-at="2025-10-14T05:36:03 EDT" name="initPages" finished-at="2025-10-14T05:36:03 EDT" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Patient.Patient_Role_Actions@6b09fb41]" started-at="2025-10-14T05:36:03 EDT" name="setUp" finished-at="2025-10-14T05:36:03 EDT" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -525,7 +461,7 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Patient_actions()[pri:1, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:30:44 EDT" name="Patient_actions" finished-at="2025-10-14T04:31:00 EDT" duration-ms="16202" status="FAIL">
+        <test-method signature="Patient_actions()[pri:1, instance:testCases_Patient.Patient_Role_Actions@6b09fb41]" started-at="2025-10-14T05:36:03 EDT" name="Patient_actions" finished-at="2025-10-14T05:36:16 EDT" duration-ms="13048" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4]"}
@@ -534,9 +470,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9680b0504c95e54f700dc064ba7270ab, findElement {value=//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53228/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9680b0504c95e54f700dc064ba7270ab]]>
+Command: [663ab8074e38ea82789409132e036058, findElement {value=//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53936/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 663ab8074e38ea82789409132e036058]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4]"}
@@ -545,9 +481,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9680b0504c95e54f700dc064ba7270ab, findElement {value=//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53228/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9680b0504c95e54f700dc064ba7270ab
+Command: [663ab8074e38ea82789409132e036058, findElement {value=//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53936/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 663ab8074e38ea82789409132e036058
 at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -606,13 +542,13 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Patient_actions -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:31:00 EDT" name="tearDown" finished-at="2025-10-14T04:31:00 EDT" duration-ms="259" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Patient.Patient_Role_Actions@6b09fb41]" started-at="2025-10-14T05:36:17 EDT" name="tearDown" finished-at="2025-10-14T05:36:18 EDT" duration-ms="512" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases_Patient.Patient_Role_Actions -->
       <class name="testCases_Patient.Login_Patient">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Patient.Login_Patient@327514f]" started-at="2025-10-14T04:29:39 EDT" name="setup" finished-at="2025-10-14T04:30:03 EDT" duration-ms="24118" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Patient.Login_Patient@16150369]" started-at="2025-10-14T05:35:38 EDT" name="setup" finished-at="2025-10-14T05:35:48 EDT" duration-ms="10607" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -623,11 +559,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Patient_login()[pri:1, instance:testCases_Patient.Login_Patient@327514f]" started-at="2025-10-14T04:30:03 EDT" name="Patient_login" finished-at="2025-10-14T04:30:14 EDT" duration-ms="11168" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Patient_login -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Patient.Login_Patient@327514f]" started-at="2025-10-14T04:30:03 EDT" name="setUp" finished-at="2025-10-14T04:30:03 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Patient.Login_Patient@16150369]" started-at="2025-10-14T05:35:48 EDT" name="setUp" finished-at="2025-10-14T05:35:48 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -638,7 +570,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Patient.Login_Patient@327514f]" started-at="2025-10-14T04:30:14 EDT" name="tearDown" finished-at="2025-10-14T04:30:14 EDT" duration-ms="364" status="PASS">
+        <test-method signature="Patient_login()[pri:1, instance:testCases_Patient.Login_Patient@16150369]" started-at="2025-10-14T05:35:48 EDT" name="Patient_login" finished-at="2025-10-14T05:35:54 EDT" duration-ms="5727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Patient_login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Patient.Login_Patient@16150369]" started-at="2025-10-14T05:35:54 EDT" name="tearDown" finished-at="2025-10-14T05:35:54 EDT" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -231,27 +231,27 @@
                     <div class="method-list-content passed suite-User_Login_Verification___Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Admin.Login_Admin" class="method navigator-link" hash-for-method="Admin_login">Admin_login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Case.Patient_Creation" class="method navigator-link" hash-for-method="Check_Patient_Created">Check_Patient_Created</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Case.Login_Case" class="method navigator-link" hash-for-method="Case_login">Case_login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Case.Patient_Creation" class="method navigator-link" hash-for-method="Connected_User_To_New_Patient">Connected_User_To_New_Patient</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_PAS.Login_PAS" class="method navigator-link" hash-for-method="Patient_access_specialist_login">Patient_access_specialist_login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Case.Patient_Creation" class="method navigator-link" hash-for-method="Patient_Creation_by_CM">Patient_Creation_by_CM</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Patient.Login_Patient" class="method navigator-link" hash-for-method="Patient_login">Patient_login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Case.Patient_Creation" class="method navigator-link" hash-for-method="Verifying_Patient_Duplication">Verifying_Patient_Duplication</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Provider.Login_Provider" class="method navigator-link" hash-for-method="Provider_login">Provider_login</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-User_Login_Verification___Suite" title="testCases_Case.Patient_Creation" class="method navigator-link" hash-for-method="View_Edit_Patient_Assessment_Options">View_Edit_Patient_Assessment_Options</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-User_Login_Verification___Suite -->
@@ -373,7 +373,7 @@
                   <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //mat-select[@formcontrolname=&apos;athenaApptType&apos;]&apos; (tried for 20 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at BasePage.Common_Utils.click(Common_Utils.java:52)
+	at BasePage.Common_Utils.click(Common_Utils.java:56)
 	at testCases_Case.CM_Appointment_booking.CM_Appointment_booking_flow(CM_Appointment_booking.java:64)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//mat-select[@formcontrolname=&apos;athenaApptType&apos;]&quot;}
@@ -382,9 +382,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [33816062aa48d6efa0ef12c7688057a9, findElement {value=//mat-select[@formcontrolname=&apos;athenaApptType&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54231}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54231/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 33816062aa48d6efa0ef12c7688057a9
+Command: [7cab7a462ce073f8076ce5655d2afc56, findElement {value=//mat-select[@formcontrolname=&apos;athenaApptType&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61886}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61886/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cab7a462ce073f8076ce5655d2afc56
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -415,14 +415,14 @@ Session ID: 33816062aa48d6efa0ef12c7688057a9
           <div class="suite-Case_Manager_Sceniorios_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases_Case.Login_Case</span>
+              <span class="class-name">testCases_Case.CM_Role_Menu_Visibility</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Case_login">
-                  </a> <!-- Case_login -->
-                  <span class="method-name">Case_login</span>
+                  <a name="CM_Role_Menu_Checks">
+                  </a> <!-- CM_Role_Menu_Checks -->
+                  <span class="method-name">CM_Role_Menu_Checks</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -445,14 +445,14 @@ Session ID: 33816062aa48d6efa0ef12c7688057a9
           <div class="suite-Case_Manager_Sceniorios_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases_Case.CM_Role_Menu_Visibility</span>
+              <span class="class-name">testCases_Case.Login_Case</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CM_Role_Menu_Checks">
-                  </a> <!-- CM_Role_Menu_Checks -->
-                  <span class="method-name">CM_Role_Menu_Checks</span>
+                  <a name="Case_login">
+                  </a> <!-- Case_login -->
+                  <span class="method-name">Case_login</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -507,74 +507,42 @@ Session ID: 33816062aa48d6efa0ef12c7688057a9
           <div class="suite-User_Login_Verification___Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases_Case.Login_Case</span>
+              <span class="class-name">testCases_Case.Patient_Creation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Case_login">
-                  </a> <!-- Case_login -->
-                  <span class="method-name">Case_login</span>
+                  <a name="Check_Patient_Created">
+                  </a> <!-- Check_Patient_Created -->
+                  <span class="method-name">Check_Patient_Created</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-User_Login_Verification___Suite-class-passed -->
-          <div class="suite-User_Login_Verification___Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases_PAS.Login_PAS</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Patient_access_specialist_login">
-                  </a> <!-- Patient_access_specialist_login -->
-                  <span class="method-name">Patient_access_specialist_login</span>
+                  <a name="Connected_User_To_New_Patient">
+                  </a> <!-- Connected_User_To_New_Patient -->
+                  <span class="method-name">Connected_User_To_New_Patient</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-User_Login_Verification___Suite-class-passed -->
-          <div class="suite-User_Login_Verification___Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases_Admin.Login_Admin</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Admin_login">
-                  </a> <!-- Admin_login -->
-                  <span class="method-name">Admin_login</span>
+                  <a name="Patient_Creation_by_CM">
+                  </a> <!-- Patient_Creation_by_CM -->
+                  <span class="method-name">Patient_Creation_by_CM</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-User_Login_Verification___Suite-class-passed -->
-          <div class="suite-User_Login_Verification___Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases_Patient.Login_Patient</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Patient_login">
-                  </a> <!-- Patient_login -->
-                  <span class="method-name">Patient_login</span>
+                  <a name="Verifying_Patient_Duplication">
+                  </a> <!-- Verifying_Patient_Duplication -->
+                  <span class="method-name">Verifying_Patient_Duplication</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-User_Login_Verification___Suite-class-passed -->
-          <div class="suite-User_Login_Verification___Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testCases_Provider.Login_Provider</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Provider_login">
-                  </a> <!-- Provider_login -->
-                  <span class="method-name">Provider_login</span>
+                  <a name="View_Edit_Patient_Assessment_Options">
+                  </a> <!-- View_Edit_Patient_Assessment_Options -->
+                  <span class="method-name">View_Edit_Patient_Assessment_Options</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -598,9 +566,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9680b0504c95e54f700dc064ba7270ab, findElement {value=//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53228/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9680b0504c95e54f700dc064ba7270ab
+Command: [663ab8074e38ea82789409132e036058, findElement {value=//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53936}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53936/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 663ab8074e38ea82789409132e036058
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -649,6 +617,10 @@ Session ID: 9680b0504c95e54f700dc064ba7270ab
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Case_Manager_Sceniorios-Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utilities.ExtentSparkManager&quot;/&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;PAS User Role Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testCases_Case.Login_Case&quot;/&gt;
@@ -674,6 +646,7 @@ Session ID: 9680b0504c95e54f700dc064ba7270ab
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;utilities.ExtentSparkManager&quot;/&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
   &lt;/listeners&gt;
   &lt;suite-files&gt;
     &lt;suite-file path=&quot;All_user_login.xml&quot;/&gt;
@@ -694,13 +667,13 @@ Session ID: 9680b0504c95e54f700dc064ba7270ab
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;User_Login_Verification - Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utilities.ExtentSparkManager&quot;/&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;All Users Login Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases_Case.Login_Case&quot;/&gt;
-      &lt;class name=&quot;testCases_Admin.Login_Admin&quot;/&gt;
-      &lt;class name=&quot;testCases_Patient.Login_Patient&quot;/&gt;
-      &lt;class name=&quot;testCases_Provider.Login_Provider&quot;/&gt;
-      &lt;class name=&quot;testCases_PAS.Login_PAS&quot;/&gt;
+      &lt;class name=&quot;testCases_Case.Patient_Creation&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- All Users Login Tests --&gt;
 &lt;/suite&gt; &lt;!-- User_Login_Verification - Suite --&gt;
@@ -755,7 +728,7 @@ Session ID: 9680b0504c95e54f700dc064ba7270ab
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">All Users Login Tests (5 classes)</span>
+                <span class="test-name">All Users Login Tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -818,44 +791,44 @@ data.addRows(9);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Provider_list_view_and_filter')
 data.setCell(0, 2, 'testCases_Case.Provider_list')
-data.setCell(0, 3, 87762);
+data.setCell(0, 3, 88347);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'CM_Role_Menu_Checks')
-data.setCell(1, 2, 'testCases_Case.CM_Role_Menu_Visibility')
-data.setCell(1, 3, 61588);
+data.setCell(1, 1, 'Patient_Creation_by_CM')
+data.setCell(1, 2, 'testCases_Case.Patient_Creation')
+data.setCell(1, 3, 83064);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Patient_Creation_by_CM')
-data.setCell(2, 2, 'testCases_Case.Patient_Creation')
-data.setCell(2, 3, 60408);
+data.setCell(2, 1, 'CM_Role_Menu_Checks')
+data.setCell(2, 2, 'testCases_Case.CM_Role_Menu_Visibility')
+data.setCell(2, 3, 69999);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'CM_Appointment_booking_flow')
 data.setCell(3, 2, 'testCases_Case.CM_Appointment_booking')
-data.setCell(3, 3, 55847);
+data.setCell(3, 3, 56696);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'View_Edit_Patient_Assessment_Options')
+data.setCell(4, 1, 'Connected_User_To_New_Patient')
 data.setCell(4, 2, 'testCases_Case.Patient_Creation')
-data.setCell(4, 3, 18087);
+data.setCell(4, 3, 29677);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'Connected_User_To_New_Patient')
+data.setCell(5, 1, 'View_Edit_Patient_Assessment_Options')
 data.setCell(5, 2, 'testCases_Case.Patient_Creation')
-data.setCell(5, 3, 12615);
+data.setCell(5, 3, 25521);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'Verifying_Patient_Duplication')
-data.setCell(6, 2, 'testCases_Case.Patient_Creation')
-data.setCell(6, 3, 8112);
+data.setCell(6, 1, 'Case_login')
+data.setCell(6, 2, 'testCases_Case.Login_Case')
+data.setCell(6, 3, 11813);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'Case_login')
-data.setCell(7, 2, 'testCases_Case.Login_Case')
-data.setCell(7, 3, 7911);
+data.setCell(7, 1, 'Verifying_Patient_Duplication')
+data.setCell(7, 2, 'testCases_Case.Patient_Creation')
+data.setCell(7, 3, 9094);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'Check_Patient_Created')
 data.setCell(8, 2, 'testCases_Case.Patient_Creation')
-data.setCell(8, 3, 2811);
+data.setCell(8, 3, 2868);
 window.suiteTableData['Case_Manager_Sceniorios_Suite']= { tableData: data, tableDiv: 'times-div-Case_Manager_Sceniorios_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Case_Manager_Sceniorios_Suite">
               </div> <!-- times-div-Case_Manager_Sceniorios_Suite -->
             </div> <!-- times-div -->
@@ -902,30 +875,30 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Admin_login')
-data.setCell(0, 2, 'testCases_Admin.Login_Admin')
-data.setCell(0, 3, 24422);
+data.setCell(0, 1, 'Patient_Creation_by_CM')
+data.setCell(0, 2, 'testCases_Case.Patient_Creation')
+data.setCell(0, 3, 81054);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Case_login')
-data.setCell(1, 2, 'testCases_Case.Login_Case')
-data.setCell(1, 3, 9642);
+data.setCell(1, 1, 'View_Edit_Patient_Assessment_Options')
+data.setCell(1, 2, 'testCases_Case.Patient_Creation')
+data.setCell(1, 3, 20664);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Patient_access_specialist_login')
-data.setCell(2, 2, 'testCases_PAS.Login_PAS')
-data.setCell(2, 3, 8931);
+data.setCell(2, 1, 'Connected_User_To_New_Patient')
+data.setCell(2, 2, 'testCases_Case.Patient_Creation')
+data.setCell(2, 3, 19752);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Provider_login')
-data.setCell(3, 2, 'testCases_Provider.Login_Provider')
-data.setCell(3, 3, 7105);
+data.setCell(3, 1, 'Verifying_Patient_Duplication')
+data.setCell(3, 2, 'testCases_Case.Patient_Creation')
+data.setCell(3, 3, 8522);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Patient_login')
-data.setCell(4, 2, 'testCases_Patient.Login_Patient')
-data.setCell(4, 3, 4087);
+data.setCell(4, 1, 'Check_Patient_Created')
+data.setCell(4, 2, 'testCases_Case.Patient_Creation')
+data.setCell(4, 3, 3084);
 window.suiteTableData['User_Login_Verification___Suite']= { tableData: data, tableDiv: 'times-div-User_Login_Verification___Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-User_Login_Verification___Suite">
               </div> <!-- times-div-User_Login_Verification___Suite -->
             </div> <!-- times-div -->
@@ -949,16 +922,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Patient_actions')
 data.setCell(0, 2, 'testCases_Patient.Patient_Role_Actions')
-data.setCell(0, 3, 16202);
+data.setCell(0, 3, 13048);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'Patient_login')
 data.setCell(1, 2, 'testCases_Patient.Login_Patient')
-data.setCell(1, 3, 11168);
+data.setCell(1, 3, 5727);
 window.suiteTableData['Patient_Sceniorios_Suite']= { tableData: data, tableDiv: 'times-div-Patient_Sceniorios_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Patient_Sceniorios_Suite">
               </div> <!-- times-div-Patient_Sceniorios_Suite -->
             </div> <!-- times-div -->
@@ -1033,141 +1006,141 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.Login_Case.Case_login() throws java.lang.InterruptedException)</span>
-                <span class="method-start">19717 ms</span>
+                <span class="method-start">38654 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Case_login</span>
-                <span class="method-start">19718 ms</span>
+                <span class="method-start">38678 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">27631 ms</span>
+                <span class="method-start">50498 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases_Case.CM_Appointment_booking</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">28510 ms</span>
+                <span class="method-start">51169 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">46527 ms</span>
+                <span class="method-start">72100 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.CM_Appointment_booking.CM_Appointment_booking_flow() throws java.lang.Int...)</span>
-                <span class="method-start">46552 ms</span>
+                <span class="method-start">72111 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CM_Appointment_booking_flow</span>
-                <span class="method-start">46553 ms</span>
+                <span class="method-start">72114 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">102555 ms</span>
+                <span class="method-start">129326 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases_Case.Provider_list</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">102695 ms</span>
+                <span class="method-start">129980 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">120412 ms</span>
+                <span class="method-start">161743 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">Provider_list_view_and_filter</span>
-                <span class="method-start">120418 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.Provider_list.Provider_list_view_and_filter() throws java.lang.Interrupte...)</span>
-                <span class="method-start">120418 ms</span>
+                <span class="method-start">161747 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Provider_list_view_and_filter</span>
+                <span class="method-start">161751 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">208182 ms</span>
+                <span class="method-start">250100 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases_Case.Patient_Creation</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">208334 ms</span>
+                <span class="method-start">250294 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">217596 ms</span>
+                <span class="method-start">301022 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">Patient_Creation_by_CM</span>
-                <span class="method-start">217603 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.Patient_Creation.Patient_Creation_by_CM() throws java.lang.InterruptedExc...)</span>
-                <span class="method-start">217603 ms</span>
+                <span class="method-start">301030 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Check_Patient_Created</span>
-                <span class="method-start">278013 ms</span>
+                <span class="method-name">Patient_Creation_by_CM</span>
+                <span class="method-start">301035 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.Patient_Creation.Check_Patient_Created() throws java.lang.InterruptedExce...)</span>
-                <span class="method-start">278013 ms</span>
+                <span class="method-start">384099 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Verifying_Patient_Duplication</span>
-                <span class="method-start">280824 ms</span>
+                <span class="method-name">Check_Patient_Created</span>
+                <span class="method-start">384099 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.Patient_Creation.Verifying_Patient_Duplication())</span>
-                <span class="method-start">280824 ms</span>
+                <span class="method-start">386971 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Verifying_Patient_Duplication</span>
+                <span class="method-start">386972 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.Patient_Creation.View_Edit_Patient_Assessment_Options() throws java.lang....)</span>
-                <span class="method-start">288937 ms</span>
+                <span class="method-start">396071 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">View_Edit_Patient_Assessment_Options</span>
-                <span class="method-start">288938 ms</span>
+                <span class="method-start">396076 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.Patient_Creation.Connected_User_To_New_Patient() throws java.lang.Interru...)</span>
-                <span class="method-start">307025 ms</span>
+                <span class="method-start">421672 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">Connected_User_To_New_Patient</span>
-                <span class="method-start">307030 ms</span>
+                <span class="method-start">421813 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">319652 ms</span>
+                <span class="method-start">451521 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases_Case.CM_Role_Menu_Visibility</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">320044 ms</span>
+                <span class="method-start">457767 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">345869 ms</span>
+                <span class="method-start">470767 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Case.CM_Role_Menu_Visibility.CM_Role_Menu_Checks() throws java.lang.Interrupte...)</span>
-                <span class="method-start">345872 ms</span>
+                <span class="method-start">470790 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CM_Role_Menu_Checks</span>
-                <span class="method-start">345873 ms</span>
+                <span class="method-start">470806 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">407461 ms</span>
+                <span class="method-start">540811 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -1184,98 +1157,58 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases_Case.Login_Case</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases_Case.Patient_Creation</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(public void testCases_Case.Login_Case.Case_login() throws java.lang.InterruptedException)</span>
-                <span class="method-start">24630 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">Case_login</span>
-                <span class="method-start">24634 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">34399 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testCases_Admin.Login_Admin</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">34849 ms</span>
+                <span class="method-name">initPages</span>
+                <span class="method-start">8904 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void testCases_Admin.Login_Admin.Admin_login() throws java.lang.InterruptedException)</span>
-                <span class="method-start">41798 ms</span>
+                <span class="method-name">setUp(public void testCases_Case.Patient_Creation.Patient_Creation_by_CM() throws java.lang.InterruptedExc...)</span>
+                <span class="method-start">9205 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Admin_login</span>
-                <span class="method-start">41805 ms</span>
+                <span class="method-name">Patient_Creation_by_CM</span>
+                <span class="method-start">9849 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">66229 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testCases_Patient.Login_Patient</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">66420 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void testCases_Patient.Login_Patient.Patient_login() throws java.lang.InterruptedException)</span>
-                <span class="method-start">79089 ms</span>
+                <span class="method-name">setUp(public void testCases_Case.Patient_Creation.Check_Patient_Created() throws java.lang.InterruptedExce...)</span>
+                <span class="method-start">90938 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Patient_login</span>
-                <span class="method-start">79090 ms</span>
+                <span class="method-name">Check_Patient_Created</span>
+                <span class="method-start">90940 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">83180 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testCases_Provider.Login_Provider</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">83382 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void testCases_Provider.Login_Provider.Provider_login() throws java.lang.InterruptedException)</span>
-                <span class="method-start">101208 ms</span>
+                <span class="method-name">setUp(public void testCases_Case.Patient_Creation.Verifying_Patient_Duplication())</span>
+                <span class="method-start">94034 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Provider_login</span>
-                <span class="method-start">101214 ms</span>
+                <span class="method-name">Verifying_Patient_Duplication</span>
+                <span class="method-start">94038 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">108331 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testCases_PAS.Login_PAS</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup(chrome)</span>
-                <span class="method-start">108725 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(public void testCases_PAS.Login_PAS.Patient_access_specialist_login() throws java.lang.InterruptedEx...)</span>
-                <span class="method-start">114255 ms</span>
+                <span class="method-name">setUp(public void testCases_Case.Patient_Creation.View_Edit_Patient_Assessment_Options() throws java.lang....)</span>
+                <span class="method-start">102564 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Patient_access_specialist_login</span>
-                <span class="method-start">114256 ms</span>
+                <span class="method-name">View_Edit_Patient_Assessment_Options</span>
+                <span class="method-start">102567 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(public void testCases_Case.Patient_Creation.Connected_User_To_New_Patient() throws java.lang.Interru...)</span>
+                <span class="method-start">123238 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Connected_User_To_New_Patient</span>
+                <span class="method-start">123243 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">123187 ms</span>
+                <span class="method-start">143004 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -1290,42 +1223,42 @@ return data;
                 <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">Patient_login</span>
-                <span class="method-start">24121 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Patient.Login_Patient.Patient_login() throws java.lang.InterruptedException)</span>
-                <span class="method-start">24121 ms</span>
+                <span class="method-start">10609 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Patient_login</span>
+                <span class="method-start">10616 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">35289 ms</span>
+                <span class="method-start">16356 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCases_Patient.Patient_Role_Actions</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">35655 ms</span>
+                <span class="method-start">16592 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">initPages</span>
-                <span class="method-start">64942 ms</span>
+                <span class="method-start">25748 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(public void testCases_Patient.Patient_Role_Actions.Patient_actions() throws java.lang.InterruptedExc...)</span>
-                <span class="method-start">64950 ms</span>
+                <span class="method-start">25762 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Patient_actions</span>
-                <span class="method-start">64952 ms</span>
+                <span class="method-start">25779 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">81350 ms</span>
+                <span class="method-start">39429 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

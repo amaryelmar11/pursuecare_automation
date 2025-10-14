@@ -4,6 +4,9 @@
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="utilities.ExtentSparkManager"/>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    <listener class-name="utilities.ExtentSparkManager"/>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
   </listeners>
   <test thread-count="5" name="PAS User Role Tests(failed)" verbose="0">
     <classes>

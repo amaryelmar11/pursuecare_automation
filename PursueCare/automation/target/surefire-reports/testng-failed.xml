@@ -4,6 +4,7 @@
   <parameter name="browser" value="chrome"/>
   <listeners>
     <listener class-name="utilities.ExtentSparkManager"/>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
   </listeners>
   <test thread-count="5" name="Patient Tests(failed)" verbose="0">
     <classes>
@@ -11,8 +12,8 @@
         <methods>
           <include name="Patient_actions"/>
           <include name="initPages"/>
-          <include name="setup"/>
           <include name="setUp"/>
+          <include name="setup"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testCases_Patient.Patient_Role_Actions -->
