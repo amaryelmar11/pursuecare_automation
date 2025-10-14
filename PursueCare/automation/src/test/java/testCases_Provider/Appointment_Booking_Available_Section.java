@@ -76,3 +76,4 @@ public class Appointment_Booking_Available_Section extends Baseclass {
 		cu.click(pa.selectSaveButton);
 	}
 }
+

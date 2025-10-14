@@ -10,7 +10,7 @@ import PageObjectClass.LoginPage;
 public class Login_Provider extends Baseclass{
 
     @Test(priority = 1)
-    public void correctdetails() throws InterruptedException
+    public void Provider_login() throws InterruptedException
     {
         LoginPage lp = new LoginPage(driver);
         lp.enterEmailId(p.getProperty("provider1"));

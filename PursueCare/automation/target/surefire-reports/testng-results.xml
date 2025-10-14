@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="16" passed="14" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-26T02:42:52 EDT" name="Suite" finished-at="2025-09-26T02:46:31 EDT" duration-ms="218769">
+  <suite started-at="2025-10-14T04:22:51 EDT" name="Case_Manager_Sceniorios-Suite" finished-at="2025-10-14T04:29:38 EDT" duration-ms="407589">
     <groups>
     </groups>
-    <test started-at="2025-09-26T02:42:52 EDT" name="All Users Login Tests" finished-at="2025-09-26T02:46:31 EDT" duration-ms="218769">
-      <class name="testCases_Case.Patient_Creation">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Patient_Creation@55183b20]" started-at="2025-09-26T02:42:53 EDT" name="setup" finished-at="2025-09-26T02:46:31 EDT" duration-ms="218273" status="FAIL">
+    <test started-at="2025-10-14T04:22:51 EDT" name="PAS User Role Tests" finished-at="2025-10-14T04:29:38 EDT" duration-ms="407589">
+      <class name="testCases_Case.Login_Case">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Login_Case@5b7a5baa]" started-at="2025-10-14T04:22:51 EDT" name="setup" finished-at="2025-10-14T04:23:10 EDT" duration-ms="19717" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -15,96 +15,634 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[java.net.http.HttpTimeoutException: request timed out
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d5b896cdb60c58394a1fa523e950fbac, get {url=https://pcareqaproviderportal.azurewebsites.net/authentication/signin}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54077}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54077/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d5b896cdb60c58394a1fa523e950fbac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: java.net.http.HttpTimeoutException: request timed out
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d5b896cdb60c58394a1fa523e950fbac, get {url=https://pcareqaproviderportal.azurewebsites.net/authentication/signin}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54077}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54077/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d5b896cdb60c58394a1fa523e950fbac
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:494)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:383)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.net.http.HttpTimeoutException: request timed out
-at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:571)
-at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:123)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:455)
-... 8 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.Patient_Creation@55183b20]" started-at="2025-09-26T02:46:31 EDT" name="initPages" finished-at="2025-09-26T02:46:31 EDT" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initPages -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@55183b20]" started-at="2025-09-26T02:46:31 EDT" name="setUp" finished-at="2025-09-26T02:46:31 EDT" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Login_Case@5b7a5baa]" started-at="2025-10-14T04:23:10 EDT" name="setUp" finished-at="2025-10-14T04:23:10 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Login_Case.Case_login() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Valid_Patient_Creation()[pri:1, instance:testCases_Case.Patient_Creation@55183b20]" started-at="2025-09-26T02:46:31 EDT" name="Valid_Patient_Creation" finished-at="2025-09-26T02:46:31 EDT" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[java.net.http.HttpTimeoutException: request timed out
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d5b896cdb60c58394a1fa523e950fbac, get {url=https://pcareqaproviderportal.azurewebsites.net/authentication/signin}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54077}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54077/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d5b896cdb60c58394a1fa523e950fbac]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: java.net.http.HttpTimeoutException: request timed out
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d5b896cdb60c58394a1fa523e950fbac, get {url=https://pcareqaproviderportal.azurewebsites.net/authentication/signin}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54077}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54077/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d5b896cdb60c58394a1fa523e950fbac
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:494)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$1(JdkHttpClient.java:383)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
-Caused by: java.net.http.HttpTimeoutException: request timed out
-at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:571)
-at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:123)
-at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:455)
-... 8 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="Case_login()[pri:0, instance:testCases_Case.Login_Case@5b7a5baa]" started-at="2025-10-14T04:23:10 EDT" name="Case_login" finished-at="2025-10-14T04:23:18 EDT" duration-ms="7911" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Valid_Patient_Creation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Patient_Creation@55183b20]" started-at="2025-09-26T02:46:31 EDT" name="tearDown" finished-at="2025-09-26T02:46:31 EDT" duration-ms="0" status="SKIP">
+        </test-method> <!-- Case_login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Login_Case@5b7a5baa]" started-at="2025-10-14T04:23:18 EDT" name="tearDown" finished-at="2025-10-14T04:23:19 EDT" duration-ms="878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Case.Login_Case -->
+      <class name="testCases_Case.Patient_Creation">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:26:19 EDT" name="setup" finished-at="2025-10-14T04:26:28 EDT" duration-ms="9261" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:26:28 EDT" name="initPages" finished-at="2025-10-14T04:26:28 EDT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method signature="Patient_Creation_by_CM()[pri:1, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:26:28 EDT" name="Patient_Creation_by_CM" finished-at="2025-10-14T04:27:29 EDT" duration-ms="60408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Patient_Creation_by_CM -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:26:28 EDT" name="setUp" finished-at="2025-10-14T04:26:28 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.Patient_Creation_by_CM() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Check_Patient_Created()[pri:2, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:29 EDT" name="Check_Patient_Created" finished-at="2025-10-14T04:27:31 EDT" duration-ms="2811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Patient_Created -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:29 EDT" name="setUp" finished-at="2025-10-14T04:27:29 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.Check_Patient_Created() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Verifying_Patient_Duplication()[pri:3, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:31 EDT" name="Verifying_Patient_Duplication" finished-at="2025-10-14T04:27:40 EDT" duration-ms="8112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verifying_Patient_Duplication -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:31 EDT" name="setUp" finished-at="2025-10-14T04:27:31 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.Verifying_Patient_Duplication()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:40 EDT" name="setUp" finished-at="2025-10-14T04:27:40 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.View_Edit_Patient_Assessment_Options() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="View_Edit_Patient_Assessment_Options()[pri:4, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:40 EDT" name="View_Edit_Patient_Assessment_Options" finished-at="2025-10-14T04:27:58 EDT" duration-ms="18087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- View_Edit_Patient_Assessment_Options -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:58 EDT" name="setUp" finished-at="2025-10-14T04:27:58 EDT" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Patient_Creation.Connected_User_To_New_Patient() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Connected_User_To_New_Patient()[pri:5, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:27:58 EDT" name="Connected_User_To_New_Patient" finished-at="2025-10-14T04:28:10 EDT" duration-ms="12615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Connected_User_To_New_Patient -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Patient_Creation@6a6cb05c]" started-at="2025-10-14T04:28:10 EDT" name="tearDown" finished-at="2025-10-14T04:28:11 EDT" duration-ms="392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- testCases_Case.Patient_Creation -->
+      <class name="testCases_Case.CM_Appointment_booking">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:23:19 EDT" name="setup" finished-at="2025-10-14T04:23:37 EDT" duration-ms="18017" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:23:37 EDT" name="initPages" finished-at="2025-10-14T04:23:37 EDT" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:23:37 EDT" name="setUp" finished-at="2025-10-14T04:23:37 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.CM_Appointment_booking.CM_Appointment_booking_flow() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CM_Appointment_booking_flow()[pri:1, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:23:37 EDT" name="CM_Appointment_booking_flow" finished-at="2025-10-14T04:24:33 EDT" duration-ms="55847" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-select[@formcontrolname='athenaApptType']' (tried for 20 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //mat-select[@formcontrolname='athenaApptType']' (tried for 20 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at BasePage.Common_Utils.click(Common_Utils.java:52)
+at testCases_Case.CM_Appointment_booking.CM_Appointment_booking_flow(CM_Appointment_booking.java:64)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1269)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//mat-select[@formcontrolname='athenaApptType']"}
+  (Session info: chrome=140.0.7339.208)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [33816062aa48d6efa0ef12c7688057a9, findElement {value=//mat-select[@formcontrolname='athenaApptType'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54231}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54231/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 33816062aa48d6efa0ef12c7688057a9
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 35 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CM_Appointment_booking_flow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.CM_Appointment_booking@43bc63a3]" started-at="2025-10-14T04:24:33 EDT" name="tearDown" finished-at="2025-10-14T04:24:33 EDT" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Case.CM_Appointment_booking -->
+      <class name="testCases_Case.CM_Role_Menu_Visibility">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:28:11 EDT" name="setup" finished-at="2025-10-14T04:28:36 EDT" duration-ms="25825" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:28:36 EDT" name="initPages" finished-at="2025-10-14T04:28:36 EDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:28:36 EDT" name="setUp" finished-at="2025-10-14T04:28:36 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.CM_Role_Menu_Visibility.CM_Role_Menu_Checks() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CM_Role_Menu_Checks()[pri:1, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:28:36 EDT" name="CM_Role_Menu_Checks" finished-at="2025-10-14T04:29:38 EDT" duration-ms="61588" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CM_Role_Menu_Checks -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.CM_Role_Menu_Visibility@6025e1b6]" started-at="2025-10-14T04:29:38 EDT" name="tearDown" finished-at="2025-10-14T04:29:38 EDT" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Case.CM_Role_Menu_Visibility -->
+      <class name="testCases_Case.Provider_list">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:24:33 EDT" name="setup" finished-at="2025-10-14T04:24:51 EDT" duration-ms="17717" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:24:51 EDT" name="initPages" finished-at="2025-10-14T04:24:51 EDT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method signature="Provider_list_view_and_filter()[pri:1, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:24:51 EDT" name="Provider_list_view_and_filter" finished-at="2025-10-14T04:26:19 EDT" duration-ms="87762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Provider_list_view_and_filter -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:24:51 EDT" name="setUp" finished-at="2025-10-14T04:24:51 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Provider_list.Provider_list_view_and_filter() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Provider_list@702657cc]" started-at="2025-10-14T04:26:19 EDT" name="tearDown" finished-at="2025-10-14T04:26:19 EDT" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Case.Provider_list -->
+    </test> <!-- PAS User Role Tests -->
+  </suite> <!-- Case_Manager_Sceniorios-Suite -->
+  <suite started-at="2025-10-14T04:31:02 EDT" name="End2End Automation Suite" finished-at="2025-10-14T04:31:02 EDT" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- End2End Automation Suite -->
+  <suite started-at="2025-10-14T04:20:42 EDT" name="User_Login_Verification - Suite" finished-at="2025-10-14T04:22:47 EDT" duration-ms="125428">
+    <groups>
+    </groups>
+    <test started-at="2025-10-14T04:20:42 EDT" name="All Users Login Tests" finished-at="2025-10-14T04:22:47 EDT" duration-ms="125428">
+      <class name="testCases_Case.Login_Case">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Case.Login_Case@1623b78d]" started-at="2025-10-14T04:20:44 EDT" name="setup" finished-at="2025-10-14T04:21:08 EDT" duration-ms="24594" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Case.Login_Case@1623b78d]" started-at="2025-10-14T04:21:08 EDT" name="setUp" finished-at="2025-10-14T04:21:08 EDT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Case.Login_Case.Case_login() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Case_login()[pri:0, instance:testCases_Case.Login_Case@1623b78d]" started-at="2025-10-14T04:21:08 EDT" name="Case_login" finished-at="2025-10-14T04:21:18 EDT" duration-ms="9642" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Case_login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Case.Login_Case@1623b78d]" started-at="2025-10-14T04:21:18 EDT" name="tearDown" finished-at="2025-10-14T04:21:18 EDT" duration-ms="434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Case.Login_Case -->
+      <class name="testCases_PAS.Login_PAS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_PAS.Login_PAS@4efbca5a]" started-at="2025-10-14T04:22:32 EDT" name="setup" finished-at="2025-10-14T04:22:38 EDT" duration-ms="5529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_PAS.Login_PAS@4efbca5a]" started-at="2025-10-14T04:22:38 EDT" name="setUp" finished-at="2025-10-14T04:22:38 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_PAS.Login_PAS.Patient_access_specialist_login() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Patient_access_specialist_login()[pri:0, instance:testCases_PAS.Login_PAS@4efbca5a]" started-at="2025-10-14T04:22:38 EDT" name="Patient_access_specialist_login" finished-at="2025-10-14T04:22:47 EDT" duration-ms="8931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Patient_access_specialist_login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_PAS.Login_PAS@4efbca5a]" started-at="2025-10-14T04:22:47 EDT" name="tearDown" finished-at="2025-10-14T04:22:47 EDT" duration-ms="228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_PAS.Login_PAS -->
+      <class name="testCases_Provider.Login_Provider">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Provider.Login_Provider@6069db50]" started-at="2025-10-14T04:22:07 EDT" name="setup" finished-at="2025-10-14T04:22:25 EDT" duration-ms="17814" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Provider.Login_Provider@6069db50]" started-at="2025-10-14T04:22:25 EDT" name="setUp" finished-at="2025-10-14T04:22:25 EDT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Provider.Login_Provider.Provider_login() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Provider_login()[pri:1, instance:testCases_Provider.Login_Provider@6069db50]" started-at="2025-10-14T04:22:25 EDT" name="Provider_login" finished-at="2025-10-14T04:22:32 EDT" duration-ms="7105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Provider_login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Provider.Login_Provider@6069db50]" started-at="2025-10-14T04:22:32 EDT" name="tearDown" finished-at="2025-10-14T04:22:32 EDT" duration-ms="394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Provider.Login_Provider -->
+      <class name="testCases_Admin.Login_Admin">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Admin.Login_Admin@49139829]" started-at="2025-10-14T04:21:18 EDT" name="setup" finished-at="2025-10-14T04:21:25 EDT" duration-ms="6945" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Admin.Login_Admin@49139829]" started-at="2025-10-14T04:21:25 EDT" name="setUp" finished-at="2025-10-14T04:21:25 EDT" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Admin.Login_Admin.Admin_login() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Admin_login()[pri:1, instance:testCases_Admin.Login_Admin@49139829]" started-at="2025-10-14T04:21:25 EDT" name="Admin_login" finished-at="2025-10-14T04:21:50 EDT" duration-ms="24422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Admin_login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Admin.Login_Admin@49139829]" started-at="2025-10-14T04:21:50 EDT" name="tearDown" finished-at="2025-10-14T04:21:50 EDT" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Admin.Login_Admin -->
+      <class name="testCases_Patient.Login_Patient">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Patient.Login_Patient@9597028]" started-at="2025-10-14T04:21:50 EDT" name="setup" finished-at="2025-10-14T04:22:03 EDT" duration-ms="12669" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Patient.Login_Patient@9597028]" started-at="2025-10-14T04:22:03 EDT" name="setUp" finished-at="2025-10-14T04:22:03 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Patient.Login_Patient.Patient_login() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Patient_login()[pri:1, instance:testCases_Patient.Login_Patient@9597028]" started-at="2025-10-14T04:22:03 EDT" name="Patient_login" finished-at="2025-10-14T04:22:07 EDT" duration-ms="4087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Patient_login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Patient.Login_Patient@9597028]" started-at="2025-10-14T04:22:07 EDT" name="tearDown" finished-at="2025-10-14T04:22:07 EDT" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Patient.Login_Patient -->
     </test> <!-- All Users Login Tests -->
-  </suite> <!-- Suite -->
+  </suite> <!-- User_Login_Verification - Suite -->
+  <suite started-at="2025-10-14T04:29:39 EDT" name="Patient_Sceniorios-Suite" finished-at="2025-10-14T04:31:00 EDT" duration-ms="81611">
+    <groups>
+    </groups>
+    <test started-at="2025-10-14T04:29:39 EDT" name="Patient Tests" finished-at="2025-10-14T04:31:00 EDT" duration-ms="81611">
+      <class name="testCases_Patient.Patient_Role_Actions">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:30:14 EDT" name="setup" finished-at="2025-10-14T04:30:44 EDT" duration-ms="29287" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="initPages()[pri:0, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:30:44 EDT" name="initPages" finished-at="2025-10-14T04:30:44 EDT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPages -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:30:44 EDT" name="setUp" finished-at="2025-10-14T04:30:44 EDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Patient.Patient_Role_Actions.Patient_actions() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Patient_actions()[pri:1, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:30:44 EDT" name="Patient_actions" finished-at="2025-10-14T04:31:00 EDT" duration-ms="16202" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4]"}
+  (Session info: chrome=140.0.7339.208)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9680b0504c95e54f700dc064ba7270ab, findElement {value=//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53228/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9680b0504c95e54f700dc064ba7270ab]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4]"}
+  (Session info: chrome=140.0.7339.208)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9680b0504c95e54f700dc064ba7270ab, findElement {value=//body[1]/app-root[1]/app-patient-dashboard[1]/section[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[7]/div[2]/button[1]/span[4], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\ayelmar\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53228}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53228/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9680b0504c95e54f700dc064ba7270ab
+at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at testCases_Patient.Patient_Role_Actions.Patient_actions(Patient_Role_Actions.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1269)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Patient_actions -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Patient.Patient_Role_Actions@5b12b668]" started-at="2025-10-14T04:31:00 EDT" name="tearDown" finished-at="2025-10-14T04:31:00 EDT" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Patient.Patient_Role_Actions -->
+      <class name="testCases_Patient.Login_Patient">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases_Patient.Login_Patient@327514f]" started-at="2025-10-14T04:29:39 EDT" name="setup" finished-at="2025-10-14T04:30:03 EDT" duration-ms="24118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Patient_login()[pri:1, instance:testCases_Patient.Login_Patient@327514f]" started-at="2025-10-14T04:30:03 EDT" name="Patient_login" finished-at="2025-10-14T04:30:14 EDT" duration-ms="11168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Patient_login -->
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:testCases_Patient.Login_Patient@327514f]" started-at="2025-10-14T04:30:03 EDT" name="setUp" finished-at="2025-10-14T04:30:03 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testCases_Patient.Login_Patient.Patient_login() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases_Patient.Login_Patient@327514f]" started-at="2025-10-14T04:30:14 EDT" name="tearDown" finished-at="2025-10-14T04:30:14 EDT" duration-ms="364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases_Patient.Login_Patient -->
+    </test> <!-- Patient Tests -->
+  </suite> <!-- Patient_Sceniorios-Suite -->
 </testng-results>

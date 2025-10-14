@@ -7,10 +7,14 @@ import BaseClass.Baseclass;
 import PageObjectClass.DashBoardPage;
 import PageObjectClass.LoginPage;
 
+
+
+
+
 public class Login_Case extends Baseclass{
 
-    @Test(priority = 1)
-    public void correctdetails() throws InterruptedException
+    @Test(testName = "Case Login")
+    public void Case_login() throws InterruptedException
     {
         LoginPage lp = new LoginPage(driver);
         lp.enterEmailId(p.getProperty("case"));

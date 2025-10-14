@@ -10,9 +10,6 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
-/*
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;*/
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -20,76 +17,82 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import BaseClass.Baseclass;
 
-public class ExtentSparkManager implements ITestListener{
+public class ExtentSparkManager implements ITestListener {
 
-	public ExtentSparkReporter sparkReporter;
-	public ExtentReports extent;
-	public ExtentTest test;
-	
-	String repName;
-	
-	public void onStart(ITestContext testContext) 
-	{
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-		repName = "Test-Report_SaiSystem" + timeStamp + ".html";
-		sparkReporter = new ExtentSparkReporter(".\\reports\\"+ repName);
-		
-		sparkReporter.config().setDocumentTitle("PusueCare Addiction Therapy Application Report");
-		sparkReporter.config().setReportName("Functional Testing");
-		sparkReporter.config().setTheme(Theme.STANDARD);
-		
-		extent =new ExtentReports();
-		extent.attachReporter(sparkReporter);
-		extent.setSystemInfo("Application", "Addiction Therapy Appl");
-		extent.setSystemInfo("Module", "Admin");
-		extent.setSystemInfo("Environment", "QA");
-		
-	String browser	= testContext.getCurrentXmlTest().getParameter("browser");
-	extent.setSystemInfo("Browser", browser);
-		
-	}
-	
-	public void onTestSuccess(ITestResult result) 
-	{
-		test = extent.createTest(result.getClass().getName());
-		//test.assignCategory(result.getMethod().getGroups()); //turn on this when using the groups concept
-		test.log(Status.PASS, result.getName()+" got Successfully Executed");
-	}
-	
-	public void onTestFailure(ITestResult result) 
-	{
-		test = extent.createTest(result.getClass().getName());
-		//test.assignCategory(result.getMethod().getGroups());
-		test.log(Status.FAIL, result.getName()+ "got Failed");
-		test.log(Status.INFO, result.getThrowable().getMessage());
-		try {
-			String imgpath = new Baseclass().captureScreen(result.getName());
-			test.addScreenCaptureFromPath(imgpath);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}	
-	}
-	
-	public void  onTestSkipped(ITestResult result) 
-	{
-		test = extent.createTest(result.getClass().getName());
-		//test.assignCategory(result.getMethod().getGroups());
-		test.log(Status.SKIP, result.getName()+" got Skipped");
-		test.log(Status.INFO, result.getThrowable().getMessage());
-	}
-	
-	public void onFinish(ITestContext testContext) 
-	{
-		extent.flush();
-		
-		String pathofExtentReport = System.getProperty("user.dir")+"\\reports\\"+repName;
-		File extentReport = new File(pathofExtentReport);
-		
-		try {
-			Desktop.getDesktop().browse(extentReport.toURI());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
+    private static ExtentReports extent; // make it static to share across suites
+    private static ExtentSparkReporter sparkReporter;
+    private static String repName;
+    public ExtentTest test;
+
+    @Override
+    public synchronized void onStart(ITestContext testContext) {
+        // Initialize only once for all suites
+        if (extent == null) {
+            String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+            repName = "Test-Report_SaiSystem_" + timeStamp + ".html";
+            String reportPath = System.getProperty("user.dir") + File.separator + "reports" + File.separator + repName;
+
+            sparkReporter = new ExtentSparkReporter(reportPath);
+            sparkReporter.config().setDocumentTitle("PursueCare Addiction Therapy Application Report");
+            sparkReporter.config().setReportName("Functional Testing Summary (All Suites)");
+            sparkReporter.config().setTheme(Theme.STANDARD);
+
+            extent = new ExtentReports();
+            extent.attachReporter(sparkReporter);
+            extent.setSystemInfo("Application", "Addiction Therapy App");
+            extent.setSystemInfo("Environment", "QA");
+            extent.setSystemInfo("Executed By", System.getProperty("user.name"));
+        }
+
+        // Set current suite info dynamically
+        extent.setSystemInfo("Current Suite", testContext.getSuite().getName());
+    }
+
+    public static String getReadableTestName(ITestResult result) {
+        String desc = result.getMethod().getDescription();
+        return (desc != null && !desc.isEmpty()) ? desc : result.getMethod().getMethodName();
+    }
+
+    @Override
+    public synchronized void onTestSuccess(ITestResult result) {
+        test = extent.createTest(getReadableTestName(result))
+                     .assignCategory(result.getTestContext().getSuite().getName()); // tag suite name
+        test.log(Status.PASS, getReadableTestName(result) + " passed successfully.");
+    }
+
+    @Override
+    public synchronized void onTestFailure(ITestResult result) {
+        test = extent.createTest(getReadableTestName(result))
+                     .assignCategory(result.getTestContext().getSuite().getName());
+        test.log(Status.FAIL, getReadableTestName(result) + " failed.");
+        test.log(Status.INFO, result.getThrowable().getMessage());
+        try {
+            String imgPath = new Baseclass().captureScreen(result.getName());
+            test.addScreenCaptureFromPath(imgPath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public synchronized void onTestSkipped(ITestResult result) {
+        test = extent.createTest(getReadableTestName(result))
+                     .assignCategory(result.getTestContext().getSuite().getName());
+        test.log(Status.SKIP, getReadableTestName(result) + " skipped.");
+        test.log(Status.INFO, result.getThrowable() != null ? result.getThrowable().getMessage() : "No skip reason provided.");
+    }
+
+    @Override
+    public synchronized void onFinish(ITestContext testContext) {
+        // Flush only at the end of the final suite
+        if (testContext.getSuite().getAllMethods().size() == testContext.getAllTestMethods().length) {
+            extent.flush();
+            try {
+                String pathOfExtentReport = System.getProperty("user.dir") + "\\reports\\" + repName;
+                Desktop.getDesktop().browse(new File(pathOfExtentReport).toURI());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

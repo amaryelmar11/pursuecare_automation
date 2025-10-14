@@ -36,7 +36,7 @@ public class Patient_Creation extends Baseclass{
     
 
     @Test(priority = 1)
-    public void Valid_Patient_Creation() throws InterruptedException
+    public void Patient_Creation_by_CM() throws InterruptedException
     {
         lp.enterEmailId(p.getProperty("case"));
         lp.enterPassword(p.getProperty("case_pass"));
@@ -64,109 +64,114 @@ public class Patient_Creation extends Baseclass{
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300)");
 
         cu.click(pc.Select_State_DrpDwn);
-       // pc.selectRandomState();
+        pc.selectRandomState();
         cu.enterText(pc.add_patient_Phone, RandomData.getPhone());
 
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300)");
 
         cu.click(pc.add_patient_InterpreterPref);
-        cu.click(pc.add_patient_InterpreterPrefYES);
-        cu.click(pc.InterpreterPrefLanguageselection_DrpDwn);
+        cu.click(pc.add_patient_InterpreterPrefNO);
         Thread.sleep(2000);
-        cu.click(pc.InterpreterPrefLanguageselection);
-
+        // cu.click(pc.InterpreterPrefLanguageselection_DrpDwn);
+        
+        // cu.click(pc.InterpreterPrefLanguageselection);
+Thread.sleep(5000);
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
 
 
         cu.click(pc.Save_Patient_Info);
-        Thread.sleep(2000);
+        Thread.sleep(8000);
 
     }
 
-//     @Test(priority = 2)
-//     public void Check_Patient_Created() throws InterruptedException
-//     {
-//         // Use the same email generated in Valid_Patient_Creation
+    
+    @Test(priority = 2)
+    public void Check_Patient_Created() throws InterruptedException
+    {
+        // Use the same email generated in Valid_Patient_Creation
         
 
-//         cu.enterText(pc.patient_Search, createdPatientEmail);
-//         Thread.sleep(1000);
-//         String email = cu.getElementText(pc.Created_Pateint_Email_PatientList);
-//         Thread.sleep(1000);
-//         Assert.assertEquals(createdPatientEmail, email);
+        cu.enterText(pc.patient_Search, createdPatientEmail);
+        driver.switchTo().activeElement().sendKeys(Keys.ENTER);
+        Thread.sleep(1500);
+        String email = driver.findElement(org.openqa.selenium.By.xpath("//tbody[@role='rowgroup']//td[contains(@class,'mat-column-email')][normalize-space()='#EMAIL#']".replace("#EMAIL#", createdPatientEmail))).getText().trim();
+        Assert.assertEquals(createdPatientEmail, email);
 
-//     }
+    }
 
-//     @Test(priority = 3)
-//     public void VerifyingPatientDuplication()
-//     {
-//        // String emailToVerify = createdPatientEmail;
-//         cu.click(pc.addPatient);
-//         cu.enterText(pc.add_pat_Email, createdPatientEmail);
-//         driver.switchTo().activeElement().sendKeys(Keys.TAB);
-//         String dupText = cu.getElementText(pc.verify_Duplicate_Pateint_Creation);
-//         Assert.assertEquals(dupText, "This email has been registered already");
+    @Test(priority = 3)
+    public void Verifying_Patient_Duplication()
+    {
+       // String emailToVerify = createdPatientEmail;
+        cu.click(pc.addPatient);
+        cu.enterText(pc.add_pat_Email, createdPatientEmail);
+        driver.switchTo().activeElement().sendKeys(Keys.TAB);
+        String dupText = cu.getElementText(pc.verify_Duplicate_Pateint_Creation);
+        Assert.assertEquals(dupText, "This email has been registered already");
 
-//         cu.click(pc.Clos_AddPatient_Tab);
-//     }
+        cu.click(pc.Clos_AddPatient_Tab);
+    }
 
-//     @Test(priority = 4)
-//     public void ViewEditPatientAssessmentOptions() throws InterruptedException
-//     {
+    @Test(priority = 4)
+    public void View_Edit_Patient_Assessment_Options() throws InterruptedException
+    {
 
-//         cu.click(pc.Click_Pateints_ActionTab);
-//         Thread.sleep(1000);
-//          cu.click(pc.Click_View_Patient);
-//         String viewPatientText = cu.getElementText(pc.viewPatient);
-//         System.out.print(viewPatientText);
-//         Assert.assertEquals(viewPatientText, "View Patient");
+        cu.click(pc.Click_Pateints_ActionTab);
+        Thread.sleep(1500);
+        cu.click(pc.Click_View_Patient);
+        cu.waitForOverlayToDisappear();
+        String viewPatientText = cu.getElementText(pc.viewPatientText);
+        System.out.print(viewPatientText);
+        Assert.assertEquals(viewPatientText, "View Patient");
 
-//         cu.click(pc.Clos_AddPatient_Tab);
-//         Thread.sleep(1000);
-//         cu.click(pc.Click_Pateints_ActionTab);
-//         cu.click(pc.Click_Edit_Patient);
-//         String editPatientText = cu.getElementText(pc.editPatient);
-//         System.out.print(editPatientText);
+        cu.click(pc.Clos_AddPatient_Tab);
+        Thread.sleep(1200);
+        cu.click(pc.Click_Pateints_ActionTab);
+        Thread.sleep(1200);
+        cu.click(pc.Click_Edit_Patient);
+        cu.waitForOverlayToDisappear();
+        String editPatientText = cu.getElementText(pc.editPatientText);
+        System.out.print(editPatientText);
 
-//         Assert.assertEquals(editPatientText, "Edit Patient");
-//         cu.click(pc.Clos_AddPatient_Tab);
-//     }
+        Assert.assertEquals(editPatientText, "Edit Patient");
+        cu.click(pc.Clos_AddPatient_Tab);
+    }
 
 
-//     @Test(priority = 5)
-//     public void ConnectedUserToNewPatient() throws InterruptedException
-//     {
-//         cu.click(pc.Click_Pateints_ActionTab);
-//         cu.click(pc.ConnectToUsers);
-//         cu.click(pc.RoleSelectDrpDwn);
-//         cu.click(pc.ProviderRoleSelect);
-//         cu.click(pc.UseridDrpDwn);
-//         cu.click(pc.UseridSelectDrpDwn);
-//         cu.click(pc.ClickSaveBtn);
+    @Test(priority = 5)
+    public void Connected_User_To_New_Patient() throws InterruptedException
+    {
+        cu.click(pc.Click_Pateints_ActionTab);
+        cu.click(pc.ConnectToUsers);
+        cu.click(pc.RoleSelectDrpDwn);
+        cu.click(pc.ProviderRoleSelect);
+        cu.click(pc.UseridDrpDwn);
+        cu.click(pc.UseridSelectDrpDwn);
+        cu.click(pc.ClickSaveBtn);
 
-//         cu.click(lp.clickonImageforLogout);
-//         cu.click(lp.clickonLogout);
+        cu.click(lp.clickonImageforLogout);
+        cu.click(lp.clickonLogout);
 
-//         Thread.sleep(2000);
-//         cu.enterText(lp.emailId, p.getProperty("Admin"));
-//         cu.enterText(lp.password, p.getProperty("PasswordA"));
-//         lp.clickLoginbtn();
+    //     Thread.sleep(2000);
+    //     cu.enterText(lp.emailId, p.getProperty("Admin"));
+    //     cu.enterText(lp.password, p.getProperty("PasswordA"));
+    //     lp.clickLoginbtn();
 
-//         Thread.sleep(4000);
-//         cu.click(dp.ClickOnProvider);
-//         cu.click(dp.ClcikOnProviderList);
-//         cu.enterText(dp.SearchBtnProviderList, "Rahul Singh");
-//         cu.click(dp.VisibleSearchBtnProviderList);
-//         Thread.sleep(4000);
-//         cu.click(dp.ActionBtnProviderList);
-//         cu.click(dp.ConnectedPatientProviderList);
-//        cu.enterText(dp.SearchPatientConnectedPatientList,createdPatientEmail);
-//        Thread.sleep(1000);
-//         String email = cu.getElementText(dp.GetMailId);
+    //     Thread.sleep(4000);
+    //     cu.click(dp.ClickOnProvider);
+    //     cu.click(dp.ClcikOnProviderList);
+    //     cu.enterText(dp.SearchBtnProviderList, "Rahul Singh");
+    //     cu.click(dp.VisibleSearchBtnProviderList);
+    //     Thread.sleep(4000);
+    //     cu.click(dp.ActionBtnProviderList);
+    //     cu.click(dp.ConnectedPatientProviderList);
+    //    cu.enterText(dp.SearchPatientConnectedPatientList,createdPatientEmail);
+    //    Thread.sleep(1000);
+    //     String email = cu.getElementText(dp.GetMailId);
 
-//        Assert.assertEquals(email, createdPatientEmail);
+    //    Assert.assertEquals(email, createdPatientEmail);
 
-//         cu.click(dp.CloseConnectedPatientListDialogue);
+    //     cu.click(dp.CloseConnectedPatientListDialogue);
 
        
 
@@ -182,5 +187,6 @@ public class Patient_Creation extends Baseclass{
 //         cu.click(dp.ClickActionBtnPatintListAdmin);
 //         cu.click(dp.ClickOnDeletePatient);
 
-//     }
+//  
+   }
 }

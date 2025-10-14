@@ -16,7 +16,9 @@ testCases_Provider\Login_Provider.class
 PageObjectClass\ProviderChatPage.class
 testCases_Patient\Patient_Role_Actions.class
 testCases_Provider\Provider_DashBoard_Checks.class
+utilities\suite.class
 testCases_Provider\Remember_Me.class
+testCases_Case\CM_Appointment_booking.class
 testCases_Provider\Provider_Zoom_Session_EndToEnd.class
 testCases_Admin\Login_Admin.class
 BasePage\RandomData.class
@@ -28,6 +30,7 @@ BaseClass\Baseclass.class
 PageObjectClass\Patient_Role.class
 testCases_Case\Login_Case.class
 BasePage\BasePageClass.class
+testCases_Case\Provider_list.class
 testCases_Provider\Appointment_Booking_Available_Section.class
 testCases_Provider\Provider_Timezone_Option.class
 testCases_Provider\RecurringAppBooking_DailyType.class

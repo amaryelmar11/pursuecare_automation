@@ -23,7 +23,7 @@ public class CM_Role_Menu_Visibility extends Baseclass{
     }
 
     @Test(priority = 1)
-    public void verifyMenusPresent() throws InterruptedException
+    public void CM_Role_Menu_Checks() throws InterruptedException
     {
         cu.login(lp, p.getProperty("case"), p.getProperty("case_pass"));
 
