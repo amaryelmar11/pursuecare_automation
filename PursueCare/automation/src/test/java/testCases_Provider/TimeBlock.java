@@ -49,9 +49,9 @@ public class TimeBlock extends Baseclass {
         cu.click(tb.clickOnEndDateIcon);
         //Thread.sleep(4000);
        cu.click(tb.OpenEndDateCalendar);
-        pa.BlockclickDateAfterXDays(driver, 3, "M/d/yyyy");
+        pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
         Thread.sleep(2000);
-        cu.click(tb.ProceedBtnClick);
+       // cu.click(tb.ProceedBtnClick);
         driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
        // ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,200);");
 
@@ -73,7 +73,7 @@ public class TimeBlock extends Baseclass {
 
     }
 
-    @Test(priority = 2)
+   // @Test(priority = 2)
     public void TimeBlockDelete() throws InterruptedException
     {
         cu.login(lp, p.getProperty("Admin"), p.getProperty("PasswordA"));

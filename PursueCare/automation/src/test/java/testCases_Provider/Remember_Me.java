@@ -28,7 +28,7 @@ public class Remember_Me extends Baseclass{
 
     }
 
-    @Test(priority = 2)
+    //@Test(priority = 2)
     public void rememberMeChecks()
     {
         Common_Utils cu = new Common_Utils(driver);

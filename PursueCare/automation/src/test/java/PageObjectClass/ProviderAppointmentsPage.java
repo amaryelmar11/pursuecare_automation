@@ -98,7 +98,7 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	@FindBy(xpath="//mat-label[normalize-space()='Select Provider']")
 	public WebElement SelectProviderDropdown;
 	
-	@FindBy(xpath="//span[normalize-space()='Sid Automation3']")
+	@FindBy(xpath="//span[normalize-space()='Sid Automation4']")
 	public WebElement SelectProviderFromDrpdwn;
 
 	// Calendar Filter Related Xpaths
@@ -108,7 +108,7 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	@FindBy(xpath = "//span[normalize-space()='sid Automation5']")
 	public WebElement SelectProviderFilterChk1;
 
-	@FindBy(xpath = "//span[normalize-space()='Jade Wise']")
+	@FindBy(xpath = "//span[normalize-space()='Grandy Sand']")
 	public WebElement SelectProviderFilterChk2;
 
 	@FindBy(xpath = "//mat-select[@formcontrolname='providerlist']/div/div/span/span")
@@ -175,6 +175,14 @@ public class ProviderAppointmentsPage extends BasePageClass{
 
 	@FindBy(xpath="//label[normalize-space()='Delete All Recurring Meetings']")
 	public WebElement ClickAllRecurringMeetingChkbx;
+
+	// Double booking appointment related bcs need to click on schedule appointment second time
+
+	@FindBy(xpath="//span[normalize-space()='Schedule Appointment']")
+	public WebElement ClickScheduleAppointmentCalendarBtn;
+
+	@FindBy(xpath="//mat-label[normalize-space()='Appointment Date']")
+	public WebElement ClickAppointmentDate;
 
 
 	//PAS & CM Appointment Booking Xpaths

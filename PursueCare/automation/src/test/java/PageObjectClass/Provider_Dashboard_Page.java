@@ -43,7 +43,7 @@ public class Provider_Dashboard_Page extends BasePageClass{
     @FindBy(xpath = "//div[@class='col-xs-12 col-sm-12 col-md-12 col-lg-12']//a[@class='custom-cursor-pointer reset-filter'][normalize-space()='Reset Filter']")
     public WebElement resetFilterTodaysAppointment;
     
-    @FindBy(xpath = "//div[@class='table-responsive'][1]//table[1]/tbody/tr/td[12]/table/td[3]/button")
+    @FindBy(xpath = "//div[@class='table-responsive'][1]//table[1]/tbody/tr/td[11]/table/td[3]/button")
     public WebElement actionButton;
     
     @FindBy(xpath = "//span[contains(text(),'Canceled by Staff')]")
@@ -62,7 +62,7 @@ public class Provider_Dashboard_Page extends BasePageClass{
     @FindBy(xpath="/html[1]/body[1]/app-root[1]/app-dashboard[1]/section[1]/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/select[1]")
     public WebElement ClickProgrm;
     
-    @FindBy(xpath="/html[1]/body[1]/app-root[1]/app-dashboard[1]/section[1]/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/select[1]")
+    @FindBy(xpath="//option[normalize-space()='Assessment']/parent::select")
     public WebElement CleckAssessment;
     
     @FindBy(xpath="//button[@aria-label='Open calendar']//span[@class='mat-mdc-button-touch-target']")
@@ -74,7 +74,7 @@ public class Provider_Dashboard_Page extends BasePageClass{
     @FindBy(xpath="//div[@class='col-xl-12 col-lg-12 col-md-12 col-sm-12']//a[@class='custom-cursor-pointer reset-filter'][normalize-space()='Reset Filter']")
     public WebElement ClickResetFilterCompletedPatientAssessments;
 
-    @FindBy(xpath="//tbody/tr[1]/td[6]/table[1]/td[1]/button[1]/span[3]")
+    @FindBy(xpath="//tbody/tr[1]/td[5]/table[1]/td[1]/button[1]/mat-icon[1]")
     public WebElement ClickOnViewPatientResponse;
     
     @FindBy(xpath="//tbody/tr[1]/td[1]/span[1]")
@@ -83,7 +83,7 @@ public class Provider_Dashboard_Page extends BasePageClass{
     @FindBy(xpath="//div[@class='row label col-md-12 m-l-5 color-black legendcursor']/strong")
     public WebElement ValidatePatientNameFromAssessScreen;
     
-    @FindBy(xpath="/html[1]/body[1]/div[3]/div[2]/div[1]/mat-dialog-container[1]/div[1]/div[1]/app-patient-assessment-view[1]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[2]/div[1]/button[1]/span[3]")
+    @FindBy(xpath="//button[@mattooltip='Close']")
     public WebElement CuttheAssessmentScreen;
 
     //TimeZone Related
@@ -97,7 +97,7 @@ public class Provider_Dashboard_Page extends BasePageClass{
     public WebElement SelectESTimeZone;
 
     // Get Appointment Time For TimeZone Checks
-    @FindBy(xpath="//div[@class='table-responsive'][1]//table[1]/tbody/tr/td[9]")
+    @FindBy(xpath="//div[@class='table-responsive'][1]//table[1]/tbody/tr/td[8]")
     public WebElement ProviderAppointmentTime;
 
    // Click Appointments Reports Page

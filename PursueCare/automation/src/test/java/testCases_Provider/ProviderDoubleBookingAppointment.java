@@ -28,7 +28,7 @@ public class ProviderDoubleBookingAppointment extends Baseclass{
     @Test(priority = 1)
     public void doubleBookingProvider() throws InterruptedException
     {
-        cu.login(lp, p.getProperty("providerdoublebook"), p.getProperty("passwordoublebook"));
+        cu.login(lp, p.getProperty("providerSinglebook"), p.getProperty("passwordSinglebook"));
         cu.click(pa.selectAppointmentDash);
         WebElement todayCell = pa.getTodayAppXpath();
         cu.click(todayCell);
@@ -42,7 +42,7 @@ public class ProviderDoubleBookingAppointment extends Baseclass{
         cu.click(pa.selectHost);
         new Actions(driver).sendKeys(Keys.ENTER).perform();
         cu.click(pa.selectPatient);
-        cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch1"));
+        cu.enterText(pa.inputPatientName, p.getProperty("patientDoublebook1"));
         cu.click(pa.setVisiblePatient);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 
@@ -58,12 +58,14 @@ public class ProviderDoubleBookingAppointment extends Baseclass{
         // Save
         cu.click(pa.selectSaveButton);
 
-        
+        Thread.sleep(2000);
+       // driver.navigate().refresh();
 
         // Double Booking
 
-        cu.click(todayCell);
+        //cu.click(todayCell);
         Thread.sleep(2000);
+        cu.click(pa.ClickScheduleAppointmentCalendarBtn);
         cu.click(pa.selectAppointment);
 
         cu.click(pa.selectAppointmentType);
@@ -73,8 +75,12 @@ public class ProviderDoubleBookingAppointment extends Baseclass{
         cu.click(pa.selectHost);
         new Actions(driver).sendKeys(Keys.ENTER).perform();
         cu.click(pa.selectPatient);
-        cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch2"));
+        cu.enterText(pa.inputPatientName, p.getProperty("patientDoublebook2"));
         cu.click(pa.setVisiblePatient);
+
+        cu.click(pa.ClickAppointmentDate);
+        cu.enterText(pa.ClickAppointmentDate, cu.getTodayDate());
+
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 
         // Start time selection

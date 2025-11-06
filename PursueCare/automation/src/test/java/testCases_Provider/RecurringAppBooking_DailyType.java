@@ -42,7 +42,7 @@ public class RecurringAppBooking_DailyType extends Baseclass {
         cu.click(pa.selectHost);
         new Actions(driver).sendKeys(Keys.ENTER).perform();
         cu.click(pa.selectPatient);
-        cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch3"));
+        cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch"));
         cu.click(pa.setVisiblePatient);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 

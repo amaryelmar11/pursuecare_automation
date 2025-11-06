@@ -94,7 +94,7 @@ public class Appointment_Report_Page extends BasePageClass{
     public WebElement clickPAS;
 
 
-    @FindBy(xpath = "//button[@aria-label='Open calendar']//span[@class='mat-mdc-button-touch-target']")
+    @FindBy(xpath = "//button[@aria-label='Open calendar'][1]")
     public WebElement ClickonDateRangeFilter;
 
 

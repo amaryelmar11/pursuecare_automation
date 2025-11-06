@@ -20,7 +20,7 @@ public class Patient_Creation_Page extends BasePageClass{
         this.driver = driver;
     }
 
-    @FindBy(xpath="//button[@mattooltip='Add Patient']")
+    @FindBy(xpath="//button[@aria-label='Add item']")
     public WebElement addPatient;
 
     @FindBy(xpath="//input[@formcontrolname='email']")
@@ -68,11 +68,15 @@ public class Patient_Creation_Page extends BasePageClass{
     @FindBy(xpath="//button[@type='onSubmit(){}']")
     public WebElement Save_Patient_Info;
 
+    // New Chnage For Selecting patient Date of Birth
+    @FindBy(xpath="//input[@formcontrolname='dob']")
+    public WebElement add_patient_DateOfBirth;
+
     // For Pateint Creation checks
     @FindBy(xpath="//input[@placeholder='Search']")
     public WebElement patient_Search;
 
-    @FindBy(xpath="//tbody[@class='mdc-data-table__content ng-star-inserted']/tr/td[8]")
+    @FindBy(xpath="//tbody[@class='mdc-data-table__content ng-star-inserted']/tr/td[6]")
     public WebElement Created_Pateint_Email_PatientList;
 
     // Close the Add Patient Tab
@@ -87,13 +91,13 @@ public class Patient_Creation_Page extends BasePageClass{
 
     // For View, Edit, Connected Patient TestCases
 
-    @FindBy(xpath="//tbody[@class='mdc-data-table__content ng-star-inserted']/tr/td[14]")
+    @FindBy(xpath="//tbody[@class='mdc-data-table__content ng-star-inserted']/tr/td[11]")
     public WebElement Click_Pateints_ActionTab;
 
-    @FindBy(xpath="//ul[@class='dropdown-menu show']/li[5]/a")
+    @FindBy(xpath="//div[@class='mat-mdc-menu-content']/button[4]")
     public WebElement Click_View_Patient;
 
-    @FindBy(xpath="//ul[@class='dropdown-menu show']/li[6]/a")
+    @FindBy(xpath="//div[@class='mat-mdc-menu-content']/button[5]")
     public WebElement Click_Edit_Patient;
 
     //View And Edit Patient texts
@@ -103,8 +107,20 @@ public class Patient_Creation_Page extends BasePageClass{
     @FindBy(xpath="//div[normalize-space()='Edit Patient'][1]")
     public WebElement editPatient;
 
-    @FindBy(xpath="//ul[@class='dropdown-menu show']/li[11]/a")
+    @FindBy(xpath="//div[@class='mat-mdc-menu-content']/button[9]")
     public WebElement ConnectToUsers;
+
+    @FindBy(xpath="//div[@class='mat-mdc-menu-content']/button[8]")
+    public WebElement ClickShowConnectedUsers;
+
+    @FindBy(xpath="//div[@class='dropdown mr-2']/mat-form-field/div[1]/div/div/input")
+    public WebElement clickSearchConnectedUsersList;
+
+    @FindBy(xpath="//div[@class='addContainer']/div[2]//tbody/tr/td[6]")
+    public WebElement GetProviderNameFormConnectedUserList;
+
+    @FindBy(xpath="//div[@class='mat-mdc-menu-content']/button[6]")
+    public WebElement ClickDeletePatientAdmin;
     
     // Connect To User
 

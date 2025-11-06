@@ -1,5 +1,6 @@
 package BasePage;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -16,8 +17,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.NoSuchElementException;
@@ -182,11 +186,11 @@ public void clickJoinMeetingprovider(String startTime) {
     boolean app = false;
     for (int i = 1; i <= rows.size(); i++) {
         String value = driver
-                .findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[9][1]"))
+                .findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[8][1]"))
                 .getText();
 
         if (value.contains(startTime)) {
-            driver.findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[12]"))
+            driver.findElement(By.xpath("//div[@class='table-responsive'][1]//table[1]/tbody/tr[" + i + "]/td[11]/table/td/button"))
                     .click();
             app = true;
             Assert.assertTrue(app);
@@ -254,6 +258,32 @@ public static boolean isColumnSorted(List<WebElement> columnElements, String ord
         }
         return actualList.equals(sortedList);
     }
+}
+
+public  String getRandomDOB() {
+    // Define year range for realistic DOBs (ages 18–75)
+    int startYear = 1950;
+    int endYear = 2005;
+
+    // Generate random year, month, and day
+    int randomYear = ThreadLocalRandom.current().nextInt(startYear, endYear + 1);
+    int randomMonth = ThreadLocalRandom.current().nextInt(1, 13);   // 1–12
+    int randomDay = ThreadLocalRandom.current().nextInt(1, 29);     // 1–28 (safe for all months)
+
+    // Set the date
+    Calendar calendar = Calendar.getInstance();
+    calendar.set(randomYear, randomMonth - 1, randomDay);
+    Date randomDate = calendar.getTime();
+
+    // Format as M/d/yyyy (e.g., 3/7/1998)
+    SimpleDateFormat formatter = new SimpleDateFormat("M/d/yyyy");
+    return formatter.format(randomDate);
+}
+
+public String getTodayDate() {
+    Date today = new Date();
+    SimpleDateFormat formatter = new SimpleDateFormat("M/d/yyyy");
+    return formatter.format(today);
 }
 
 }
