@@ -176,6 +176,16 @@ public void pressEscape() {
     actions.sendKeys(Keys.ESCAPE).perform();
 }
 
+public boolean isElementClickable(WebDriver driver, WebElement element) {
+    try {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        return true;   // element is clickable
+    } catch (Exception e) {
+        return false;  // element is NOT clickable
+    }
+}
+
 //Click On Join Zoom Session
 
 
@@ -284,6 +294,19 @@ public String getTodayDate() {
     Date today = new Date();
     SimpleDateFormat formatter = new SimpleDateFormat("M/d/yyyy");
     return formatter.format(today);
+}
+
+// Method for sorting logic
+
+public List<WebElement> getColumnElements(int index) {
+    String xpath = "//tbody/tr[position()>=1]/td["+index+"]";
+    return driver.findElements(By.xpath(xpath));
+}
+
+public void clickcolumnheader(int index)
+{
+    WebElement header = driver.findElement(By.xpath("//thead/tr/th[" + index + "]"));
+    header.click();
 }
 
 }

@@ -53,7 +53,7 @@ public class Appointment_Report_Page extends BasePageClass{
 
 
 
-    @FindBy(xpath = "//tbody[@role='rowgroup']/tr[1]/td[7]")
+    @FindBy(xpath = "//tbody[@role='rowgroup']/tr[1]/td[8]")
     public WebElement AppointmentCompletionTxtZoomCheck;
 
     @FindBy(xpath = "//mat-label[normalize-space()='User Role']/parent::*/parent::div/mat-select")

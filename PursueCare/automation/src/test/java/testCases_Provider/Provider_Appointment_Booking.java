@@ -57,6 +57,7 @@ public class Provider_Appointment_Booking extends Baseclass{
 
         // Save
         cu.click(pa.selectSaveButton);
+        //cu.click(pa.selectContinueAnywayButton);
 
         cu.logout(lp);
     }
@@ -68,8 +69,9 @@ public class Provider_Appointment_Booking extends Baseclass{
    
         cu.click(pa.clickCareTeamDash);
         cu.click(pa.clickAppointments);
-
+        Thread.sleep(1000);
         cu.click(pa.SelectProviderDropdown);
+        Thread.sleep(2000);
         cu.click(pa.SelectProviderFromDrpdwn);
         new Actions(driver).sendKeys(Keys.ESCAPE).perform();
 

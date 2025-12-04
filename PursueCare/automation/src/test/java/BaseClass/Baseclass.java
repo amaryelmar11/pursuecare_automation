@@ -9,6 +9,8 @@ import java.time.format.DateTimeFormatter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.logging.log4j.LogManager;
@@ -59,7 +61,29 @@ public void setup(String br, @Optional("false") String headless) throws IOExcept
                 options.addArguments("--disable-dev-shm-usage");
                 options.addArguments("--disable-gpu");
                 options.addArguments("--window-size=1920,1080");
+
+                // NEW: Fake media streams for headless (Zoom needs this)
+                options.addArguments("--use-fake-ui-for-media-stream");
+                options.addArguments("--use-fake-device-for-media-stream");
             }
+
+
+                // NEW: Zoom Permission Settings (For both headless and normal mode)
+            Map<String, Object> prefs = new HashMap<>();
+            
+            // Allow camera and microphone for all sites (or specific domain)
+            prefs.put("profile.default_content_setting_values.media_stream_mic", 1);
+            prefs.put("profile.default_content_setting_values.media_stream_camera", 1);
+            prefs.put("profile.default_content_setting_values.notifications", 1);
+            
+            // Disable popup blocker (for Zoom window)
+            prefs.put("profile.default_content_setting_values.popups", 1);
+            
+            options.setExperimentalOption("prefs", prefs);
+            
+            // NEW: Additional arguments for Zoom SDK
+            options.addArguments("--disable-blink-features=AutomationControlled");
+            options.addArguments("--use-fake-ui-for-media-stream"); // Auto-grant permissions
 
             driver = new ChromeDriver(options);
             break;

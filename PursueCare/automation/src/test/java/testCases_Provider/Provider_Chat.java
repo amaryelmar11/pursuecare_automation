@@ -84,8 +84,6 @@ public class Provider_Chat extends Baseclass{
         cu.click(pc.clickonSearchedPatient);
         cu.click(pc.clickPatienttab);
         driver.navigate().refresh();
-        
-        
     }
  
     @Test(priority = 3)

@@ -3,36 +3,52 @@
 <suite name="Provider Regression Suite" thread-count="5">
     <parameter name="browser" value="chrome"/>
 
-   <!--
+
     <listeners>
         <listener class-name="utilities.ExtentSparkManager"/>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-    </listeners> -->
+    </listeners>  
    
 <test name="Patient Tests">
-        <classes>
-     
-         <!-- <class name="testCases_Provider.Login_Provider"/>  
+        <classes> 
+
+        
+        
+       
+     <class name="testCases_Provider.Login_Provider"/> 
+     <class name="testCases_Provider.Provider_Appointment_Booking"/>
+     <class name="testCases_Provider.RecurringAppBooking_WeekelyType"/>
+     <class name="testCases_Provider.Patient_Creation"/>
+     <class name="testCases_Provider.Provider_Zoom_Session_EndToEnd"/> 
+     <class name="testCases_Provider.SettingsChecks_Provider"/>
+        
+   <!--
+        <class name="testCases_Provider.Login_Provider"/>  
         <class name="testCases_Provider.Login_Validations"/> 
         <class name="testCases_Provider.Forgot_Password_Provider"/>   
         <class name="testCases_Provider.Remember_Me"/> 
         <class name="testCases_Provider.Provider_DashBoard_Checks"/> 
+        <class name="testCases_Provider.Provider_Timezone_Option"/> 
         <class name="testCases_Provider.Provider_Availability"/> 
         <class name="testCases_Provider.CalendarFiltersValidations"/> 
         <class name="testCases_Provider.Provider_Appointment_Booking"/> 
-       <class name="testCases_Provider.RecurringAppBooking_DailyType"/> -->
-       <class name="testCases_Provider.ProviderDoubleBookingAppointment"/>
-        <!-- <class name="testCases_Provider.Patient_Creation"/> 
-          <class name="testCases_Provider.Provider_Chat"/>  
-        <class name="testCases_Provider.Provider_Chat_Advanced"/> 
-       <class name="testCases_Provider.Appointment_Report_Checks"/> 
-        <class name="testCases_Provider.No_Show_Report"/> 
+        <class name="testCases_Provider.RecurringAppBooking_DailyType"/> 
+        <class name="testCases_Provider.RecurringAppBooking_WeekelyType"/>
+        <class name="testCases_Provider.PatientList_Checks"/>
+        <class name="testCases_Provider.Patient_Creation"/> 
+        <class name="testCases_Provider.Provider_Chat"/>    
+        <class name="testCases_Provider.SettingsChecks_Provider"/> 
+        <class name="testCases_Provider.Appointment_Report_Checks"/> 
+        <class name="testCases_Provider.appointment_Report_Sorting_Checks"/>
+        <class name="testCases_Provider.No_Show_Report"/>
+        <class name="testCases_Provider.No_Show_Report_Sorting"/> 
         <class name="testCases_Provider.Patient_Satisfaction_Report"/> 
-        <class name="testCases_Provider.Appointment_Confirmation_Report"/> 
-        <class name="testCases_Provider.TimeBlock"/> 
-        <class name="testCases_Provider.Provider_Timezone_Option"/> 
-        <class name="testCases_Provider.Provider_ZoomSession_Checks"/> 
-        <class name="testCases_Provider.Provider_Zoom_Session_EndToEnd"/> -->
+        <class name="testCases_Provider.Appointment_Confirmation_Report"/>
+        <class name="testCases_Provider.TimeBlock"/>  
+        <class name="testCases_Provider.Provider_ZoomSession_Checks"/>  
+        <class name="testCases_Provider.Provider_Zoom_Session_EndToEnd"/>  
+         
+   -->
         </classes>
     </test>
      

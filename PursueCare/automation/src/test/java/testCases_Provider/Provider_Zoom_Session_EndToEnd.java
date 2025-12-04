@@ -44,7 +44,8 @@ public class Provider_Zoom_Session_EndToEnd extends Baseclass{
     @Test(priority = 1)
     public void EndToEndZoom() throws InterruptedException
     {
-        cu.login(lp, p.getProperty("provider2"), p.getProperty("password2"));
+       // cu.login(lp, p.getProperty("ProviderZoom"), p.getProperty("PassZoom"));
+        cu.login(lp, p.getProperty("zoomsessionchecks"), p.getProperty("passwordzoomsessionchecks"));
 
 		// Open Appointments and open today's slot
 	 	cu.click(pa.selectAppointmentDash);
@@ -60,7 +61,7 @@ public class Provider_Zoom_Session_EndToEnd extends Baseclass{
 		new Actions(driver).sendKeys(Keys.ENTER).perform();
 
 		cu.click(pa.selectPatient);
-		cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch1"));
+		cu.enterText(pa.inputPatientName, p.getProperty("patientZoomEndToEnd"));
 		cu.click(pa.setVisiblePatient);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 
@@ -108,7 +109,7 @@ public class Provider_Zoom_Session_EndToEnd extends Baseclass{
     }
 
              cu.logout(lp);
-             cu.login(lp, p.getProperty("PatientSearch1"), p.getProperty("patientPassword1"));
+             cu.login(lp, p.getProperty("patientEndToEnd"), p.getProperty("PasswordendToEnd"));
             Thread.sleep(5000);
 
             cu.clickJoinMeetingPatient(time);
@@ -144,12 +145,31 @@ public class Provider_Zoom_Session_EndToEnd extends Baseclass{
             cu.click(pd.ClickAppointmentReportDash);  
 
             cu.click(pr.clickSelectPatientFilter);
-            cu.enterText(pr.SearchPatientInput, p.getProperty("PatientSearch1"));
+            cu.enterText(pr.SearchPatientInput, p.getProperty("patientZoomEndToEnd"));
             cu.click(pr.clickCheckbxPatientSelect);
             driver.switchTo().activeElement().sendKeys(Keys.ESCAPE);
             cu.click(pr.clickAppointmentReportSearch);
             Thread.sleep(2000);
             Assert.assertEquals("Completed Successfully", cu.getElementText(pr.AppointmentCompletionTxtZoomCheck));
+
+            cu.logout(lp);
+            cu.login(lp, p.getProperty("Admin"), p.getProperty("PasswordA"));
+   
+            cu.click(pa.clickCareTeamDash);
+            cu.click(pa.clickAppointments);
+    
+            cu.click(pa.SelectProviderDropdown);
+            cu.click(pa.SelectProviderSessionChecksFromDrpdwn);
+            new Actions(driver).sendKeys(Keys.ESCAPE).perform();
+    
+            
+            Thread.sleep(1000);
+            cu.click(pa.SelectAppointmentForDeletion);
+            ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+            Thread.sleep(2000);
+            cu.click(pa.DeleteProviderApp);
+            cu.click(pa.ClickOnDeleteBtnPopup);
+            Thread.sleep(5000);
 
     }
 }

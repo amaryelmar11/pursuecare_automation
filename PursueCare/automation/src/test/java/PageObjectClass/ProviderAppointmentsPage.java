@@ -78,6 +78,10 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	@FindBy(xpath = "//span[normalize-space()='Save']") //// span[normalize-space()='Save']
 	public WebElement selectSaveButton;
 
+	@FindBy(xpath = "//span[normalize-space()='Continue anyway']") //// span[normalize-space()='Save']
+	public WebElement selectContinueAnywayButton;
+
+
 	// Delete Provider Appointments
 
 	@FindBy(xpath = "//td[contains(@class, 'fc-day-today fc-daygrid-day')]/div/div[2]/div/a/div")
@@ -100,6 +104,15 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	
 	@FindBy(xpath="//span[normalize-space()='Sid Automation4']")
 	public WebElement SelectProviderFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='automation zoom']")
+	public WebElement SelectProviderZoomEndToEndFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='automation zoom1']")
+	public WebElement SelectProviderSessionChecksFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='sid Automation5']")
+	public WebElement SelectProviderTimeBlockFromDrpdwn;	
 
 	// Calendar Filter Related Xpaths
 	@FindBy(xpath = "//div[@class='icon-button-demo']/button")
@@ -172,6 +185,13 @@ public class ProviderAppointmentsPage extends BasePageClass{
 
 	@FindBy(xpath="//span[normalize-space()='SidAutomation Account']")
 	public WebElement SelectRecProviderFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='automation daily']")
+	public WebElement SelectRec1ProviderFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='provider weekly']")
+	public WebElement SelectRec2ProviderFromDrpdwn;
+
 
 	@FindBy(xpath="//label[normalize-space()='Delete All Recurring Meetings']")
 	public WebElement ClickAllRecurringMeetingChkbx;
@@ -306,7 +326,8 @@ public class ProviderAppointmentsPage extends BasePageClass{
             LocalTime end = LocalTime.parse(parts[1].trim(), fmt);
 
             if (!end.isBefore(now)) {
-                slot.click();
+				System.out.println("Clicked on slot: " + text);
+                slot.click();				
                 return;
             }
         }

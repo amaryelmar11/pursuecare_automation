@@ -48,7 +48,7 @@ public class No_Show_Report extends Baseclass{
 
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void patientSatisfactionReport() throws InterruptedException 
 	{
 		cu.login(lp, p.getProperty("provider1"), p.getProperty("Password1"));
@@ -72,7 +72,7 @@ public class No_Show_Report extends Baseclass{
 		cu.click(ns.clickMedicalNSRDrpDwn);	
 		cu.click(ns.SelectLowNSROption);
 		cu.click(ns.clickCounsellingNSRDrpDwn);
-		cu.click(ns.SelectLowNSROption);
+		cu.click(ns.SelectMediumNSROption);
 		cu.click(ns.clickStateDrpDwn);
 		cu.click(ns.SelectAlabamaStateOption);
 		//cu.click(ns.clickStateProgramDrpDwn);
@@ -81,12 +81,11 @@ public class No_Show_Report extends Baseclass{
 		cu.click(ns.SelectToxScreenOption);
 		//cu.click(ns.clickStateProgramDrpDwn);
 		//.click(ns.SelectProgramOption);
-		cu.click(ns.clickToxSxreenDrpDwn);
-		cu.click(ns.SelectToxScreenOption);
+		
 		cu.click(pr.ClickonDateRangeFilter);
             
-		pa.BlockclickDateAfterXDays(driver, 0, "M/dd/yyyy");
-		pa.BlockclickDateAfterXDays(driver, 1, "M/dd/yyyy");
+		pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
+		pa.BlockclickDateAfterXDays(driver, 1, "M/d/yyyy");
 		cu.click(pr.clickAppointmentReportSearch);
 		cu.click(pr.clickResetFilterElement);
 		Thread.sleep(2000);
@@ -108,6 +107,8 @@ public class No_Show_Report extends Baseclass{
 
             cu.click(pr.clikconRefresh);
 			cu.click(pr.downloadExcelReport);
+
+			Thread.sleep(2000);
 		
 	}
 

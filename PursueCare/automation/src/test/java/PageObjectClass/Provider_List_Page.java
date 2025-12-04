@@ -101,4 +101,6 @@ public class Provider_List_Page extends BasePageClass{
     @FindBy(xpath = "//div[normalize-space()='Schedule Appointment']")
 	public WebElement GetScheduleAppointmentText;
 
+    
+
 }

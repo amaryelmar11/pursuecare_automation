@@ -133,7 +133,7 @@ public class Patient_Creation_Page extends BasePageClass{
     @FindBy(xpath="//mat-select[@formcontrolname='userid']")
     public WebElement UseridDrpDwn;
 
-    @FindBy(xpath="//div[@aria-multiselectable='true']//mat-option[18]")
+    @FindBy(xpath="//span[normalize-space()='Rahul Singh']")
     public WebElement UseridSelectDrpDwn;
 
     @FindBy(xpath="//span[normalize-space()='Save']")

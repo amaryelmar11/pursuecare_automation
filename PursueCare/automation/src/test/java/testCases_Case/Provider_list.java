@@ -1,11 +1,16 @@
 package testCases_Case;
 
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import BaseClass.Baseclass;
 import PageObjectClass.DashBoardPage;
 import PageObjectClass.LoginPage;
+import utilities.TableSortUtils;
 import PageObjectClass.CM_Role;
 import org.testng.annotations.BeforeClass;
 import BasePage.Common_Utils;
@@ -20,6 +25,7 @@ public class Provider_list extends Baseclass{
     private DashBoardPage dp;
     private Common_Utils cu;
     private CM_Role pc;
+    private TableSortUtils ts;
 
     @BeforeClass
     public void initPages() {
@@ -27,6 +33,7 @@ public class Provider_list extends Baseclass{
         dp = new DashBoardPage(driver);
         cu = new Common_Utils(driver);
         pc = new CM_Role (driver);
+        ts = new TableSortUtils();
   
 
 }
@@ -45,6 +52,7 @@ public class Provider_list extends Baseclass{
         Thread.sleep(3000);
          cu.click(pc.provider_list_menu);
          Thread.sleep(5000);
+       /*   
          cu.click(pc.providersearch);
          cu.enterText(pc.providersearch, "Grandy");
          Thread.sleep(3000);
@@ -70,6 +78,19 @@ public class Provider_list extends Baseclass{
          Thread.sleep(3000);
          cu.click(pc.dashboard_menu);
          Thread.sleep(8000);
-
+*/
+            // Ascending sort
+            List<WebElement> column = cu.getColumnElements(1);
+            boolean status = TableSortUtils.isColumnSortedUniversal(column, "asc");
+            System.out.println(status);
+            Assert.assertTrue(status);
+            //Descending order
+            Thread.sleep(2000);
+            cu.clickcolumnheader(1);
+            Thread.sleep(2000);
+           // cu.clickcolumnheader(1);
+            List<WebElement> column1 = cu.getColumnElements(1);
+            boolean status1 = TableSortUtils.isColumnSortedUniversal(column1, "desc");
+            Assert.assertTrue(status1);
     }
 }

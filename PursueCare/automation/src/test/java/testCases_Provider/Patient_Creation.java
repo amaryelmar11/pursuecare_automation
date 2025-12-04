@@ -70,6 +70,7 @@ public class Patient_Creation extends Baseclass{
         cu.click(pc.Gender_Male);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300)");
 
+        Thread.sleep(2000);
         cu.click(pc.Select_State_DrpDwn);
         pc.selectRandomState();
         cu.enterText(pc.add_patient_Phone, RandomData.getPhone());
