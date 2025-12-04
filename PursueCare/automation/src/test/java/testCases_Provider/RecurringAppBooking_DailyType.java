@@ -28,7 +28,7 @@ public class RecurringAppBooking_DailyType extends Baseclass {
 
 	@Test(priority = 1)
 	public void createDailyRecurringAppointment() throws InterruptedException {
-        cu.login(lp, p.getProperty("ProviderChat"), p.getProperty("PasswordChat"));
+        cu.login(lp, p.getProperty("providerDaily"), p.getProperty("passworddaily"));
         cu.click(pa.selectAppointmentDash);
         WebElement todayCell = pa.getTodayAppXpath();
         cu.click(todayCell);
@@ -42,10 +42,11 @@ public class RecurringAppBooking_DailyType extends Baseclass {
         cu.click(pa.selectHost);
         new Actions(driver).sendKeys(Keys.ENTER).perform();
         cu.click(pa.selectPatient);
-        cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch3"));
+        cu.enterText(pa.inputPatientName, p.getProperty("patientdaily"));
         cu.click(pa.setVisiblePatient);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 
+        Thread.sleep(3000);
         pa.selectNextRangeSlot();
        
         cu.click(pa.clickRecurringCheckbox);
@@ -71,7 +72,7 @@ public class RecurringAppBooking_DailyType extends Baseclass {
             cu.click(pa.clickAppointments);
     
             cu.click(pa.SelectProviderDropdown);
-            cu.click(pa.SelectRecProviderFromDrpdwn);
+            cu.click(pa.SelectRec1ProviderFromDrpdwn);
             new Actions(driver).sendKeys(Keys.ESCAPE).perform();
     
             

@@ -88,11 +88,11 @@ public class ProviderChatPage extends BasePageClass{
     @FindBy(xpath="//ul[@class='chat-list list-unstyled m-b-0']/li[1]")
 	public WebElement msgProviderOrPatientAtTop;
 
-    @FindBy(xpath="//ul[@class='chat-list list-unstyled m-b-0']/li[3]/div/div/div/p[1]")
+    @FindBy(xpath="//ul[@class='chat-list list-unstyled m-b-0']/li[3]/div/div/div[1]//p[@class='small email']")
 	public WebElement getmsgProviderOrPatientAtMiddle;
 
 
-    @FindBy(xpath="//ul[@class='chat-list list-unstyled m-b-0']/li[1]/div/div/div/p[1]")
+    @FindBy(xpath="//ul[@class='chat-list list-unstyled m-b-0']/li[1]/div/div/div[1]//p[@class='small email']")
 	public WebElement getmsgProviderOrPatientInTop;
     // Method to send message
     public void sendMessage(String message)

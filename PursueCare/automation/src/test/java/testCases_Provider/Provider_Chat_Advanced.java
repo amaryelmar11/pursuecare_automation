@@ -23,7 +23,7 @@ public class Provider_Chat_Advanced extends Baseclass{
     }
 
     @Test(priority = 1)
-    public void MultimediaOptionInChat()
+    public void MultimediaOptionInChat() throws InterruptedException
     {
         cu.login(lp, p.getProperty("ProviderChat"), p.getProperty("PasswordChat"));
 
@@ -45,6 +45,7 @@ public class Provider_Chat_Advanced extends Baseclass{
         cu.click(pc.MultimediaLibraryTextOption);
         cu.click(pc.selectTextOptionContent);
         cu.click(pc.clickSendMsgBtn);
+        Thread.sleep(2000);
 
     }
 }

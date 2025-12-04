@@ -51,13 +51,13 @@ public class DashBoardPage extends BasePageClass{
     @FindBy(xpath="//button[@mattooltip='Search']")
 	public WebElement VisibleSearchBtnProviderList;
 
-    @FindBy(xpath="//tbody[@role='rowgroup']/tr/td[10]/table/td[2]")
+    @FindBy(xpath="//tbody[@role='rowgroup']/tr/td[8]/div/button/span")
 	public WebElement ActionBtnProviderList;
 
     @FindBy(xpath="//div[@role='menu']/div/button[4]")
 	public WebElement ConnectedPatientProviderList;
 
-    @FindBy(xpath="//div[@class='mdc-dialog__container']/div/app-connected-patient-list/div/div[2]/div/div/div/div/div/div/div/div/ul/li/mat-form-field/div/div/div/input")
+    @FindBy(xpath="//div[@class='materialTableHeader']/div/div/ul/li/mat-form-field/div")
 	public WebElement SearchPatientConnectedPatientList;
 
     @FindBy(xpath="//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-email mat-column-email ng-star-inserted']")
@@ -77,11 +77,16 @@ public class DashBoardPage extends BasePageClass{
     @FindBy(xpath="//input[@placeholder='Search']")
 	public WebElement SearchBtnAdminPatinetList;
 
-    @FindBy(xpath="//tbody[@role='rowgroup']/tr/td[14]")
+    @FindBy(xpath="//tbody[@role='rowgroup']/tr/td[11]")
 	public WebElement ClickActionBtnPatintListAdmin;
 
-    @FindBy(xpath="//ul[@class='dropdown-menu show']/li[7]/a")
+    @FindBy(xpath="//button[@color='warn']/parent::div/button[1]")
 	public WebElement ClickOnDeletePatient; 
+
+    // Care Team Related
+    @FindBy(xpath="//span[normalize-space()='Care Team']")
+	public WebElement ClickOnCareTeamDash; 
+
 
 
   // Related to the zoom Session

@@ -62,8 +62,37 @@ public class Provider_Availability_Page extends BasePageClass{
     @FindBy(xpath="//mat-icon[@role='button']")
     public WebElement DeleteslotBtn;
 
-    // Add slot for the multiple days
+    // For Specifically PAS login --> Provider Availability Page
+    @FindBy(xpath="//a[normalize-space()='Provider Availability']")
+    public WebElement ClickProviderAvailDash;
+    
+    @FindBy(xpath="//input[@aria-label='Search box']")
+    public WebElement SearchProviderAvailability;
 
+    @FindBy(xpath="//button[@aria-label='Export to Excel']")
+    public WebElement ClickExportToExcel;
+
+    @FindBy(xpath="//button[@mattooltip='View Provider Availability'][1]")
+    public WebElement ViewProviderAvailability;
+
+    @FindBy(xpath="//button[@mattooltip='Edit Provider Availability'][1]")
+    public WebElement EditProviderAvailability;
+
+    @FindBy(xpath="//button[@mattooltip='Delete Provider Availability'][1]")
+    public WebElement DeleteProviderAvailability;
+
+    
+    @FindBy(xpath="//div[@class='modalHeader clearfix']/div")
+    public WebElement GetViewProviderAvailText;
+
+    @FindBy(xpath="//a[normalize-space()='Availability Schedule']")
+    public WebElement GetAvailabilityScheduleText;
+
+    @FindBy(xpath="//h3[normalize-space()='Delete Provider Availability']")
+    public WebElement DeleteProviderAvailText;
+
+    @FindBy(xpath="//button[@color='warn']")
+    public WebElement ClickCancelBtn;
 
 
     public void clickTodayAndTomorrow() {

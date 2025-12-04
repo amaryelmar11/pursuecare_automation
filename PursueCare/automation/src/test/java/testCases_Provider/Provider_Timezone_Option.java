@@ -29,20 +29,23 @@ public class Provider_Timezone_Option extends Baseclass{
     }
 
     @Test
-    public void ProviderTimeZoneChecks()
+    public void ProviderTimeZoneChecks() throws InterruptedException
     {
         cu.login(lp, p.getProperty("ProviderChat"), p.getProperty("PasswordChat"));
         String ESTtime = cu.getElementText(pd.ProviderAppointmentTime);
         cu.click(pd.TimeZoneDrpDwn);
         cu.click(pd.SelectMSTimeZone);
+        Thread.sleep(2000);
         String MSTtime = cu.getElementText(pd.ProviderAppointmentTime);
         
         boolean status = pd.compareTimeRanges(ESTtime, MSTtime);
-
+System.out.println(ESTtime +""+ MSTtime);
         Assert.assertTrue(status);
         cu.click(pd.TimeZoneDrpDwn);
 
         cu.click(pd.SelectESTimeZone);
+
+        Thread.sleep(2000);
 
     }
 }

@@ -41,7 +41,7 @@ public class Provider_ZoomSession_Checks extends Baseclass {
 	// Schedules a provider appointment (meeting) similar to other flows
 	@Test(priority = 1)
 	public void providerCanScheduleMeeting() throws InterruptedException {
-		cu.login(lp, p.getProperty("provider2"), p.getProperty("password2"));
+		cu.login(lp, p.getProperty("zoomsessionchecks"), p.getProperty("passwordzoomsessionchecks"));
 
 		// Open Appointments and open today's slot
 	 	cu.click(pa.selectAppointmentDash);
@@ -57,7 +57,7 @@ public class Provider_ZoomSession_Checks extends Baseclass {
 		new Actions(driver).sendKeys(Keys.ENTER).perform();
 
 		cu.click(pa.selectPatient);
-		cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch3"));
+		cu.enterText(pa.inputPatientName, p.getProperty("PatientSearchZoom"));
 		cu.click(pa.setVisiblePatient);
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 
@@ -102,17 +102,38 @@ public class Provider_ZoomSession_Checks extends Baseclass {
        cu.click(pz.clickOnTestSpeaker2);
        cu.click(pz.clickOnJoinSession);
 	   Thread.sleep(3000);
-	   cu.click(pz.clickonNotNowPatient);
+	   //cu.click(pz.clickonNotNowPatient);
 
 	   cu.selectFromDropdown(pz.ClickInterpreterLang, "text", "American Sign Language" );
 	   cu.click(pz.ClickCallInterpreterBtn);
 	 	 Thread.sleep(2000);
-	   String toastText = cu.getElementText(pz.CallInterpreterToast);
+	  // String toastText = cu.getElementText(pz.CallInterpreterToast);
 	   Thread.sleep(4000);
 	  // Assert.assertEquals("toastText", "Accepted Request processed successfully");
 	   cu.click(pz.clickonLeaveOption);
 
        cu.click(pz.clickOnLeaveSession);
+       Thread.sleep(2000);
+       driver.switchTo().window(mainwindowHandle);
+       cu.logout(lp);
+       cu.login(lp, p.getProperty("Admin"), p.getProperty("PasswordA"));
+
+	   cu.click(pa.clickCareTeamDash);
+	   cu.click(pa.clickAppointments);
+
+	   cu.click(pa.SelectProviderDropdown);
+	   cu.click(pa.SelectProviderSessionChecksFromDrpdwn);
+	   new Actions(driver).sendKeys(Keys.ESCAPE).perform();
+
+	   
+	   Thread.sleep(1000);
+	   cu.click(pa.SelectAppointmentForDeletion);
+	   ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+	   Thread.sleep(2000);
+	   cu.click(pa.DeleteProviderApp);
+	   cu.click(pa.ClickOnDeleteBtnPopup);
+	   Thread.sleep(5000);
+
       
 	}
 

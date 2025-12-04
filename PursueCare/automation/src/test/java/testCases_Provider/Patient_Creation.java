@@ -9,9 +9,11 @@ import org.testng.annotations.Test;
 import BaseClass.Baseclass;
 import BasePage.Common_Utils;
 import BasePage.RandomData;
+import PageObjectClass.Appointment_Report_Page;
 import PageObjectClass.DashBoardPage;
 import PageObjectClass.LoginPage;
 import PageObjectClass.Patient_Creation_Page;
+import PageObjectClass.ProviderAppointmentsPage;
 
 
 
@@ -22,6 +24,8 @@ public class Patient_Creation extends Baseclass{
     private DashBoardPage dp;
     private Common_Utils cu;
     private Patient_Creation_Page pc;
+    private Appointment_Report_Page pr;
+    private ProviderAppointmentsPage pa;
 
     @BeforeClass
     public void initPages() {
@@ -30,7 +34,8 @@ public class Patient_Creation extends Baseclass{
         cu = new Common_Utils(driver);
         pc = new Patient_Creation_Page(driver);
         createdPatientEmail = RandomData.getEmail();
-
+        pr = new Appointment_Report_Page(driver);
+        pa = new ProviderAppointmentsPage(driver);
 }
     
 
@@ -45,20 +50,27 @@ public class Patient_Creation extends Baseclass{
         cu.click(pc.addPatient);
 
         
-      //  cu.enterText(pc.add_pat_Email, createdPatientEmail);
-       // Thread.sleep(2000);
-        //driver.switchTo().activeElement().sendKeys(Keys.TAB);
+       cu.enterText(pc.add_pat_Email, createdPatientEmail);
+       Thread.sleep(2000);
+        driver.switchTo().activeElement().sendKeys(Keys.TAB);
 
         cu.click(pc.add_pat_Timezone);
         cu.click(pc.timezone_EST);
         cu.enterText(pc.add_patient_FirstName, RandomData.getFirstName());
         cu.enterText(pc.add_patient_middlename, RandomData.getMiddleName());
         cu.enterText(pc.add_patient_lastname, RandomData.getLastName());
+       
+      /*  cu.click(pr.ClickonDateRangeFilter);
+        Thread.sleep(2000);
+        pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
+        pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy"); */
+        cu.click(pc.add_patient_DateOfBirth);
+        cu.enterText(pc.add_patient_DateOfBirth, cu.getRandomDOB());
         cu.click(pc.Gender_drpdwn);
         cu.click(pc.Gender_Male);
-
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300)");
 
+        Thread.sleep(2000);
         cu.click(pc.Select_State_DrpDwn);
         pc.selectRandomState();
         cu.enterText(pc.add_patient_Phone, RandomData.getPhone());
@@ -134,25 +146,25 @@ public class Patient_Creation extends Baseclass{
     {
         cu.click(pc.Click_Pateints_ActionTab);
         cu.click(pc.ConnectToUsers);
+        Thread.sleep(1000);
         cu.click(pc.RoleSelectDrpDwn);
         cu.click(pc.ProviderRoleSelect);
         cu.click(pc.UseridDrpDwn);
         cu.click(pc.UseridSelectDrpDwn);
+
         cu.click(pc.ClickSaveBtn);
 
-        cu.click(lp.clickonImageforLogout);
-        cu.click(lp.clickonLogout);
-
-        Thread.sleep(2000);
-        cu.enterText(lp.emailId, p.getProperty("Admin"));
-        cu.enterText(lp.password, p.getProperty("PasswordA"));
-        lp.clickLoginbtn();
-
-        Thread.sleep(4000);
-        cu.click(dp.ClickOnProvider);
+        cu.click(pc.Click_Pateints_ActionTab);
+        cu.click(pc.ClickShowConnectedUsers);
+       String text =  cu.getElementText(pc.GetProviderNameFormConnectedUserList);
+       Assert.assertEquals(text, "Rahul Singh");
+       cu.click(pc.Clos_AddPatient_Tab);
+        
+       cu.logout(lp);
+       /* cu.click(dp.ClickOnProvider);
         cu.click(dp.ClcikOnProviderList);
         cu.enterText(dp.SearchBtnProviderList, "Rahul Singh");
-        cu.click(dp.VisibleSearchBtnProviderList);
+        //cu.click(dp.VisibleSearchBtnProviderList);
         Thread.sleep(4000);
         cu.click(dp.ActionBtnProviderList);
         cu.click(dp.ConnectedPatientProviderList);
@@ -162,21 +174,25 @@ public class Patient_Creation extends Baseclass{
 
        Assert.assertEquals(email, createdPatientEmail);
 
-        cu.click(dp.CloseConnectedPatientListDialogue);
+        cu.click(dp.CloseConnectedPatientListDialogue); */
 
        
 
     }
 
     @Test(priority = 6)
-    public void DeleteCreatedPatient()
+    public void DeleteCreatedPatient() throws InterruptedException
     {
-        
+        cu.login(lp, p.getProperty("Admin"), p.getProperty("PasswordA"));
         cu.click(dp.PatientClickAdmin);
         cu.click(dp.PatientListClickAdmin);
+        Thread.sleep(2000);
         cu.enterText(dp.SearchBtnAdminPatinetList, createdPatientEmail);
+        Thread.sleep(2000);
         cu.click(dp.ClickActionBtnPatintListAdmin);
+        cu.click(pc.ClickDeletePatientAdmin);
         cu.click(dp.ClickOnDeletePatient);
+        Thread.sleep(3000);
 
     }
 }

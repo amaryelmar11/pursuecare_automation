@@ -1,6 +1,9 @@
 package testCases_Provider;
 
+import java.util.List;
+
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -13,6 +16,7 @@ import PageObjectClass.LoginPage;
 import PageObjectClass.ProviderAppointmentsPage;
 import PageObjectClass.ProviderZoomSessionPage;
 import PageObjectClass.Provider_Dashboard_Page;
+import utilities.TableSortUtils;
 import PageObjectClass.Appointment_Confirmation_Report_Page;
 
 public class Appointment_Confirmation_Report extends Baseclass{
@@ -60,8 +64,9 @@ public class Appointment_Confirmation_Report extends Baseclass{
         
         cu.click(pr.ClickonDateRangeFilter);
             
-        pa.BlockclickDateAfterXDays(driver, 0, "M/dd/yyyy");
-        pa.BlockclickDateAfterXDays(driver, 1, "M/dd/yyyy");
+        pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
+        Thread.sleep(2000);
+        pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
         cu.click(ac.ClickConnectedCMDrpDwn);
         cu.click(ac.SelectCMDrpDwn);
         driver.switchTo().activeElement().sendKeys(Keys.ESCAPE);
@@ -81,6 +86,45 @@ public class Appointment_Confirmation_Report extends Baseclass{
 
         cu.click(pr.clikconRefresh);
         cu.click(pr.downloadExcelReport);
+
+        // ========== COLUMN 2 ==========
+
+        // Ascending
+        Thread.sleep(2000);
+        cu.clickcolumnheader(2);
+        Thread.sleep(3000);
+        List<WebElement> col2Asc = cu.getColumnElements(2);
+        System.out.println(col2Asc);
+        boolean col2AscStatus = TableSortUtils.isColumnSortedUniversal(col2Asc, "asc");
+        Assert.assertTrue(col2AscStatus);
+
+        // Descending
+        Thread.sleep(1000);
+        cu.clickcolumnheader(2);
+        Thread.sleep(2000);
+        List<WebElement> col2Desc = cu.getColumnElements(2);
+        boolean col2DescStatus = TableSortUtils.isColumnSortedUniversal(col2Desc, "desc");
+        Assert.assertTrue(col2DescStatus);
+
+
+        // ========== COLUMN 3 ==========
+
+        // Ascending
+        Thread.sleep(2000);
+        cu.clickcolumnheader(3);
+        Thread.sleep(2000);
+        List<WebElement> col3Asc = cu.getColumnElements(3);
+        boolean col3AscStatus = TableSortUtils.isColumnSortedUniversal(col3Asc, "asc");
+        Assert.assertTrue(col3AscStatus);
+
+        // Descending
+        Thread.sleep(1000);
+        cu.clickcolumnheader(3);
+        Thread.sleep(2000);
+        List<WebElement> col3Desc = cu.getColumnElements(3);
+        boolean col3DescStatus = TableSortUtils.isColumnSortedUniversal(col3Desc, "desc");
+        Assert.assertTrue(col3DescStatus);
+
 
 
     }

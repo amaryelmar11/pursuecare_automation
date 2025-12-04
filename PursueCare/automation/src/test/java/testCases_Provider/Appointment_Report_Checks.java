@@ -16,6 +16,7 @@ import PageObjectClass.LoginPage;
 import PageObjectClass.ProviderAppointmentsPage;
 import PageObjectClass.ProviderZoomSessionPage;
 import PageObjectClass.Provider_Dashboard_Page;
+import utilities.TableSortUtils;
 
 public class Appointment_Report_Checks extends Baseclass{
 
@@ -78,8 +79,8 @@ public class Appointment_Report_Checks extends Baseclass{
             Thread.sleep(2000);
             cu.click(pr.ClickonDateRangeFilter);
             
-            pa.BlockclickDateAfterXDays(driver, 0, "M/dd/yyyy");
-            pa.BlockclickDateAfterXDays(driver, 1, "M/dd/yyyy");
+            pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
+            pa.BlockclickDateAfterXDays(driver, 1, "M/d/yyyy");
             cu.click(pr.clickAppointmentReportSearch);
             Thread.sleep(2000);
             cu.click(pr.clickResetFilterElement);
@@ -87,12 +88,12 @@ public class Appointment_Report_Checks extends Baseclass{
             int actualValue = Integer.parseInt(cu.getElementText(pr.ClickOnFilterRange25).trim());
             Assert.assertEquals(actualValue, 25);
 
-            cu.click(pr.clikconRefresh);
+            
 
-            // Check the sorting Ascending or Descending
-            List<WebElement> sort = pr.SortingRowsAppReport;
+            
 
-            //pr.getColumnElements(driver, sort, 8 );
+           
+
     }
 }
 

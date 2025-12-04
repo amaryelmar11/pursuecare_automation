@@ -16,7 +16,7 @@ public LoginPage(WebDriver driver)
     this.driver = driver;
  }
 
- @FindBy(xpath="//input[@formcontrolname='email']")
+@FindBy(xpath="//input[@formcontrolname='email']")
 public WebElement emailId;
 	
 @FindBy(xpath="//input[@formcontrolname='password']")

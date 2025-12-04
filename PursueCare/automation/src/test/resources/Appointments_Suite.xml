@@ -6,6 +6,7 @@
     
     <listeners>
         <listener class-name="utilities.ExtentSparkManager"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
     
 

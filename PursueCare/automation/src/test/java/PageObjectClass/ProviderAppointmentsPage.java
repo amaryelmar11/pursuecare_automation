@@ -48,7 +48,7 @@ public class ProviderAppointmentsPage extends BasePageClass{
 
    
 
-	@FindBy(xpath = "/html[1]/body[1]/div[3]/div[2]/div[1]/mat-dialog-container[1]/div[1]/div[1]/app-multiple-user-appointment-add[1]/div[1]/div[2]/form[1]/div[7]/div[1]/div[2]/mat-form-field[1]/div[1]/div[2]/div[1]/mat-select[1]/div[1]/div[1]/span[1]")
+	@FindBy(xpath = "//mat-select[@formcontrolname='patientNameControl']")
 	public WebElement selectPatient;
 
 	@FindBy(xpath = "//input[@placeholder='Search patients...']")
@@ -78,6 +78,10 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	@FindBy(xpath = "//span[normalize-space()='Save']") //// span[normalize-space()='Save']
 	public WebElement selectSaveButton;
 
+	@FindBy(xpath = "//span[normalize-space()='Continue anyway']") //// span[normalize-space()='Save']
+	public WebElement selectContinueAnywayButton;
+
+
 	// Delete Provider Appointments
 
 	@FindBy(xpath = "//td[contains(@class, 'fc-day-today fc-daygrid-day')]/div/div[2]/div/a/div")
@@ -98,8 +102,17 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	@FindBy(xpath="//mat-label[normalize-space()='Select Provider']")
 	public WebElement SelectProviderDropdown;
 	
-	@FindBy(xpath="//span[normalize-space()='Sid Automation3']")
+	@FindBy(xpath="//span[normalize-space()='Sid Automation4']")
 	public WebElement SelectProviderFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='automation zoom']")
+	public WebElement SelectProviderZoomEndToEndFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='automation zoom1']")
+	public WebElement SelectProviderSessionChecksFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='sid Automation5']")
+	public WebElement SelectProviderTimeBlockFromDrpdwn;	
 
 	// Calendar Filter Related Xpaths
 	@FindBy(xpath = "//div[@class='icon-button-demo']/button")
@@ -108,7 +121,7 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	@FindBy(xpath = "//span[normalize-space()='sid Automation5']")
 	public WebElement SelectProviderFilterChk1;
 
-	@FindBy(xpath = "//span[normalize-space()='Jade Wise']")
+	@FindBy(xpath = "//span[normalize-space()='Grandy Sand']")
 	public WebElement SelectProviderFilterChk2;
 
 	@FindBy(xpath = "//mat-select[@formcontrolname='providerlist']/div/div/span/span")
@@ -173,8 +186,23 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	@FindBy(xpath="//span[normalize-space()='SidAutomation Account']")
 	public WebElement SelectRecProviderFromDrpdwn;
 
+	@FindBy(xpath="//span[normalize-space()='automation daily']")
+	public WebElement SelectRec1ProviderFromDrpdwn;
+
+	@FindBy(xpath="//span[normalize-space()='provider weekly']")
+	public WebElement SelectRec2ProviderFromDrpdwn;
+
+
 	@FindBy(xpath="//label[normalize-space()='Delete All Recurring Meetings']")
 	public WebElement ClickAllRecurringMeetingChkbx;
+
+	// Double booking appointment related bcs need to click on schedule appointment second time
+
+	@FindBy(xpath="//span[normalize-space()='Schedule Appointment']")
+	public WebElement ClickScheduleAppointmentCalendarBtn;
+
+	@FindBy(xpath="//mat-label[normalize-space()='Appointment Date']")
+	public WebElement ClickAppointmentDate;
 
 
 	//PAS & CM Appointment Booking Xpaths
@@ -211,6 +239,20 @@ public class ProviderAppointmentsPage extends BasePageClass{
 		String xpath = "//td[normalize-space()='" + currentDate + "' and contains(@class, 'fc-day-today')]";
 		return driver.findElement(By.xpath(xpath));
 	}
+
+	//today xpath CM & PAS
+	public WebElement getTodayAppXpathCM_PAS() {
+
+	
+		String currentDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+	
+		String xpath = "//td[@data-date='" + currentDate + "' and contains(@class, 'fc-day-today')]";
+	
+		return driver.findElement(By.xpath(xpath));
+	
+	}
+	
+	 
 
 
 	// Clicking on the available Section Of the Calendar
@@ -284,7 +326,8 @@ public class ProviderAppointmentsPage extends BasePageClass{
             LocalTime end = LocalTime.parse(parts[1].trim(), fmt);
 
             if (!end.isBefore(now)) {
-                slot.click();
+				System.out.println("Clicked on slot: " + text);
+                slot.click();				
                 return;
             }
         }
@@ -316,10 +359,10 @@ public void BlockclickDateAfterXDays(WebDriver driver, int daysToAdd, String dat
     // Step 2: Format using the given pattern (e.g., "MMMM d, yyyy")
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern(datePattern);
     String dateToClick = targetDate.format(formatter);
-
+	System.out.println(dateToClick);
     // Step 3: Build dynamic XPath
     String xpath = "//button[@aria-label='" + dateToClick + "']";
-
+	System.out.println(xpath);
     // Step 4: Locate and click
     WebElement element = driver.findElement(By.xpath(xpath));
     element.click();

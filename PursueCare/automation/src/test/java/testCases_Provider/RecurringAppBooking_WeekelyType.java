@@ -28,7 +28,7 @@ public class RecurringAppBooking_WeekelyType extends Baseclass {
 
     @Test(priority = 1)
     public void createWeeklyRecurringAppointment() throws InterruptedException {
-        cu.login(lp, p.getProperty("ProviderChat"), p.getProperty("PasswordChat"));
+        cu.login(lp, p.getProperty("providerweekly"), p.getProperty("passwordweekly"));
         cu.click(pa.selectAppointmentDash);
 
         WebElement todayCell = pa.getTodayAppXpath();
@@ -42,10 +42,10 @@ public class RecurringAppBooking_WeekelyType extends Baseclass {
         cu.click(pa.selectHost);
         new Actions(driver).sendKeys(Keys.ENTER).perform();
         cu.click(pa.selectPatient);
-        cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch3"));
+        cu.enterText(pa.inputPatientName, p.getProperty("patientweekly"));
         cu.click(pa.setVisiblePatient);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
-
+        Thread.sleep(3000);
         pa.selectNextRangeSlot();
 
         cu.click(pa.clickRecurringCheckbox);
@@ -73,7 +73,7 @@ public class RecurringAppBooking_WeekelyType extends Baseclass {
         cu.click(pa.clickAppointments);
 
         cu.click(pa.SelectProviderDropdown);
-        cu.click(pa.SelectRecProviderFromDrpdwn);
+        cu.click(pa.SelectRec2ProviderFromDrpdwn);
         new Actions(driver).sendKeys(Keys.ESCAPE).perform();
 
         Thread.sleep(1000);
@@ -83,7 +83,7 @@ public class RecurringAppBooking_WeekelyType extends Baseclass {
         cu.click(pa.ClickAllRecurringMeetingChkbx);
         cu.click(pa.DeleteProviderApp);
         Thread.sleep(500);
-        cu.click(pa.ClickOnDeleteBtnPopup);
+        //cu.click(pa.ClickOnDeleteBtnPopup);
         Thread.sleep(1000);
     }
 }

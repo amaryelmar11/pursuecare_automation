@@ -49,9 +49,9 @@ public class TimeBlock extends Baseclass {
         cu.click(tb.clickOnEndDateIcon);
         //Thread.sleep(4000);
        cu.click(tb.OpenEndDateCalendar);
-        pa.BlockclickDateAfterXDays(driver, 3, "M/d/yyyy");
+        pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
         Thread.sleep(2000);
-        cu.click(tb.ProceedBtnClick);
+       // cu.click(tb.ProceedBtnClick);
         driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
        // ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,200);");
 
@@ -71,9 +71,27 @@ public class TimeBlock extends Baseclass {
           Thread.sleep(5000);
           cu.logout(lp);
 
+          cu.login(lp, p.getProperty("Admin"), p.getProperty("PasswordA"));
+   
+          cu.click(pa.clickCareTeamDash);
+          cu.click(pa.clickAppointments);
+  
+          cu.click(pa.SelectProviderDropdown);
+          cu.click(pa.SelectProviderTimeBlockFromDrpdwn);
+          new Actions(driver).sendKeys(Keys.ESCAPE).perform();
+  
+          
+          Thread.sleep(1000);
+          cu.click(pa.SelectAppointmentForDeletion);
+          ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+          Thread.sleep(2000);
+          cu.click(pa.DeleteProviderApp);
+          cu.click(pa.ClickOnDeleteBtnPopup);
+          Thread.sleep(5000);
+
     }
 
-    @Test(priority = 2)
+   // @Test(priority = 2)
     public void TimeBlockDelete() throws InterruptedException
     {
         cu.login(lp, p.getProperty("Admin"), p.getProperty("PasswordA"));

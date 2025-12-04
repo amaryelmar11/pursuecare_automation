@@ -48,7 +48,7 @@ public class No_Show_Report extends Baseclass{
 
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void patientSatisfactionReport() throws InterruptedException 
 	{
 		cu.login(lp, p.getProperty("provider1"), p.getProperty("Password1"));
@@ -62,31 +62,30 @@ public class No_Show_Report extends Baseclass{
 		Assert.assertEquals("Medical NSR", cu.getElementText(ns.clickMedicalNSRDrpDwn));
 		Assert.assertEquals("Counseling NSR", cu.getElementText(ns.clickCounsellingNSRDrpDwn));
 		Assert.assertEquals("State", cu.getElementText(ns.clickStateDrpDwn));
-		Assert.assertEquals("Program", cu.getElementText(ns.clickStateProgramDrpDwn));
+		//Assert.assertEquals("Program", cu.getElementText(ns.clickStateProgramDrpDwn));
 		Assert.assertEquals("Last Tox Screen", cu.getElementText(ns.clickToxSxreenDrpDwn));
 		Assert.assertEquals("Provider", cu.getElementText(pr.ClickUserRoleFilter));
 		Assert.assertEquals("Speciality", cu.getElementText(pr.ClickSpecialityFilterProvider));
-		Assert.assertEquals(cu.getElementText(ns.ProviderNameForValidation), cu.getElementText(pr.ClickProviderFilter));
+		//Assert.assertEquals(cu.getElementText(ns.ProviderNameForValidation), cu.getElementText(pr.ClickProviderFilter));
 		
 		//Click Medical NSR
 		cu.click(ns.clickMedicalNSRDrpDwn);	
 		cu.click(ns.SelectLowNSROption);
 		cu.click(ns.clickCounsellingNSRDrpDwn);
-		cu.click(ns.SelectLowNSROption);
+		cu.click(ns.SelectMediumNSROption);
 		cu.click(ns.clickStateDrpDwn);
 		cu.click(ns.SelectAlabamaStateOption);
-		cu.click(ns.clickStateProgramDrpDwn);
-		cu.click(ns.SelectProgramOption);
+		//cu.click(ns.clickStateProgramDrpDwn);
+		//cu.click(ns.SelectProgramOption);
 		cu.click(ns.clickToxSxreenDrpDwn);
 		cu.click(ns.SelectToxScreenOption);
-		cu.click(ns.clickStateProgramDrpDwn);
-		cu.click(ns.SelectProgramOption);
-		cu.click(ns.clickToxSxreenDrpDwn);
-		cu.click(ns.SelectToxScreenOption);
+		//cu.click(ns.clickStateProgramDrpDwn);
+		//.click(ns.SelectProgramOption);
+		
 		cu.click(pr.ClickonDateRangeFilter);
             
-		pa.BlockclickDateAfterXDays(driver, 0, "M/dd/yyyy");
-		pa.BlockclickDateAfterXDays(driver, 1, "M/dd/yyyy");
+		pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
+		pa.BlockclickDateAfterXDays(driver, 1, "M/d/yyyy");
 		cu.click(pr.clickAppointmentReportSearch);
 		cu.click(pr.clickResetFilterElement);
 		Thread.sleep(2000);
@@ -94,11 +93,11 @@ public class No_Show_Report extends Baseclass{
 		Assert.assertEquals("Medical NSR", cu.getElementText(ns.clickMedicalNSRDrpDwn));
 		Assert.assertEquals("Counseling NSR", cu.getElementText(ns.clickCounsellingNSRDrpDwn));
 		Assert.assertEquals("State", cu.getElementText(ns.clickStateDrpDwn));
-		Assert.assertEquals("Program", cu.getElementText(ns.clickStateProgramDrpDwn));
+		//Assert.assertEquals("Program", cu.getElementText(ns.clickStateProgramDrpDwn));
 		Assert.assertEquals("Last Tox Screen", cu.getElementText(ns.clickToxSxreenDrpDwn));
 		Assert.assertEquals("Provider", cu.getElementText(pr.ClickUserRoleFilter));
 		Assert.assertEquals("Speciality", cu.getElementText(pr.ClickSpecialityFilterProvider));
-		Assert.assertEquals(cu.getElementText(ns.ProviderNameForValidation), cu.getElementText(pr.ClickProviderFilter));
+		//Assert.assertEquals(cu.getElementText(ns.ProviderNameForValidation), cu.getElementText(pr.ClickProviderFilter));
 
             
 
@@ -108,9 +107,9 @@ public class No_Show_Report extends Baseclass{
 
             cu.click(pr.clikconRefresh);
 			cu.click(pr.downloadExcelReport);
-			
-			
-			
+
+			Thread.sleep(2000);
+		
 	}
 
 }

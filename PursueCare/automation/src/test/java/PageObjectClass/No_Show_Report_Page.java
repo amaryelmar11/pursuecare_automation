@@ -35,6 +35,9 @@ public class No_Show_Report_Page extends BasePageClass{
     @FindBy(xpath="//mat-label[normalize-space()='Counseling NSR']")
     public WebElement clickCounsellingNSRDrpDwn;
 
+    @FindBy(xpath="//span[normalize-space()='Medium (30 to 50%)']")
+    public WebElement SelectMediumNSROption;
+
     @FindBy(xpath="//mat-label[normalize-space()='State']")
     public WebElement clickStateDrpDwn;
 
