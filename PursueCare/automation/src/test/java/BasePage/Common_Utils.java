@@ -25,6 +25,8 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.NoSuchElementException;
+
+import PageObjectClass.LSEHR_Page;
 import PageObjectClass.LoginPage;
 
 public class Common_Utils extends BasePageClass{
@@ -171,6 +173,12 @@ public void login(LoginPage loginPage, String username, String password) {
     click(loginPage.Loginbtn);
 }
 
+public void loginLS(LSEHR_Page LSPage, String username, String password) {
+    enterText(LSPage.EnterLsMailID, username);
+    enterText(LSPage.EnterLsPassword, password);
+    click(LSPage.ClickSignInBtn);
+}
+
 public void pressEscape() {
     Actions actions = new Actions(driver);
     actions.sendKeys(Keys.ESCAPE).perform();
@@ -308,6 +316,18 @@ public void clickcolumnheader(int index)
     WebElement header = driver.findElement(By.xpath("//thead/tr/th[" + index + "]"));
     header.click();
 }
+
+public String getCurrentDay() {
+    return java.time.LocalDate.now()
+            .getDayOfWeek()
+            .toString()
+            .substring(0,1).toUpperCase() 
+            + java.time.LocalDate.now()
+                .getDayOfWeek()
+                .toString()
+                .substring(1).toLowerCase();
+}
+
 
 }
 

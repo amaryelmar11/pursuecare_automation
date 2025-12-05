@@ -15,13 +15,9 @@
         
         
        
-     <class name="testCases_Provider.Login_Provider"/> 
+      
      <class name="testCases_Provider.Provider_Appointment_Booking"/>
-     <class name="testCases_Provider.RecurringAppBooking_WeekelyType"/>
-     <class name="testCases_Provider.Patient_Creation"/>
-     <class name="testCases_Provider.Provider_Zoom_Session_EndToEnd"/> 
-     <class name="testCases_Provider.SettingsChecks_Provider"/>
-        
+     
    <!--
         <class name="testCases_Provider.Login_Provider"/>  
         <class name="testCases_Provider.Login_Validations"/> 
