@@ -1,5 +1,7 @@
 package testCases_Provider;
 
+import java.util.Set;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -11,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import BaseClass.Baseclass;
 import BasePage.Common_Utils;
+import PageObjectClass.DashBoardPage;
 import PageObjectClass.LSEHR_Page;
 import PageObjectClass.LoginPage;
 import PageObjectClass.ProviderAppointmentsPage;
@@ -21,6 +24,7 @@ public class Provider_Appointment_Booking extends Baseclass{
     private Common_Utils cu;
     private ProviderAppointmentsPage pa;
     private LSEHR_Page ls;
+    private DashBoardPage dp;
 
     @BeforeClass
     public void initPages() {
@@ -28,6 +32,7 @@ public class Provider_Appointment_Booking extends Baseclass{
         cu = new Common_Utils(driver);
         pa = new ProviderAppointmentsPage(driver);
         ls = new LSEHR_Page(driver);
+        dp = new DashBoardPage(driver);
     }
 
     @Test(priority = 1)
@@ -50,7 +55,7 @@ public class Provider_Appointment_Booking extends Baseclass{
         cu.click(pa.selectHost);
         new Actions(driver).sendKeys(Keys.ENTER).perform();
         cu.click(pa.selectPatient);
-        cu.enterText(pa.inputPatientName, p.getProperty("PatientSearch"));
+        cu.enterText(pa.inputPatientName, p.getProperty("SearchLS"));
         cu.click(pa.setVisiblePatient);
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 
@@ -66,17 +71,65 @@ public class Provider_Appointment_Booking extends Baseclass{
         // Save
         cu.click(pa.selectSaveButton);
         cu.click(pa.selectContinueAnywayButton);
+       
+        cu.click(dp.dashBoardText);
+
+        cu.click(pa.ClickOnPatientForNavigation);
+         // Switching To The Main Window
+       Set<String> allWindows = driver.getWindowHandles();
+       for (String window : allWindows) {
+        if (!window.equals(mainwindowHandle)) {
+            driver.switchTo().window(window);
+            // Do something in new window
+            break;
+        }}
+
+        cu.loginLS(ls, p.getProperty("LoginIDLS"), p.getProperty("PasswordLS"));
+
+        String LSWindow = driver.getWindowHandle();
+
+        cu.click(ls.SearchBtnLS);
+        cu.click(ls.ClickInquiriesOption);
+        cu.click(ls.ClickFullsearch);
+        cu.enterText(ls.ClickSearch, p.getProperty("SearchLS"));
+        cu.click(ls.ClickInquiryNameHyperlink);
+        cu.click(ls.ClickSchedulingSection);
+        
+       Assert.assertEquals( cu.getElementText(ls.ValidDayAppointment), cu.getCurrentDay());
+
+       Assert.assertEquals( cu.getElementText(ls.ValidateEventType), "appointment");
+       Assert.assertEquals( cu.getElementText(ls.ValidateStatus), "active");
+
+       cu.click(ls.ClickEditBtn);
+
+       Assert.assertNotNull(ls.ClickServiceType);
+       Assert.assertNotNull(ls.CLickClientId);
+       
+       cu.selectFromDropdown(ls.ClickStatusDpDwn, "value", "deleted");
+       cu.click(ls.ClickSaveRevisionBtn);
+
+       
+       for (String window : allWindows) {
+        if (!window.equals(LSWindow)) {
+            driver.switchTo().window(window);
+            // Do something in new window
+            break;
+        }}
+
         cu.logout(lp);
 
-    }
 
+    }
+    //@Test(priority = 2)
     public void checkAppointmentInLS()
-    {
+    {/*
         Actions actions = new Actions(driver);
         actions.keyDown(Keys.CONTROL).sendKeys("t").keyUp(Keys.CONTROL).perform();
 
         driver.get(p.getProperty("LSTestEnvUrl"));
         cu.loginLS(ls, p.getProperty("LoginIDLS"), p.getProperty("PasswordLS"));
+
+        String LSWindow = driver.getWindowHandle();
 
         cu.click(ls.SearchBtnLS);
         cu.click(ls.ClickInquiriesOption);
@@ -87,7 +140,7 @@ public class Provider_Appointment_Booking extends Baseclass{
         cu.click(ls.ClickInquiryNameHyperlink);
         cu.click(ls.ClickSchedulingSection);
 
-       
+
         Assert.assertEquals(cu.getElementText(ls.ValidateAppointmentDate), cu.getTodayDate());
 
        Assert.assertEquals( cu.getElementText(ls.ValidDayAppointment), cu.getCurrentDay());
@@ -99,11 +152,25 @@ public class Provider_Appointment_Booking extends Baseclass{
 
        Assert.assertNotNull(ls.ClickServiceType);
        Assert.assertNotNull(ls.CLickClientId);
-       cu.click(ls.ClickDeleteBtn);
+       
+       cu.selectFromDropdown(ls.ClickStatusDpDwn, "value", "deleted");
+       cu.click(ls.ClickSaveRevisionBtn);
+
+       // Switching To The Main Window
+       Set<String> allWindows = driver.getWindowHandles();
+       for (String window : allWindows) {
+        if (!window.equals(LSWindow)) {
+            driver.switchTo().window(window);
+            // Do something in new window
+            break;
+        }}
+
+        cu.logout(lp);
+        */
 
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     public void providerAppointmentDelete() throws InterruptedException
     {
         cu.login(lp, p.getProperty("Admin"), p.getProperty("PasswordA"));

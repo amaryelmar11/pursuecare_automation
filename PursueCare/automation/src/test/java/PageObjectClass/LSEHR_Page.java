@@ -77,4 +77,11 @@ public class LSEHR_Page extends BasePageClass{
     @FindBy(xpath = "//span[normalize-space()='delete']")
     public WebElement ClickDeleteBtn;
 
+    @FindBy(xpath = "//select[@name='event_status']")
+    public WebElement ClickStatusDpDwn;
+
+    @FindBy(xpath = "//a[normalize-space()='Save Revision']")
+    public WebElement ClickSaveRevisionBtn;
+
+
 }

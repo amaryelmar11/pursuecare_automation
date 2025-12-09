@@ -17,17 +17,36 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import BasePage.BasePageClass;
 
-public class ProviderAppointmentsPage extends BasePageClass{
+/**
+ * Page Object Class for Provider Appointments functionality.
+ * This class contains all the web elements and methods related to:
+ * - Appointment booking and scheduling
+ * - Appointment deletion
+ * - Calendar filtering (Provider, PAS, CM)
+ * - Recurring appointments
+ * - Available time slot selection
+ * - Double booking functionality
+ * 
+ * @author Automation Team
+ */
+public class ProviderAppointmentsPage extends BasePageClass {
 
     WebDriver driver;
 
-    public ProviderAppointmentsPage(WebDriver driver)
-    {
+    /**
+     * Constructor to initialize the ProviderAppointmentsPage.
+     * 
+     * @param driver WebDriver instance
+     */
+    public ProviderAppointmentsPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }
 
 
+    // ==================== Appointment Booking Elements ====================
+    
+    /** Element to click on Appointment option from dashboard */
     @FindBy(xpath = "//span[normalize-space()='Appointment']")
 	public WebElement selectAppointmentDash;
 
@@ -37,19 +56,20 @@ public class ProviderAppointmentsPage extends BasePageClass{
 	@FindBy(xpath = "//span[normalize-space()='FOLLOW UP 15 | Therapy']")
 	public WebElement selectAppointmentType;
 
-	@FindBy(xpath = "//mat-label[normalize-space()='Provider']")
-	public WebElement selectProvider;
+    /** Provider selection dropdown label */
+    @FindBy(xpath = "//mat-label[normalize-space()='Provider']")
+    public WebElement selectProvider;
 
-	@FindBy(xpath = "//span[normalize-space()='Jade Wise']")
-	public WebElement selectProviderCheckbox;
+    /** Checkbox to select 'Jade Wise' provider */
+    @FindBy(xpath = "//span[normalize-space()='Jade Wise']")
+    public WebElement selectProviderCheckbox;
 
 	@FindBy(xpath = "//mat-label[normalize-space()='Host']")
 	public WebElement selectHost;
 
-   
-
-	@FindBy(xpath = "//mat-select[@formcontrolname='patientNameControl']")
-	public WebElement selectPatient;
+    /** Patient selection dropdown */
+    @FindBy(xpath = "//mat-select[@formcontrolname='patientNameControl']")
+    public WebElement selectPatient;
 
 	@FindBy(xpath = "//input[@placeholder='Search patients...']")
 	public WebElement inputPatientName;
@@ -80,6 +100,9 @@ public class ProviderAppointmentsPage extends BasePageClass{
 
 	@FindBy(xpath = "//span[normalize-space()='Continue anyway']") //// span[normalize-space()='Save']
 	public WebElement selectContinueAnywayButton;
+
+	@FindBy(xpath = "//span[normalize-space()='Test LS']") //// span[normalize-space()='Save']
+	public WebElement ClickOnPatientForNavigation;
 
 
 	// Delete Provider Appointments

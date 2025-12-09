@@ -3,19 +3,15 @@
 <suite name="Provider Regression Suite" thread-count="5">
     <parameter name="browser" value="chrome"/>
 
-
+<!--
     <listeners>
         <listener class-name="utilities.ExtentSparkManager"/>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>  
-   
+   -->
 <test name="Patient Tests">
         <classes> 
 
-        
-        
-       
-      
      <class name="testCases_Provider.Provider_Appointment_Booking"/>
      
    <!--

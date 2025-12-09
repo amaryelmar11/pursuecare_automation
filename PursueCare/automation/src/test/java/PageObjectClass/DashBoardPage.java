@@ -22,8 +22,8 @@ public class DashBoardPage extends BasePageClass{
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
-    @FindBy(xpath="//*[normalize-space(text())='Dashboard']")
-    WebElement dashBoardText;
+    @FindBy(xpath="//span[normalize-space(text())='Dashboard']")
+    public WebElement dashBoardText;
 
     // Xpath for Logout
 
