@@ -42,7 +42,7 @@ public class LSEHR_Page extends BasePageClass{
 
     //Table Page LSEHR
 
-    @FindBy(xpath = "//div[@id='tblInquiry_filter']")
+    @FindBy(xpath = "//div[@id='tblInquiry_filter']/label/input")
     public WebElement ClickSearch;
 
     @FindBy(xpath = "//tbody/tr/td[1]/a")
