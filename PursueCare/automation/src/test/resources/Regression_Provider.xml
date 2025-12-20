@@ -12,7 +12,7 @@
 <test name="Patient Tests">
         <classes> 
 
-     <class name="testCases_Provider.Provider_Appointment_Booking"/>
+     <class name="testCases_Provider.Patient_Creation"/>
      
    <!--
         <class name="testCases_Provider.Login_Provider"/>  

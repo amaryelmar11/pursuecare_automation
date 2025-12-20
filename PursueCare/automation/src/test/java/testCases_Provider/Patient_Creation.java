@@ -98,6 +98,7 @@ public class Patient_Creation extends Baseclass{
         
 
         cu.enterText(pc.patient_Search, createdPatientEmail);
+        System.out.println(createdPatientEmail);
         Thread.sleep(1000);
         String email = cu.getElementText(pc.Created_Pateint_Email_PatientList);
         Thread.sleep(1000);
@@ -160,7 +161,7 @@ public class Patient_Creation extends Baseclass{
        Assert.assertEquals(text, "Rahul Singh");
        cu.click(pc.Clos_AddPatient_Tab);
         
-       cu.logout(lp);
+       //cu.logout(lp);
        /* cu.click(dp.ClickOnProvider);
         cu.click(dp.ClcikOnProviderList);
         cu.enterText(dp.SearchBtnProviderList, "Rahul Singh");
@@ -181,6 +182,123 @@ public class Patient_Creation extends Baseclass{
     }
 
     @Test(priority = 6)
+    public void checkpatientListAssessmentOptions() throws InterruptedException
+    {
+        cu.click(pc.Click_Pateints_ActionTab);
+        cu.click(pc.Click_Assessment_Options);
+
+       //Sorting Checks for Assessment Options
+    /*     cu.checkColumnSorting(1);
+        cu.checkColumnSorting(2);
+        cu.checkColumnSorting(3);
+        cu.checkColumnSorting(4);
+        cu.checkColumnSorting(5);
+        cu.checkColumnSorting(6);
+        cu.checkColumnSorting(7);
+        cu.checkColumnSorting(8); 
+*/
+        Thread.sleep(2000);
+        cu.enterText(pc.SearchBtnAssessmentOptions, "CAGE-AID Questionnaire");
+        Thread.sleep(1000);
+        cu.click(pc.DeleteParticularAssessmentOption);
+        cu.click(dp.ClickOnDeletePatient);
+        Thread.sleep(1000);
+        cu.click(pc.AddpatientAssessment);
+        cu.click(pc.AssessmentNameDrpDwn);
+        Thread.sleep(1000);
+        cu.click(pc.SelectAssessmentName);
+        cu.enterText(pc.InputDaysForAssessment, "0");
+
+        cu.click(pr.ClickonDateRangeFilter);
+        Thread.sleep(1000);
+        pa.BlockclickDateAfterXDays(driver, 0, "M/d/yyyy");
+
+        cu.click(pa.selectSaveButton);
+        cu.click(pc.ClickBackBtnAssessmentOptions);
+        //cu.logout(lp);
+
+    }
+
+    @Test(priority = 7)
+    public void CheckResetPasswordpatient() throws InterruptedException
+    {
+       cu.click(pc.Click_Pateints_ActionTab);
+       cu.enterText(pc.patient_Search, createdPatientEmail);
+       Thread.sleep(1000);
+       cu.click(pc.ClickResetPasswordPatient);
+       Thread.sleep(1000);
+       cu.click(pc.ClickOkBtnResetPasswordPatient);
+       String tempPassword = cu.getElementText(pc.GetTempPassword);
+       Assert.assertNotNull(tempPassword);
+       System.out.println(tempPassword);
+       Thread.sleep(2000);
+       cu.click(pc.ClickOkBtnResetPasswordPatient);
+       cu.logout(lp);
+       Thread.sleep(1000);
+       cu.click(lp.emailId);
+       lp.emailId.sendKeys(Keys.chord(Keys.CONTROL, "a")); // CTRL+A to select all
+       lp.emailId.sendKeys(Keys.BACK_SPACE);
+       lp.emailId.sendKeys(createdPatientEmail);
+       Thread.sleep(1000);
+       cu.click(lp.password);
+       Thread.sleep(1000);
+       lp.password.sendKeys(Keys.chord(Keys.CONTROL, "a")); // CTRL+A to select all
+       lp.password.sendKeys(Keys.BACK_SPACE);
+       lp.password.sendKeys(tempPassword);
+       Thread.sleep(2000);
+       lp.Loginbtn.click();
+       Thread.sleep(2000);
+       cu.enterText(pc.EnterChangePasswordPatient, p.getProperty("PatientNewPass"));
+       cu.enterText(pc.EnterConfirmPasswordPatient, p.getProperty("PatientNewPass"));
+       cu.click(pc.ClickSaveBtn);
+       Thread.sleep(1000);
+       //cu.logout(lp);
+       lp.emailId.clear();
+       lp.password.clear();
+       cu.login(lp, createdPatientEmail, p.getProperty("PatientNewPass"));
+       cu.click(pc.ClikCAGEAIDQuestionnaire);
+       cu.click(pc.ClickStartAssessmentBtn);
+       cu.click(pc.ClickYesBtn);
+       cu.click(pc.ClickNextBtn);
+       cu.click(pc.ClickYesBtn);
+       cu.click(pc.ClickNoBtn);
+       cu.click(pc.ClickYesBtn);
+       cu.click(pc.ClickNextBtn);
+       cu.click(pc.ClickYesBtn);
+       cu.click(pc.ClickSubmitBtn);
+
+       cu.click(pc.ClickPatientLogoutBtn);
+       Thread.sleep(1000);
+
+    }
+
+    @Test(priority = 8)
+    public void checkpatientAssessmentOptions() throws InterruptedException
+    {
+        cu.login(lp, p.getProperty("provider1"), p.getProperty("Password1"));
+        cu.click(dp.clickOnPatients);
+        Thread.sleep(1000);
+        cu.enterText(pc.patient_Search, createdPatientEmail);
+        Thread.sleep(1000);
+        cu.click(pc.Click_Pateints_ActionTab);
+        Thread.sleep(1000);
+        cu.click(pc.Click_Assessment_Options);
+        Thread.sleep(1000);
+        cu.enterText(pc.SearchBtnAssessmentOptions, "CAGE-AID Questionnaire");
+        Thread.sleep(2000);
+        cu.click(pc.ViewParticularAssessmentOption);
+        Thread.sleep(1000);
+        cu.click(pc.Clos_AddPatient_Tab);
+        Thread.sleep(1000);
+        Assert.assertEquals(cu.getElementText(pc.ReviewAssessmentName), cu.getElementText(pc.loggedInProviderName));
+        Assert.assertTrue(cu.isDateCurrentDate(cu.getElementText(pc.ReviewAssessmentDate)));
+        Assert.assertEquals(cu.getElementText(pc.AssessmentStatus), "completed");
+        Thread.sleep(1000);
+        cu.logout(lp);
+        
+    }
+
+    @Test(priority = 9)
     public void DeleteCreatedPatient() throws InterruptedException
     {
         cu.login(lp, p.getProperty("Admin"), p.getProperty("PasswordA"));

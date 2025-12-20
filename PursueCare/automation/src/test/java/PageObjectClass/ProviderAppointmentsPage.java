@@ -104,6 +104,30 @@ public class ProviderAppointmentsPage extends BasePageClass {
 	@FindBy(xpath = "//span[normalize-space()='Test LS']") //// span[normalize-space()='Save']
 	public WebElement ClickOnPatientForNavigation;
 
+	//Program Selection
+	@FindBy(xpath = "//mat-select[@formcontrolname='programType']")
+	public WebElement selectProgram;
+	
+	@FindBy(xpath = "//span[normalize-space()='MAT']")
+	public WebElement selectProgram1;
+	
+	@FindBy(xpath = "//span[normalize-space()='Therapy']")
+	public WebElement selectProgram2;
+
+	@FindBy(xpath = "//label[normalize-space()='Client']/following-sibling::span[1]/span/span/span[1]")
+	public WebElement GetClientName;
+
+	@FindBy(xpath = "//label[normalize-space()='Service']/following-sibling::span[1]/span/span/span[1]")
+	public WebElement GetServiceName;
+
+	@FindBy(xpath = "//label[normalize-space()='Title']/following-sibling::input")
+	public WebElement GetTitle;
+
+	@FindBy(xpath = "//table[@id='todaysappointmentslist']/tbody/tr[1]/td[11]/table/td[3]")
+	public WebElement ClickActionButton;
+
+	@FindBy(xpath = "//span[normalize-space()='Canceled by Staff']/parent::button")
+	public WebElement ClickCancelByStaff;
 
 	// Delete Provider Appointments
 

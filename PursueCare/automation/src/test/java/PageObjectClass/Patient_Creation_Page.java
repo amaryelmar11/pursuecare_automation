@@ -138,6 +138,111 @@ public class Patient_Creation_Page extends BasePageClass{
 
     @FindBy(xpath="//span[normalize-space()='Save']")
     public WebElement ClickSaveBtn;
+
+
+    // Pateient Assessment Options
+    @FindBy(xpath="//div[@class='mat-mdc-menu-content']/button[3]")
+    public WebElement Click_Assessment_Options;
+
+    @FindBy(xpath="//input[@placeholder='Search']")
+    public WebElement SearchBtnAssessmentOptions;
+
+    @FindBy(xpath="//mat-icon[@aria-label='Delete']")
+    public WebElement DeleteParticularAssessmentOption;
+  
+    @FindBy(xpath="//mat-icon[@aria-label='Edit']")
+    public WebElement EditParticularAssessmentOption;
+
+    @FindBy(xpath="//mat-icon[@aria-label='View']")
+    public WebElement ViewParticularAssessmentOption;
+
+    @FindBy(xpath="//button[@mattooltip='Add Patient Assessment']")
+    public WebElement AddpatientAssessment;
+
+    @FindBy(xpath="//mat-select[@formcontrolname='assessmentid']")
+    public WebElement AssessmentNameDrpDwn;
+
+    @FindBy(xpath="//span[normalize-space()='CAGE-AID Questionnaire']/parent::mat-option")
+    public WebElement SelectAssessmentName;
+
+    @FindBy(xpath="//input[@formcontrolname='days']")
+    public WebElement InputDaysForAssessment;
+
+    @FindBy(xpath="//button[@mattooltip='Back']")
+    public WebElement ClickBackBtnAssessmentOptions;
+
+    @FindBy(xpath="//h2[normalize-space()='Pending Assessment']/parent::div/following-sibling::div/div/table/tbody/tr[4]/td[6]/button")
+    public WebElement ClikCAGEAIDQuestionnaire;
+
+    @FindBy(xpath="//span[normalize-space()='Start']/parent::button")
+    public WebElement ClickStartAssessmentBtn;
+
+    @FindBy(xpath="//button[normalize-space()='Yes']")
+    public WebElement ClickYesBtn;
+
+    @FindBy(xpath="//button[normalize-space()='No']")
+    public WebElement ClickNoBtn;
+
+    @FindBy(xpath="//mat-icon[normalize-space()='keyboard_arrow_right']/parent::button")
+    public WebElement ClickNextBtn;
+
+    @FindBy(xpath="//span[normalize-space()='Submit']/parent::button")
+    public WebElement ClickSubmitBtn;
+
+    @FindBy(xpath="//a[@href='/authentication/signout']/i")
+    public WebElement ClickPatientLogoutBtn;
+
+    // Specific to assessment validations
+    @FindBy(xpath="//table/tbody/tr[1]/td[8]")
+    public WebElement ReviewAssessmentName;
+
+    @FindBy(xpath="//table/tbody/tr[1]/td[9]")
+    public WebElement ReviewAssessmentDate;
+
+    @FindBy(xpath="//table/tbody/tr[1]/td[10]")
+    public WebElement AssessmentStatus;
+
+    @FindBy(xpath="//div[@class='sidebar-userpic-name']")
+    public WebElement loggedInProviderName;
+
+    // Reset Password Patient
+    @FindBy(xpath="//div[@class='mat-mdc-menu-content']/button[1]")
+    public WebElement ClickResetPasswordPatient;
+
+    @FindBy(xpath="//span[normalize-space()='Ok']/parent::button")
+    public WebElement ClickOkBtnResetPasswordPatient;
+
+    @FindBy(xpath="//p[@class='tempPassword']")
+    public WebElement GetTempPassword;
+
+    @FindBy(xpath="//input[@formcontrolname='npfield']")
+    public WebElement EnterChangePasswordPatient;
+
+    @FindBy(xpath="//input[@formcontrolname='confirmPassword']")
+    public WebElement EnterConfirmPasswordPatient;
+
+    //  Reset Patient Creation Checks
+    @FindBy(xpath="//div[@class='mat-mdc-menu-content']/button[12]")
+    public WebElement ClickResetPasswordPatientCreation;
+
+    @FindBy(xpath="//mat-select[@formcontrolname='resetProduct']")
+    public WebElement SelectProductDrpDwn;
+
+    @FindBy(xpath="//span[normalize-space()='reSET']")
+    public WebElement SelectResetProduct;
+
+    @FindBy(xpath="//mat-select[@formcontrolname='resetLocation']")
+    public WebElement SelectLocationDrpDwn;
+    
+    @FindBy(xpath="//span[normalize-space()='PursueCare Office [New Arch]']")
+    public WebElement SelectLocation;
+
+    @FindBy(xpath="//mat-label[normalize-space()='In-app Gift Cards']")
+    public WebElement SelectInappGiftCards;
+
+    @FindBy(xpath="//span[normalize-space()='No']")
+    public WebElement SelectNo;
+
     //Method to crete a random number for selecting state
 
     Random rand = new Random();
