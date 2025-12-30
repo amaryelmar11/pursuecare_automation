@@ -91,6 +91,11 @@ public class Provider_Dashboard_Page extends BasePageClass{
     @FindBy(xpath = "//span[contains(text(),'Not Completed - Tech Issue')]")
     public WebElement notCompletedTechIssue;
 
+    @FindBy(xpath = "//span[contains(text(),'Edit Group Session')]")
+    public WebElement editGroupSession;
+
+    
+
     //Completed Patient Assessments
     @FindBy(xpath="/html[1]/body[1]/app-root[1]/app-dashboard[1]/section[1]/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/select[1]")
     public WebElement ClickProgrm;

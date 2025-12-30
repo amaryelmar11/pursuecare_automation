@@ -260,10 +260,13 @@ public class Patient_Creation extends Baseclass{
        cu.click(pc.ClickStartAssessmentBtn);
        cu.click(pc.ClickYesBtn);
        cu.click(pc.ClickNextBtn);
+       Thread.sleep(1000);
        cu.click(pc.ClickYesBtn);
        cu.click(pc.ClickNoBtn);
+       Thread.sleep(1000);
        cu.click(pc.ClickYesBtn);
        cu.click(pc.ClickNextBtn);
+       Thread.sleep(1000);
        cu.click(pc.ClickYesBtn);
        cu.click(pc.ClickSubmitBtn);
 

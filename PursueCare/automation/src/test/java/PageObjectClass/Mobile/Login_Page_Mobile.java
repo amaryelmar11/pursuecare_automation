@@ -42,19 +42,19 @@ public class Login_Page_Mobile extends MobileBasePageClass {
     // ==================== Login Elements ====================
     
     /** Email input field - Android */
-    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='email']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='email-input']")
     /** Email input field - iOS */
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@name='email']")
     public WebElement emailId;
 	
     /** Password input field - Android */
-    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='password']")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='password-input']")
     /** Password input field - iOS */
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeSecureTextField[@name='password']")
     public WebElement password;
 	
     /** Login submit button - Android */
-    @AndroidFindBy(xpath = "//android.widget.Button[@resource-id='loginButton']")
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Login']")
     /** Login submit button - iOS */
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Login']")
     public WebElement loginButton;
@@ -64,6 +64,78 @@ public class Login_Page_Mobile extends MobileBasePageClass {
     /** Validation message for invalid credentials - iOS */
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@name, 'Invalid')]")
     public WebElement loginValidationMessage;
+
+    /** Empty email validation message - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Email is required\"]")
+    public WebElement EmptyemailValidation;
+
+    /** Empty password validation message - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Password is required\"]")
+    public WebElement EmptyPasswordValidation;
+
+    /** Welcome text "Welcome to PursueCare" - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Welcome to PursueCare\"]")
+    public WebElement pursuecaretext;
+
+    /** Welcome back text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Welcome back,\"]")
+    public WebElement WelcomeBackText;
+
+    /** "Let's get started!" text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Let's get started!\"]")
+    public WebElement LetsStartedText;
+
+    /** Forgot Password link - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Forgot Password ?\"]")
+    public WebElement ForgotPassword;
+
+    /** Sign Up text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Sign Up\"]")
+    public WebElement SignUpText;
+
+    /** Version text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Version - 2.7.3\"]")
+    public WebElement VersionText;
+
+    /** About Us text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"About Us\"]")
+    public WebElement AboutUsText;
+
+    /** Contact Us text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Contact Us\"]")
+    public WebElement ContactUsText;
+
+    /** Change Language text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"English\"]")
+    public WebElement ChangeLanguage;
+
+    // ==================== Forgot Password Elements ====================
+    
+    /** Password reset instruction text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Please provide the email or phone number linked to your account for a password reset link.\"]")
+    public WebElement ForgotPasswordInstructionText;
+
+    /** Enter email/phone for forgot password - Android */
+    @AndroidFindBy(xpath = "//android.widget.EditText")
+    public WebElement EnterForgotPassword;
+
+    /** Request reset link button - Android */
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Request a reset link\"]")
+    public WebElement ClickForgotPassword;
+
+    // ==================== Dialog/Popup Elements ====================
+    
+    /** System button (android:id/button2) - Android */
+    @AndroidFindBy(xpath = "//android.widget.Button[@resource-id=\"android:id/button2\"]")
+    public WebElement SystemButton2;
+
+    /** Got it button (ViewGroup) - Android */
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"Got it!\"]")
+    public WebElement ClickGotItButton;
+
+    /** Got it text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Got it!\"]")
+    public WebElement GotItText;
 
     // ==================== Login Methods ====================
     

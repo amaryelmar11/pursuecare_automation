@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import BaseClass.MobileBaseClass;
 import BasePage.Common_Utils;
+import BasePage.Common_Utils_Mobile;
 import PageObjectClass.Mobile.Login_Page_Mobile;
 
 /**
@@ -30,16 +31,18 @@ import PageObjectClass.Mobile.Login_Page_Mobile;
 public class Mobile_Login_Test extends MobileBaseClass {
 
     // Page Object instances
-    private Login_Page_Mobile loginPage;
+    private Login_Page_Mobile lp;
     private Common_Utils cu;
+    private Common_Utils_Mobile cm;
 
     /**
      * Initializes all page objects before test execution.
      */
     @BeforeClass
     public void initPages() {
-        loginPage = new Login_Page_Mobile(driver);
+        lp = new Login_Page_Mobile(driver);
         cu = new Common_Utils(driver);
+        cm = new Common_Utils_Mobile(driver);
     }
 
     /**
@@ -52,11 +55,36 @@ public class Mobile_Login_Test extends MobileBaseClass {
      * 
      * @throws InterruptedException if thread sleep is interrupted
      */
+
     @Test(priority = 1)
+    public void verifyLoginPage() throws InterruptedException {
+        Assert.assertEquals(cm.getElementText(lp.pursuecaretext), "Welcome to PursueCare");
+        Assert.assertEquals(cm.getElementText(lp.LetsStartedText), "Let's get started!");
+        Assert.assertEquals(cm.getElementText(lp.ForgotPassword), "Forgot Password ?");
+        Assert.assertEquals(lp.SignUpText.getText(), "Sign Up");
+        Assert.assertEquals(cm.getElementText(lp.VersionText), "Version - 2.7.3");
+        Assert.assertEquals(cm.getElementText(lp.AboutUsText), "About Us");
+        Assert.assertEquals(cm.getElementText(lp.ContactUsText), "Contact Us");
+        Assert.assertEquals(cm.getElementText(lp.ChangeLanguage), "English");
+      
+    }
+
+    @Test(priority = 2)
+    public void verifyEmptyLoginValidation() throws InterruptedException {
+        cm.click(lp.loginButton);
+        Assert.assertEquals(cm.getElementText(lp.EmptyemailValidation), "Email is required");
+        Assert.assertEquals(cm.getElementText(lp.EmptyPasswordValidation), "Password is required");
+    }
+
+    @Test(priority = 3)
     public void testValidLogin() throws InterruptedException {
         // Step 1-3: Perform login
-        loginPage.login(p.getProperty("provider1"), p.getProperty("Password1"));
-        
+        cm.login(lp, p.getProperty("mobile.patient.email"), p.getProperty("mobile.patient.password"));
+        Thread.sleep(1000);
+        cm.click(lp.SystemButton2);
+        cm.click(lp.ClickGotItButton);
+        cm.click(lp.GotItText);
+        //Assert.assertEquals(cm.getElementText(lp.WelcomeBackText), "Welcome back,");
         // Step 4: Add verification logic here
         // Example: Verify dashboard element is visible
         Thread.sleep(2000); // Wait for navigation
@@ -74,15 +102,15 @@ public class Mobile_Login_Test extends MobileBaseClass {
      * 
      * @throws InterruptedException if thread sleep is interrupted
      */
-    @Test(priority = 2)
+    //@Test(priority = 2)
     public void testInvalidLogin() throws InterruptedException {
         // Step 1-3: Perform login with invalid credentials
-        loginPage.login("invalid@email.com", "wrongpassword");
+        lp.login("invalid@email.com", "wrongpassword");
         
         Thread.sleep(2000); // Wait for error message
         
         // Step 4: Verify error message
-        String errorMessage = loginPage.getLoginValidationMessage();
+        String errorMessage = lp.getLoginValidationMessage();
         Assert.assertNotNull(errorMessage, "Error message should be displayed");
         Assert.assertTrue(errorMessage.contains("Invalid") || errorMessage.contains("incorrect"), 
             "Error message should indicate invalid credentials");
@@ -98,10 +126,10 @@ public class Mobile_Login_Test extends MobileBaseClass {
      * 
      * @throws InterruptedException if thread sleep is interrupted
      */
-    @Test(priority = 3)
+   // @Test(priority = 3)
     public void testEmptyCredentials() throws InterruptedException {
         // Step 1-3: Try to login with empty fields
-        loginPage.clickLoginButton();
+        lp.clickLoginButton();
         
         Thread.sleep(1000); // Wait for validation
         

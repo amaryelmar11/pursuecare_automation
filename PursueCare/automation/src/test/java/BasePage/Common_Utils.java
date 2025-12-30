@@ -415,6 +415,26 @@ public void clickDashTableColumnHeader(String tableId, int index)
     click(By.xpath(xpath));
 }
 
+// Common method for dash table column sorting checks (ascending and descending)
+// Handles clicking column header, waiting, getting elements, and asserting sort order
+public void checkDashColumnSorting(String tableId, int columnIndex) throws InterruptedException {
+    // Click column header for ascending sort
+    Thread.sleep(2000);
+    clickDashTableColumnHeader(tableId, columnIndex);
+    Thread.sleep(3000);
+    List<WebElement> colAsc = getDashColumnElements(tableId, columnIndex);
+    Assert.assertTrue(TableSortUtils.isColumnSortedUniversal(colAsc, "asc"), 
+        "Column " + columnIndex + " in table '" + tableId + "' is not sorted in ascending order");
+
+    // Click column header again for descending sort
+    Thread.sleep(2000);
+    clickDashTableColumnHeader(tableId, columnIndex);
+    Thread.sleep(3000);
+    List<WebElement> colDesc = getDashColumnElements(tableId, columnIndex);
+    Assert.assertTrue(TableSortUtils.isColumnSortedUniversal(colDesc, "desc"), 
+        "Column " + columnIndex + " in table '" + tableId + "' is not sorted in descending order");
+}
+
 public String getCurrentDay() {
     return java.time.LocalDate.now()
             .getDayOfWeek()

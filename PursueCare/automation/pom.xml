@@ -160,7 +160,7 @@
                 <version>3.2.5</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/Regression_Provider.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/Mobile_Test_Suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>

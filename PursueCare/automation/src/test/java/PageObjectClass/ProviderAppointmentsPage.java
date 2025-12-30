@@ -258,8 +258,11 @@ public class ProviderAppointmentsPage extends BasePageClass {
 	@FindBy(xpath="//span[@class='mat-mdc-select-placeholder mat-mdc-select-min-line ng-tns-c1771602899-59 ng-star-inserted']")
 	public WebElement clickpatientsearchASCM;
 
+	@FindBy(xpath="//mat-label[normalize-space()='Select Case Manager']")
+	public WebElement SelectCaseManagerDrpDwn;
 	
-
+	@FindBy(xpath="//span[normalize-space()='automation cm']")
+	public WebElement SelectCaseManager1FromDrpdwn;
 	//Schedule Popup Validations
 
 	@FindBy(xpath="//strong[normalize-space()='Patient name is required.']")
