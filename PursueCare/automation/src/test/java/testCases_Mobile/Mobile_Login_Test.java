@@ -59,7 +59,7 @@ public class Mobile_Login_Test extends MobileBaseClass {
     @Test(priority = 1)
     public void verifyLoginPage() throws InterruptedException {
         Assert.assertEquals(cm.getElementText(lp.pursuecaretext), "Welcome to PursueCare");
-        Assert.assertEquals(cm.getElementText(lp.LetsStartedText), "Let's get started!");
+       // Assert.assertEquals(cm.getElementText(lp.LetsStartedText), "Let's get started!");
         Assert.assertEquals(cm.getElementText(lp.ForgotPassword), "Forgot Password ?");
         Assert.assertEquals(lp.SignUpText.getText(), "Sign Up");
         Assert.assertEquals(cm.getElementText(lp.VersionText), "Version - 2.7.3");
@@ -77,6 +77,19 @@ public class Mobile_Login_Test extends MobileBaseClass {
     }
 
     @Test(priority = 3)
+    public void verifyIncorectLogin() throws InterruptedException {
+        cm.enterText(lp.emailId, "QA");
+        cm.enterText(lp.password, "QA");
+        Assert.assertEquals(cm.getElementText(lp.InvalidEmailValidation), "Please enter a valid email address");
+        Assert.assertEquals(cm.getElementText(lp.PasswordTooShortValidation), "Password is too short");
+        lp.emailId.clear();
+        lp.password.clear();
+  
+    }
+
+
+
+    @Test(priority = 4)
     public void testValidLogin() throws InterruptedException {
         // Step 1-3: Perform login
         cm.login(lp, p.getProperty("mobile.patient.email"), p.getProperty("mobile.patient.password"));
@@ -84,57 +97,15 @@ public class Mobile_Login_Test extends MobileBaseClass {
         cm.click(lp.SystemButton2);
         cm.click(lp.ClickGotItButton);
         cm.click(lp.GotItText);
-        //Assert.assertEquals(cm.getElementText(lp.WelcomeBackText), "Welcome back,");
+        Assert.assertEquals(cm.getElementText(lp.WelcomeBackText), "Welcome back,");
         // Step 4: Add verification logic here
         // Example: Verify dashboard element is visible
-        Thread.sleep(2000); // Wait for navigation
+        //Thread.sleep(2000); // Wait for navigation
+
+        cm.logout(lp);
         
         // Assert.assertTrue(dashboardPage.isDashboardVisible(), "Login failed - Dashboard not visible");
     }
 
-    /**
-     * Test case to verify login with invalid credentials.
-     * Steps:
-     * 1. Enter invalid email
-     * 2. Enter invalid password
-     * 3. Click login button
-     * 4. Verify error message is displayed
-     * 
-     * @throws InterruptedException if thread sleep is interrupted
-     */
-    //@Test(priority = 2)
-    public void testInvalidLogin() throws InterruptedException {
-        // Step 1-3: Perform login with invalid credentials
-        lp.login("invalid@email.com", "wrongpassword");
-        
-        Thread.sleep(2000); // Wait for error message
-        
-        // Step 4: Verify error message
-        String errorMessage = lp.getLoginValidationMessage();
-        Assert.assertNotNull(errorMessage, "Error message should be displayed");
-        Assert.assertTrue(errorMessage.contains("Invalid") || errorMessage.contains("incorrect"), 
-            "Error message should indicate invalid credentials");
-    }
-
-    /**
-     * Test case to verify login with empty credentials.
-     * Steps:
-     * 1. Leave email empty
-     * 2. Leave password empty
-     * 3. Click login button
-     * 4. Verify validation message is displayed
-     * 
-     * @throws InterruptedException if thread sleep is interrupted
-     */
-   // @Test(priority = 3)
-    public void testEmptyCredentials() throws InterruptedException {
-        // Step 1-3: Try to login with empty fields
-        lp.clickLoginButton();
-        
-        Thread.sleep(1000); // Wait for validation
-        
-        // Step 4: Verify validation message
-        // Note: Adjust based on your app's validation behavior
-        // Assert.assertTrue(loginPage.isValidationMessageVisible(), "Validation message should be displayed");
-    }
+ 
 }

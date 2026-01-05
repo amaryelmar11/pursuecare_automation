@@ -73,6 +73,14 @@ public class Login_Page_Mobile extends MobileBasePageClass {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Password is required\"]")
     public WebElement EmptyPasswordValidation;
 
+    /** Invalid email format validation message - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Please enter a valid email address\"]")
+    public WebElement InvalidEmailValidation;
+
+    /** Password too short validation message - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Password is too short\"]")
+    public WebElement PasswordTooShortValidation;
+
     /** Welcome text "Welcome to PursueCare" - Android */
     @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Welcome to PursueCare\"]")
     public WebElement pursuecaretext;
@@ -136,6 +144,16 @@ public class Login_Page_Mobile extends MobileBasePageClass {
     /** Got it text - Android */
     @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Got it!\"]")
     public WebElement GotItText;
+
+    // ==================== Navigation/Menu Elements ====================
+    
+    /** Breadcrumb menu - Android */
+    @AndroidFindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[1]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView")
+    public WebElement BreadcrumbMenu;
+
+    /** Sign Out text - Android */
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text=\"Sign Out\"]")
+    public WebElement SignOut;
 
     // ==================== Login Methods ====================
     

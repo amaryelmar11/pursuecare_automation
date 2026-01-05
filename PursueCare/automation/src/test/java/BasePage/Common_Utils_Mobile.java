@@ -117,5 +117,16 @@ public class Common_Utils_Mobile extends MobileBasePageClass {
         enterText(loginPage.password, password);
         click(loginPage.loginButton);
     }
+
+    /**
+     * Performs mobile logout using Login_Page_Mobile page object.
+     * Clicks on the breadcrumb menu and then clicks Sign Out.
+     * 
+     * @param loginPage Login_Page_Mobile page object instance
+     */
+    public void logout(Login_Page_Mobile loginPage) {
+        click(loginPage.BreadcrumbMenu);
+        click(loginPage.SignOut);
+    }
 }
 
