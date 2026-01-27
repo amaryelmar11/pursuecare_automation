@@ -159,13 +159,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/Mobile_Test_Suite.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                    <systemPropertyVariables>
-                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
-                    </systemPropertyVariables>
+                <suiteXmlFiles>
+                    <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                </suiteXmlFiles>
+                <systemPropertyVariables>
+                    <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+                </systemPropertyVariables>
                 </configuration>
+
             </plugin>
 
             <!-- Allure Maven Plugin -->

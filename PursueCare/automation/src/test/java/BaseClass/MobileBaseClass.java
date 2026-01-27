@@ -85,7 +85,7 @@ public class MobileBaseClass {
                         "Invalid platform: " + platform + ". Use 'android' or 'ios'");
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
     }
 
     /* -------------------- ANDROID DRIVER -------------------- */
@@ -127,6 +127,8 @@ public class MobileBaseClass {
             options.setPlatformVersion(platformVersion);
         }
 
+        options.setCapability("appium:disableIdLocatorAutocompletion", true);
+
         return new AndroidDriver(new URL(DEFAULT_APPIUM_URL), options);
     }
 
@@ -166,6 +168,8 @@ public class MobileBaseClass {
         if (!platformVersion.isEmpty()) {
             options.setPlatformVersion(platformVersion);
         }
+
+        options.setCapability("appium:disableIdLocatorAutocompletion", true);
 
         return new IOSDriver(new URL(DEFAULT_APPIUM_URL), options);
     }

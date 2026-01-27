@@ -214,7 +214,7 @@ public class HybridBaseClass {
                         "Invalid platform: " + platform + ". Use 'android' or 'ios'");
         }
 
-        mobileDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        mobileDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         logger.info("Mobile Driver initialized: " + platform);
     }
 
@@ -257,6 +257,8 @@ public class HybridBaseClass {
             options.setPlatformVersion(platformVersion);
         }
 
+        options.setCapability("appium:disableIdLocatorAutocompletion", true);
+
         return new AndroidDriver(new URL(DEFAULT_APPIUM_URL), options);
     }
 
@@ -296,6 +298,8 @@ public class HybridBaseClass {
         if (!platformVersion.isEmpty()) {
             options.setPlatformVersion(platformVersion);
         }
+
+        options.setCapability("appium:disableIdLocatorAutocompletion", true);
 
         return new IOSDriver(new URL(DEFAULT_APPIUM_URL), options);
     }

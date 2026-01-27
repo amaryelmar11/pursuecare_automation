@@ -47,6 +47,8 @@ public class Hybrid_Mobile_Web_Test extends HybridBaseClass {
     private Mobile_Zoom_Page mz;
     private Appointment_Report_Page pr;
     private Provider_Dashboard_Page pd;
+    private String mainwindowHandle;
+    
 
     /**
      * Initializes all page objects before test execution.
@@ -114,7 +116,7 @@ public class Hybrid_Mobile_Web_Test extends HybridBaseClass {
        Thread.sleep(3000);
        String name = cu.getElementText(dp.getProviderNameDash);
        cu.getElementText(dp.getProviderNameDash);
-       String mainwindowHandle = driver.getWindowHandle();
+       mainwindowHandle = driver.getWindowHandle();
        System.out.println(mainwindowHandle);
        cu.clickJoinMeetingprovider(time);
        Thread.sleep(6000);
@@ -134,8 +136,11 @@ public class Hybrid_Mobile_Web_Test extends HybridBaseClass {
       cu.click(pz.clickOnJoinSession);
       Thread.sleep(3000);
       cu.click(pz.clickonNotNowPatient);
+    }
+      
 
-
+    @Test(priority = 2)
+      public void mobileLoginAndJoinZoomSession() throws InterruptedException {
       //Mobile Login and Join Zoom Session
    
         // Step 1: Perform mobile login
@@ -149,7 +154,11 @@ public class Hybrid_Mobile_Web_Test extends HybridBaseClass {
         cm.click(mlp.GotItText);
 
         mz.clickZoomSessionPathView();
-    
+        Thread.sleep(5000);
+    }
+
+      @Test(priority = 3)
+        public void webLoginAndEndZoomSession() throws InterruptedException {
        // End Zoom Session
         cu.click(pz.clickonLeaveOption);
         cu.click(pz.clickOnEndSession);
