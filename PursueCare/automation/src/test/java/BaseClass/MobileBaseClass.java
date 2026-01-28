@@ -16,7 +16,6 @@ import org.testng.annotations.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -35,6 +34,7 @@ public class MobileBaseClass {
     protected static AppiumDriverLocalService service;
     protected Properties p;
     protected Logger logger;
+    private boolean appiumServiceStartedByUs = false;
 
     private static final String DEFAULT_APPIUM_URL = "http://127.0.0.1:4723";
 
@@ -66,8 +66,23 @@ public class MobileBaseClass {
         // Start Appium server (SINGLE source of truth)
         startAppiumServer();
 
-        if (!service.isRunning()) {
-            throw new RuntimeException("Appium server failed to start");
+        if (service != null) {
+            if (!service.isRunning()) {
+                throw new RuntimeException("Appium server failed to start");
+            }
+        } else {
+            try {
+                URL appiumUrl = new URL(DEFAULT_APPIUM_URL);
+                java.net.HttpURLConnection connection =
+                        (java.net.HttpURLConnection) appiumUrl.openConnection();
+                connection.setRequestMethod("GET");
+                connection.setConnectTimeout(5000);
+                connection.connect();
+                connection.disconnect();
+                logger.info("Appium server is accessible at " + DEFAULT_APPIUM_URL);
+            } catch (Exception e) {
+                throw new RuntimeException("Appium server is not accessible", e);
+            }
         }
 
         // Initialize driver
@@ -177,27 +192,58 @@ public class MobileBaseClass {
     /* -------------------- APPIUM SERVER -------------------- */
 
     private void startAppiumServer() {
+        try {
+            URL appiumUrl = new URL(DEFAULT_APPIUM_URL);
+            java.net.HttpURLConnection connection =
+                    (java.net.HttpURLConnection) appiumUrl.openConnection();
+            connection.setRequestMethod("GET");
+            connection.setConnectTimeout(2000);
+            connection.connect();
+            connection.disconnect();
+
+            logger.info("Appium server is already running on " + DEFAULT_APPIUM_URL);
+            appiumServiceStartedByUs = false;
+            return;
+        } catch (Exception e) {
+            logger.info("Appium server not detected. Starting new Appium server...");
+        }
 
         service = new AppiumServiceBuilder()
-        .withIPAddress("127.0.0.1")
-        .usingPort(4723)
-        .withArgument(() -> "--base-path", "/")
-        .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
-        .withArgument(GeneralServerFlag.LOG_LEVEL, "error")
-        .build();
+                .withIPAddress("127.0.0.1")
+                .usingPort(4723)
+                .withArgument(() -> "--base-path", "/")
+                .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
+                .withArgument(GeneralServerFlag.LOG_LEVEL, "error")
+                .build();
 
         service.start();
+        appiumServiceStartedByUs = true;
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
 
         if (driver != null) {
-            driver.quit();
+            try {
+                driver.quit();
+            } catch (Exception e) {
+                logger.warn("Error closing Mobile Driver: " + e.getMessage());
+            } finally {
+                driver = null;
+            }
         }
 
-        if (service != null && service.isRunning()) {
-            service.stop();
+        if (appiumServiceStartedByUs && service != null) {
+            try {
+                if (service.isRunning()) {
+                    service.stop();
+                }
+            } catch (Exception e) {
+                logger.warn("Error stopping Appium service: " + e.getMessage());
+            } finally {
+                service = null;
+                appiumServiceStartedByUs = false;
+            }
         }
     }
 
