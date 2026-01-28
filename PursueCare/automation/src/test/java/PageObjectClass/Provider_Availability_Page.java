@@ -62,6 +62,9 @@ public class Provider_Availability_Page extends BasePageClass{
     @FindBy(xpath="//mat-icon[@role='button']")
     public WebElement DeleteslotBtn;
 
+    @FindBy(xpath="//mat-chip-option[@id='chipOption0']/span[2]/button/span[2]")
+    public WebElement GetAddedSlotText;
+
     // For Specifically PAS login --> Provider Availability Page
     @FindBy(xpath="//a[normalize-space()='Provider Availability']")
     public WebElement ClickProviderAvailDash;
@@ -93,6 +96,34 @@ public class Provider_Availability_Page extends BasePageClass{
 
     @FindBy(xpath="//button[@color='warn']")
     public WebElement ClickCancelBtn;
+
+    //Related to value passing while adding slot
+    @FindBy(xpath="//span[normalize-space()='Hour']/preceding-sibling::input")
+    public WebElement EnterStartHourValue;
+
+    @FindBy(xpath="//span[normalize-space()='Minute']/preceding-sibling::input")
+    public WebElement EnterStartMinuteValue;
+
+     //Related to Adhoc slots
+     @FindBy(xpath="//span[normalize-space()='Create Ad hoc Slots']")
+     public WebElement ClickCreateAdhocSlots;
+ 
+     @FindBy(xpath="//a[normalize-space()='View All Ad hoc Slots']")
+     public WebElement ViewAllAdhocSlots;
+ 
+     @FindBy(xpath="//tbody/tr/td[6]")
+     public WebElement DeleteAdhocslots;
+
+     //Related to Provider filter
+     @FindBy(xpath="//mat-label[normalize-space()='Provider']")
+     public WebElement ClickProviderFilter;
+   
+     @FindBy(xpath="//mat-select[@formcontrolname='providerid']/div/div/span/span")
+     public WebElement GetProviderNameSelected;
+
+     @FindBy(xpath="//div[@class='sidebar-userpic-name']")
+     public WebElement LoggedInProviderName;
+
 
 
     public void clickTodayAndTomorrow() {
@@ -142,6 +173,8 @@ public class Provider_Availability_Page extends BasePageClass{
             }
         }
     }
+
+   
 }
     
 

@@ -109,3 +109,28 @@ hs_err_pid*
 config.local.properties
 *.local.properties
 
+# Ignore Android builds
+*.apk
+*.aab
+
+# Ignore iOS builds
+*.ipa
+
+# Ignore entire build/output directories
+app/build/
+**/build/
+
+# Ignore Android project files
+android/
+android.iml
+android.ipr
+android.iws
+android.jks
+android.keystore
+android.keystore.jks
+android.keystore.p12
+android.keystore.p8
+android.keystore.p12
+android.keystore.p8
+android.keystore.p12
+android.keystore.p8

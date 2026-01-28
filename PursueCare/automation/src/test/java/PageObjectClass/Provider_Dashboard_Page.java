@@ -18,7 +18,40 @@ public class Provider_Dashboard_Page extends BasePageClass{
         super(driver);
         this.driver = driver;
     }
+
+    // Basic checkes Provider Dashboard Page
+
+    @FindBy(xpath = "//span[normalize-space()='Dashboard']")
+    public WebElement ClickOnDashboardHome;
+
+    @FindBy(xpath = "//h4[normalize-space()='Dashboard']")
+    public WebElement dashBoardText;
+
+    @FindBy(xpath = "//h4[normalize-space()='Dashboard']")
+    public WebElement CarePortalText;
+
+    @FindBy(xpath = "//mat-label[normalize-space()='Select Timezone']")
+    public WebElement SelectTimeZoneDashText;
+
+    @FindBy(xpath = "//mat-icon[normalize-space()='fullscreen']")
+    public WebElement SelectFullScreenIcon;
+
+    @FindBy(xpath = "//mat-icon[normalize-space()='chat']")
+    public WebElement SelectChatIcon;
+
+    @FindBy(xpath = "//img[@alt='Lightning Step']")
+    public WebElement LighteningStepNavigation;
+
     
+    @FindBy(xpath = "//img[@alt='PursueCare Logo']")
+    public WebElement PursueCareLogo;
+
+    @FindBy(xpath = "//mat-icon[normalize-space()='menu']")
+    public WebElement BreadCumbMenuIcon;
+
+
+
+   // =======================================================Todays Appointments List Checks=======================================================
     @FindBy(xpath = "//div[@class='row clearfix']//h2[1]")
     public WebElement todaysAppointment;
 
@@ -57,6 +90,11 @@ public class Provider_Dashboard_Page extends BasePageClass{
 
     @FindBy(xpath = "//span[contains(text(),'Not Completed - Tech Issue')]")
     public WebElement notCompletedTechIssue;
+
+    @FindBy(xpath = "//span[contains(text(),'Edit Group Session')]")
+    public WebElement editGroupSession;
+
+    
 
     //Completed Patient Assessments
     @FindBy(xpath="/html[1]/body[1]/app-root[1]/app-dashboard[1]/section[1]/div[1]/div[5]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/select[1]")

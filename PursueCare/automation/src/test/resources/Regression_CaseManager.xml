@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Case Manager Regression Suite" thread-count="5">
+    <parameter name="browser" value="chrome"/>
+
+<!--
+    <listeners>
+        <listener class-name="utilities.ExtentSparkManager"/>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>  
+   -->
+<test name="Case Manager Tests">
+ 
+        <classes> 
+         <class name="testCases_Case.CaseManager_Dashboard"/>
+<!--
+     <class name="testCases_Case.CM_Appointment_booking"/>
+     <class name="testCases_Case.Provider_list"/>
+     <class name="testCases_Case.Patient_Creation"/>
+     <class name="testCases_Case.Login_Case"/>
+     <class name="testCases_Case.CM_Role_Menu_Visibility"/>
+   -->  
+   <!--
+        Additional test classes can be added here as needed
+   -->
+        </classes>
+    </test>
+     
+</suite>
+
